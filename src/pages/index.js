@@ -1,10 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -12,38 +9,58 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+      <div className="body-index">
+        <header>
+          <div className="slideshow" style={{position:'relative', height: '100%'}}>
+          <div className="background-img" style={{backgroundImage: 'url(/img/pole-corners.jpg)', opacity: 1}}></div>
+          <div className="background-img" style={{backgroundImage: 'url(/img/in-garden.jpg)', opacity: 1}}></div>
+          <div className="background-img" style={{backgroundImage: 'url(/img/antigone.jpg)', opacity: 0}}></div>
+          <div className="background-img" style={{backgroundImage: 'url(/img/ground-mural.jpg)', opacity: 0}}></div>
+          <div className="background-img" style={{backgroundImage: 'url(/img/pythias.jpg)', opacity: 0}}></div></div>
+          <button className="slideshow-arrow-left">←</button>
+          <button className="slideshow-arrow-right">→</button>
+
+
+          <h1 className="site-title">
+            <a href="/">
+              <img className="site-logo" src="/img/p-shadow.png" />
+              <span>Primoris Academy</span>
+            </a>
+          </h1>
+          <div className="page-head-wrap">
+            <span className="page-subhead">a vibrant &amp; nurturing school for the</span>
+            <h1>PASSIONATELY CURIOUS</h1>
+            <a href="/about" className="cta-button">Learn More</a>
+          </div>
+        </header>
+      </div>
     </Layout>
   )
 }
 
+        // <nav>
+        //   <a href="javascript:;" class="hamburger">
+        //     <span class="top-bun"></span>
+        //     <span class="meat"></span>
+        //     <span class="bottom-bun"></span>
+        //   </a>
+        //   <ul class="nav-links">        <li>
+        //         <a href="https://primoris.herokuapp.com/about">about
+        //         </a>
+        //       </li>        <li>
+        //         <a href="https://primoris.herokuapp.com/programs">programs
+        //         </a>
+        //       </li>        <li>
+        //         <a href="https://primoris.herokuapp.com/admissions/apply">admissions
+        //         </a>            <ul class="subnav">            <li><a href="https://primoris.herokuapp.com/admissions/apply">Apply</a></li>            <li><a href="https://primoris.herokuapp.com/admissions/faq">FAQ</a></li>            </ul>
+        //       </li>        <li>
+        //         <a href="https://primoris.herokuapp.com/calendar">calendar
+        //         </a>
+        //       </li>        <li>
+        //         <a href="https://primoris.herokuapp.com/contact">contact
+        //         </a>
+        //       </li>    </ul>
+        // </nav>
 export default BlogIndex
 
 export const pageQuery = graphql`
@@ -70,3 +87,31 @@ export const pageQuery = graphql`
     }
   }
 `
+
+
+// {posts.map(({ node }) => {
+//         const title = node.frontmatter.title || node.fields.slug
+//         return (
+//           <article key={node.fields.slug}>
+//             <header>
+//               <h3
+//                 style={{
+//                   marginBottom: rhythm(1 / 4),
+//                 }}
+//               >
+//                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+//                   {title}
+//                 </Link>
+//               </h3>
+//               <small>{node.frontmatter.date}</small>
+//             </header>
+//             <section>
+//               <p
+//                 dangerouslySetInnerHTML={{
+//                   __html: node.frontmatter.description || node.excerpt,
+//                 }}
+//               />
+//             </section>
+//           </article>
+//         )
+//       })}

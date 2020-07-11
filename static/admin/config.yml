@@ -24,7 +24,8 @@ collections:
 
   - name: 'navigation'
     label: 'Navigation'
-    folder: 'content/navigation'
+    file: 'content/navigation.yml'
+    create: true
     widget: 'list'
     summary: '{{fields.title}}'
     fields:

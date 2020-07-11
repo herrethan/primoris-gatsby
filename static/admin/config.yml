@@ -6,8 +6,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
+  - label: 'Blog'
+    name: 'blog'
     folder: 'content/blog'
     create: true
     slug: 'index'
@@ -22,22 +22,27 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: 'navigation'
-    label: 'Navigation'
-    file: 'content/navigation.yml'
+  - label: 'Config'
+    name: 'config'
     create: true
-    widget: 'list'
-    summary: '{{fields.title}}'
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - label: 'Subnav'
-        name: 'subnav'
+    files:
+      - label: 'Navigation'
+        name: 'navigation'
+        file: 'content/navigation.yml'
         widget: 'list'
+        summary: '{{fields.title}}'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Url', name: 'url', widget: 'string' }
+          - label: 'Subnav'
+            name: 'subnav'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Url', name: 'url', widget: 'string' }
 
-  - name: 'page'
-    label: 'Page'
+  - label: 'Page'
+    name: 'page'
     folder: 'content/page'
     create: true
     slug: 'index'

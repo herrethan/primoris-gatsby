@@ -14,3 +14,10 @@ main:
     url: /calendar
   - title: Contact
     url: /contact
+footer:
+  - title: Partner with us
+    url: /partner-with-us
+  - title: Support us
+    url: /support-us
+  - title: Work with us
+    url: /work-with-us

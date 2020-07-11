@@ -21,3 +21,33 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'navigation'
+    label: 'Navigation'
+    folder: 'content/navigation'
+    widget: 'list'
+    summary: '{{fields.title}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - label: 'Subnav'
+        name: 'subnav'
+        widget: 'list'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+
+  - name: 'page'
+    label: 'Page'
+    folder: 'content/page'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Header', name: 'header', widget: 'string' }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

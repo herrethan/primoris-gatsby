@@ -72,3 +72,5 @@ yarn-error.log
 *.sublime-project
 *.sublime-workspace
 
+# VS Code
+*.code-workspace

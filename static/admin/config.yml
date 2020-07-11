@@ -18,28 +18,9 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Publish date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-
-  - label: 'Config'
-    name: 'config'
-    create: true
-    files:
-      - label: 'Navigation'
-        name: 'navigation'
-        file: 'content/navigation.yml'
-        widget: 'list'
-        summary: '{{fields.title}}'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Url', name: 'url', widget: 'string' }
-          - label: 'Subnav'
-            name: 'subnav'
-            widget: 'list'
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Url', name: 'url', widget: 'string' }
 
   - label: 'Page'
     name: 'page'
@@ -53,7 +34,36 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Publish date', name: 'date', widget: 'datetime' }
       - { label: 'Header', name: 'header', widget: 'string' }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: 'Featured image', name: 'thumbnail', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - label: 'Config'
+    name: 'config'
+    create: true
+    files:
+      - label: 'Navigation'
+        name: 'navigation'
+        file: 'content/navigation.yml'
+        fields:
+          - label: 'Main'
+            name: 'main'
+            widget: 'list'
+            summary: '{{fields.title}}'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Url', name: 'url', widget: 'string' }
+              - label: 'Subnav'
+                name: 'subnav'
+                widget: 'list'
+                fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - { label: 'Url', name: 'url', widget: 'string' }
+          - label: 'Footer'
+            name: 'footer'
+            widget: 'list'
+            summary: '{{fields.title}}'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Url', name: 'url', widget: 'string' }

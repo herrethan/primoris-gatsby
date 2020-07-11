@@ -1,0 +1,16 @@
+main:
+  - title: About
+    url: /about
+  - title: Programs
+    url: /programs
+  - title: Admissions
+    url: /admissions/apply
+    subnav:
+      - title: Apply
+        url: /admissions/apply
+      - title: FAQ
+        url: /admissions/faq
+  - title: Calendar
+    url: /calendar
+  - title: Contact
+    url: /contact

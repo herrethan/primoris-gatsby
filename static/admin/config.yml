@@ -41,7 +41,6 @@ collections:
 
   - label: 'Config'
     name: 'config'
-    create: true
     files:
       - label: 'Navigation'
         name: 'navigation'

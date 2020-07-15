@@ -2,10 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import navData from "../../content/navigation.yml"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  console.log(navData, location)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -32,6 +34,31 @@ const BlogIndex = ({ data, location }) => {
             <h1>PASSIONATELY CURIOUS</h1>
             <a href="/about" className="cta-button">Learn More</a>
           </div>
+
+          <nav>
+            <a href="javascript:;" className="hamburger">
+              <span className="top-bun"></span>
+              <span className="meat"></span>
+              <span className="bottom-bun"></span>
+            </a>
+            <ul className="nav-links">
+              {navData && navData.main && navData.main.map(item => (
+                <li key={item.url}>
+                  <Link to={item.url}>{item.title}</Link>
+                  {item.subnav && (
+                    <ul className="subnav">
+                      {item.subnav.map(subitem => (
+                        <li key={subitem.url}>
+                          <Link to={subitem.url}>{subitem.title}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+
         </header>
       </div>
     </Layout>

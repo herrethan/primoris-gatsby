@@ -43,7 +43,7 @@ collections:
     name: 'calendar'
     folder: 'content/calendar'
     create: true
-    slug: 'calendar/index'
+    slug: 'index'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'

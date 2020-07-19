@@ -17,7 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               fields {
                 slug
-                type
+                source
               }
               frontmatter {
                 title
@@ -37,16 +37,31 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    // Safe keeping if we ever need a blog
+    // const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    // const next = index === 0 ? null : posts[index - 1].node
 
+    // createPage({
+    //   path: post.node.fields.slug,
+    //   component: blogPost,
+    //   context: {
+    //     slug: post.node.fields.slug,
+    //     previous,
+    //     next,
+    //   },
+    // })
+
+    // Prepend /calendar only to source:calendar entries
+    let path = post.node.fields.slug;
+    if (post.node.fields.source === 'calendar') {
+      path = `/calendar${path}`;
+    }
+    console.log(path);
     createPage({
-      path: post.node.fields.slug,
+      path,
       component: blogPost,
       context: {
         slug: post.node.fields.slug,
-        previous,
-        next,
       },
     })
   })
@@ -61,7 +76,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     
     createNodeField({
-      name: `type`,
+      name: `source`,
       value: parent && parent.sourceInstanceName,
       node,
     })

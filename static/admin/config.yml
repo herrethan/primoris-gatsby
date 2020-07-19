@@ -42,6 +42,7 @@ collections:
   - label: 'Calendar'
     name: 'calendar'
     folder: 'content/calendar'
+    label_singular: 'Event'
     create: true
     slug: 'index'
     media_folder: ''

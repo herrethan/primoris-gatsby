@@ -22,7 +22,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - label: 'Pages'
+  - label: 'Page'
     name: 'page'
     folder: 'content/page'
     create: true
@@ -39,9 +39,41 @@ collections:
       - { label: 'Featured image', name: 'thumbnail', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - label: 'Calendar'
+    name: 'calendar'
+    folder: 'content/calendar'
+    create: true
+    slug: 'calendar/index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Event date', name: 'date', widget: 'datetime' }
+      - { label: 'Event detail', name: 'detail', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - label: 'Config'
     name: 'config'
     files:
+      - label: 'Home page slider'
+        name: 'home-page-slider'
+        file: 'content/home-page-slider.yml'
+        fields:
+          - label: 'Slide duration (seconds)'
+            name: 'interval'
+            widget: 'number'
+            valueType: 'int'
+            default: 4
+            min: 2
+            max: 10
+          - label: 'Images'
+            name: 'images'
+            widget: 'list'
+            fields:
+              - { label: 'Image', name: 'thumbnail', widget: 'image' }
       - label: 'Navigation'
         name: 'navigation'
         file: 'content/navigation.yml'

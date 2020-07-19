@@ -53,7 +53,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Event date', name: 'date', widget: 'datetime' }
-      - { label: 'Event detail', name: 'detail', widget: 'string' }
+      - { label: 'Event detail', name: 'detail', widget: 'string', required: 'false' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - label: 'Config'

@@ -36,8 +36,8 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Header title', name: 'title', widget: 'string' }
       - { label: 'Publish date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured image', name: 'thumbnail', widget: 'image' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Featured image', name: 'thumbnail', widget: 'image', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
 
   - label: 'Calendar'
     name: 'calendar'
@@ -53,8 +53,8 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Event date', name: 'date', widget: 'datetime' }
-      - { label: 'Event detail', name: 'detail', widget: 'string', required: 'false' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Event detail', name: 'detail', widget: 'string', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
 
   - label: 'Config'
     name: 'config'
@@ -75,6 +75,11 @@ collections:
             widget: 'list'
             fields:
               - { label: 'Image', name: 'thumbnail', widget: 'image' }
+      - label: 'Home page body'
+        name: 'home-page-body'
+        file: 'content/home-page-body.yml'
+        fields:
+          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Navigation'
         name: 'navigation'
         file: 'content/navigation.yml'

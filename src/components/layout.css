@@ -1249,6 +1249,10 @@
     text-transform: capitalize
 }
 
+.uppercase {
+    text-transform: uppercase
+}
+
 .align-center {
     text-align: center
 }

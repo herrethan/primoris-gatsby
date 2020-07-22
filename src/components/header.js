@@ -8,9 +8,9 @@ const Header = ({ backgroundImg, height, children }) => {
   const toggleNav = () => setNavOpened(!navOpened);
 
   return (
-    <header style={{ height: height || 100 }} className={navOpened && 'nav-opened'}>
+    <header style={{ height: height || 100 }} className={navOpened ? 'nav-opened' : ''}>
       
-      {backgroundImg && <div className="background-img" style={{ backgroundImage: backgroundImg }}></div>}
+      <div className="background-img" style={{ backgroundImage: `url(${backgroundImg})` }}></div>
 
       {children}
 

@@ -2,7 +2,7 @@
 name: about
 title: About
 date: 2020-07-15T18:18:27.327Z
-thumbnail: legos-carrying-rocks.jpg
+image: legos-carrying-rocks.jpg
 ---
 #Philosophy & Approach
 Primoris Academy was established on the firm belief that school should fuel, not stifle, a child's curiosity. We also believe that a learning environment befitting their level incites children to perform and develop at their true potential. Therefore, at Primoris, students are placed based on ability rather than by age, and experiential learning is at the core of our approach. Our program provides:

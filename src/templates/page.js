@@ -1,39 +1,29 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
+import SEO from "../components/seo";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+const PageTemplate = ({ data }) => {
+  const page = data.markdownRemark;
+  const image = page.frontmatter.image && page.frontmatter.image.publicURL;
 
-const PageTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-
+  console.log(page)
   return (
-    <Layout location={location} title={siteTitle}>
+    <>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={`${page.frontmatter.title} | `}
+        description={page.frontmatter.description || page.excerpt}
       />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p>
-            {post.frontmatter.date}
-          </p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr/>
-        <footer>
-        </footer>
-      </article>
-
-    </Layout>
+      <Header backgroundImg={image} height={500}>
+        <div className="page-head-wrap">
+          <h1 className="uppercase">{page.frontmatter.title}</h1>
+        </div>
+      </Header>
+      
+      {page && <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />}
+      <Footer />
+    </>
   )
 }
 
@@ -41,19 +31,15 @@ export default PageTemplate
 
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 120)
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          publicURL
+        }
       }
     }
   }

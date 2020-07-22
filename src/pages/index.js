@@ -1,5 +1,5 @@
-import React, { useEffect } from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import slider from "../../content/home-page-slider.yml";
 import homePageBody from "../../content/home-page-body.yml";
@@ -8,19 +8,14 @@ import Footer from '../components/footer';
 import ImageSlider from '../components/image-slider';
 
 const SiteIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
-  console.log(slider);
-
-  // shuffle slider images on mount
-  useEffect(() => {
-    
-  }, []);
+  // console.log(location)
+  // const siteTitle = data.site.siteMetadata.title;
+  // const posts = data.allMarkdownRemark.edges;
 
   return (
     <>
       <SEO
-        title={siteTitle}
+        title={''}
         description="A vibrant and nurturing school for the passionately curious"
       />
       <Header height={700}>

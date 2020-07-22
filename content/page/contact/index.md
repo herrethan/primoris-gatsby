@@ -2,7 +2,7 @@
 name: contact
 title: Contact
 date: 2020-07-19T15:52:32.007Z
-thumbnail: boys-looking.jpg
+image: boys-looking.jpg
 ---
 
 <div class="row">

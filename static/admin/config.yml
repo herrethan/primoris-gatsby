@@ -36,7 +36,7 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Header title', name: 'title', widget: 'string' }
       - { label: 'Publish date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured image', name: 'thumbnail', widget: 'image', required: false }
+      - { label: 'Featured image', name: 'image', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
 
   - label: 'Calendar'

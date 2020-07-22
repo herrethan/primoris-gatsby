@@ -2,7 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const templates = {
-  'page': path.resolve(`./src/templates/blog-post.js`),
+  'page': path.resolve(`./src/templates/page.js`),
   'calendar': path.resolve(`./src/templates/blog-post.js`)
 }
 
@@ -64,7 +64,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path = `/calendar${path}`;
     }
     
-    console.log(path);
+    console.log(path, source);
 
     if (source in templates){
       createPage({
@@ -80,7 +80,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
     const parent = getNode(node.parent);
 
     createNodeField({
@@ -91,8 +90,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     createNodeField({
       name: `slug`,
+      value: createFilePath({ node, getNode }),
       node,
-      value,
     });
   }
 }

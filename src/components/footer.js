@@ -1,5 +1,6 @@
 import React from "react"
-
+import { Link } from "gatsby"
+import navData from "../../content/navigation.yml"
 
 const Footer = () => {
   return (
@@ -39,9 +40,11 @@ const Footer = () => {
         </a>
       </div>
       <ul className="nav-links">
-        <li><a href="/partner-with-us">partner with us</a></li>
-        <li><a href="/support-us">support us</a></li>
-        <li><a href="/work-with-us">work with us</a></li>
+        {navData && navData.footer && navData.footer.map(item => (
+          <li key={item.url}>
+            <Link to={item.url}>{item.title}</Link>
+          </li>
+        ))}
       </ul>
       <p className="copyright">
         &copy;
@@ -51,10 +54,5 @@ const Footer = () => {
     </footer>
   );
 };
-      // <ul className="nav-links">
-      //   {% for page in pages|sort_by('time') if page.meta.footer_nav_name %}
-      //   <li><a href="{{ page.url }}">{{ page.meta.footer_nav_name }}</a></li>
-      //   {% endfor %}
-      // </ul>
 
 export default Footer;

@@ -1590,6 +1590,10 @@ header {
         opacity: 1
     }
 }
+.slideshow {
+    position:'relative';
+    height: '100%'
+}
 
 .slideshow .background-img {
     position: absolute;
@@ -1870,7 +1874,8 @@ nav .subnav a:focus,nav .subnav a:hover {
         padding-top: 120px;
         padding-left: 40px;
         padding-right: 40px;
-        padding-bottom: 40px
+        padding-bottom: 40px;
+        z-index: 10;
     }
 
     .nav-opened nav>ul li {

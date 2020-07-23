@@ -10,7 +10,8 @@ image: boys-looking.jpg
     <h1>Contact Us</h1>
     Phone: (201) 722-1000<br />
     Fax: (201) 722-1001
-    <form class="contact-form" name="contact" method="POST" netlify-honeypot="legit" netlify>
+    <form class="contact-form" name="Contact us" method="POST" netlify-honeypot="legit" data-netlify="true">
+      <input type="hidden" name="form-name" value="Contact us" />
       <div class="field text name required">
         <label>Full name<input name="name" required="" type="text" value="" /></label>
       </div>

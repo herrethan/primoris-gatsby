@@ -1964,23 +1964,23 @@ nav .subnav a:focus,nav .subnav a:hover {
     top: 7px
 }
 
-.p01-contact .field {
+.contact-form .field {
     margin-top: 30px;
     margin-bottom: 20px
 }
 
-.p01-contact label {
+.contact-form label {
     display: block;
     font-weight: normal;
     margin-bottom: 5px
 }
 
-.p01-contact label .description {
+.contact-form label .description {
     color: #dad8d8;
     float: right
 }
 
-.p01-contact input:not([type=radio]):not([type=checkbox]):not([type=submit]),.p01-contact textarea,.p01-contact select {
+.contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]),.contact-form textarea,.contact-form select {
     border: 1px solid #dad8d8;
     background-color: #fafafa;
     padding: 10px;
@@ -1991,38 +1991,38 @@ nav .subnav a:focus,nav .subnav a:hover {
     transition: all 0.3s ease-in-out
 }
 
-.p01-contact input:not([type=radio]):not([type=checkbox]):not([type=submit]):focus,.p01-contact textarea:focus,.p01-contact select:focus {
+.contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]):focus,.contact-form textarea:focus,.contact-form select:focus {
     background-color: white
 }
 
-.p01-contact .required label:after {
-    content: ' *'
+.contact-form .required label:before {
+    content: '* '
 }
 
-.p01-contact input[type=radio],.p01-contact input[type=checkbox] {
+.contact-form input[type=radio],.contact-form input[type=checkbox] {
     vertical-align: middle
 }
 
-.p01-contact .options input {
+.contact-form .options input {
     display: inline-block
 }
 
-.p01-contact .error-msg {
+.contact-form .error-msg {
     color: #ff4b19
 }
 
-.p01-contact .alert {
+.contact-form .alert {
     padding: 20px;
     margin-bottom: 20px;
     margin-top: 20px
 }
 
-.p01-contact .alert.success {
+.contact-form .alert.success {
     color: #112b1a;
     background-color: #bde4cb
 }
 
-.p01-contact .alert.failed {
+.contact-form .alert.failed {
     color: #ff4b19;
     background-color: #ffebe5
 }

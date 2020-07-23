@@ -8,9 +8,29 @@ image: boys-looking.jpg
 <div class="row">
   <div class="column medium-6">
     <h1>Contact Us</h1>
-    Phone: (201) 722-1000<br>
+    Phone: (201) 722-1000<br />
     Fax: (201) 722-1001
-
+    <form class="contact-form" name="contact" method="POST" netlify-honeypot="legit" netlify>
+      <div class="field text name required">
+        <label>Full name<input name="name" required="" type="text" value="" /></label>
+      </div>
+      <div class="field email required">
+        <label>Email address<input name="email" required="" type="email" value="" /></label>
+      </div>
+      <div class="field tel">
+        <label>Phone<input name="phone" type="tel" value="" /></label>
+      </div>
+      <div class="field text subject">
+        <label>Subject<input name="subject" type="text" value="" /></label>
+      </div>
+      <div class="field textarea message required">
+        <label>Message<textarea name="message" required="" rows="10"></textarea></label>
+      </div>
+      <p class="display-none">
+        <label>Hey bots, fill this out: <input name="legit" /></label>
+      </p>
+      <input class="submit" type="submit" value="Submit">
+    </form>
   </div>
   <div class="column medium-6">
     <h1>Visit Us</h1>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import SEO from "../components/seo";
 import slider from "../../content/home-page-slider.yml";
 import homePageBody from "../../content/home-page-body.yml";
@@ -8,10 +8,6 @@ import Footer from '../components/footer';
 import ImageSlider from '../components/image-slider';
 
 const SiteIndex = () => {
-  // console.log(location)
-  // const siteTitle = data.site.siteMetadata.title;
-  // const posts = data.allMarkdownRemark.edges;
-
   return (
     <>
       <SEO

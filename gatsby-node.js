@@ -23,9 +23,6 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug
                 source
               }
-              frontmatter {
-                title
-              }
             }
           }
         }
@@ -59,15 +56,13 @@ exports.createPages = async ({ graphql, actions }) => {
     const slug = post.node.fields.slug;
     const source = post.node.fields.source;
     let component = templates[source];
-    // let path = slug;
-    
 
     // Use special calendar-index as main calendar page
     if (slug === '/calendar/') {
       component = templates['calendar-index'];
     }
     
-    console.log(path, source);
+    console.log(slug, source);
 
     if (component){
       createPage({

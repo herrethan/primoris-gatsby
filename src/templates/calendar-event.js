@@ -28,7 +28,7 @@ const PageTemplate = ({ data }) => {
 export default PageTemplate
 
 export const pageQuery = graphql`
-  query PageBySlug($slug: String!) {
+  query EventBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 120)
       html

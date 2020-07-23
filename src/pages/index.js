@@ -7,7 +7,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import ImageSlider from '../components/image-slider';
 
-const SiteIndex = ({ data, location }) => {
+const SiteIndex = () => {
   // console.log(location)
   // const siteTitle = data.site.siteMetadata.title;
   // const posts = data.allMarkdownRemark.edges;
@@ -33,28 +33,3 @@ const SiteIndex = ({ data, location }) => {
 }
 
 export default SiteIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`

@@ -3,7 +3,8 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const templates = {
   'page': path.resolve(`./src/templates/page.js`),
-  'calendar': path.resolve(`./src/templates/blog-post.js`)
+  'calendar': path.resolve(`./src/templates/calendar-event.js`),
+  'calendar-index': path.resolve(`./src/templates/calendar-index.js`)
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -57,19 +58,21 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const slug = post.node.fields.slug;
     const source = post.node.fields.source;
-    let path = slug;
+    let component = templates[source];
+    // let path = slug;
     
-    // Prepend /calendar only to source:calendar entries
-    if (source === 'calendar') {
-      path = `/calendar${path}`;
+
+    // Use special calendar-index as main calendar page
+    if (slug === '/calendar/') {
+      component = templates['calendar-index'];
     }
     
     console.log(path, source);
 
-    if (source in templates){
+    if (component){
       createPage({
-        path,
-        component: templates[source],
+        path: slug,
+        component,
         context: { slug },
       });
     }
@@ -81,16 +84,23 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const parent = getNode(node.parent);
+    const source = parent && parent.sourceInstanceName;
+    let slug = createFilePath({ node, getNode });
+
+    // Prepend /calendar only to source:calendar event entries
+    if (source === 'calendar') {
+      slug = `/calendar${slug}`;
+    }
 
     createNodeField({
       name: `source`,
-      value: parent && parent.sourceInstanceName,
+      value: source,
       node,
     });
 
     createNodeField({
       name: `slug`,
-      value: createFilePath({ node, getNode }),
+      value: slug,
       node,
     });
   }

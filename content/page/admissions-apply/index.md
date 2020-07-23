@@ -7,11 +7,13 @@ image: pick-me.jpg
 <div class="row">
     <div class="column medium-3">
       <h1 class="capitalize">admissions</h1>
-      <ul class="content-subnav">        <li class="active">
-          <h3><a href="https://primoris.herokuapp.com/admissions/apply">Apply</a></h3><h3>
+      <ul class="content-subnav">
+        <li class="active">
+          <h3><a href="/admissions/apply">Apply</a></h3><h3>
         </h3></li>        <li>
-          <h3><a href="https://primoris.herokuapp.com/admissions/faq">FAQ</a></h3><h3>
-        </h3></li>      </ul>
+          <h3><a href="/admissions/faq">FAQ</a></h3><h3>
+        </h3></li>
+      </ul>
     </div>
     <div class="column medium-9"><p>In evaluating each candidate, the Admissions Committee considers many factors throughout a holistic review process. Overall, we look for bright individuals who demonstrate intellectual curiosity and passion; an innate drive to learn, explore, question, and tinker; and creativity or inventiveness. We do not rely solely on grades, IQ tests, or other standardized testing. We evaluate the candidate's fit for and potential contribution to the distinctive Primoris experience.
 To be considered for admission, please follow the steps below.</p>

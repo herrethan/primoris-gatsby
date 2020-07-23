@@ -1,25 +1,32 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import moment from 'moment';
 
 const PageTemplate = ({ data }) => {
   const page = data.markdownRemark;
-  const image = page.frontmatter.image && page.frontmatter.image.publicURL;
 
   return (
     <>
       <SEO
         title={`${page.frontmatter.title} | `}
-        description={page.frontmatter.description || page.excerpt}
+        description={page.excerpt}
       />
-      <Header backgroundImg={image} height={image ? 500 : 100}>
-        <div className="page-head-wrap">
-          <h1 className="uppercase">{page.frontmatter.title}</h1>
-        </div>
-      </Header>
-      {page && <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />}
+      <Header />
+      {page && (
+        <main className="content">
+          <h1>{page.frontmatter.title}</h1>
+          <p>
+            {moment(page.frontmatter.date).format('dddd, MMMM Do, YYYY')}
+            <br />
+            {page.frontmatter.detail}
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
+          <Link to="/calendar">&larr; Back to calendar</Link>
+        </main>
+      )}
       <Footer />
     </>
   )
@@ -33,11 +40,9 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 120)
       html
       frontmatter {
+        detail
         title
-        description
-        image {
-          publicURL
-        }
+        date
       }
     }
   }

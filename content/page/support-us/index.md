@@ -1,5 +1,5 @@
 ---
-name: support-us
+name: support us
 title: Support us
 date: 2020-07-26T04:25:02.687Z
 ---

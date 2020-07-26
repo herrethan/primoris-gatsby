@@ -16,7 +16,7 @@ const Header = ({ backgroundImg, height, children }) => {
 
       <h1 className="site-title">
         <Link to="/">
-          <img className="site-logo" src="/img/p-shadow.png" />
+          <img className="site-logo" src="/img/p-shadow.png" alt="" />
           <span>Primoris Academy</span>
         </Link>
       </h1>

@@ -26,7 +26,7 @@ const PageTemplate = ({ data, location }) => {
     <>
       <SEO
         title={page.frontmatter.title}
-        description={page.frontmatter.description || page.excerpt}
+        description={page.excerpt}
       />
       <Header backgroundImg={image} height={image ? 500 : 100}>
         {!!image && !!page.frontmatter.title && (
@@ -71,7 +71,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
         image {
           publicURL
         }

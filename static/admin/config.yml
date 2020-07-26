@@ -5,22 +5,6 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-collections:
-  - label: 'Blog'
-    name: 'blog'
-    folder: 'content/blog'
-    create: true
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
   - label: 'Page'
     name: 'page'
     folder: 'content/page'

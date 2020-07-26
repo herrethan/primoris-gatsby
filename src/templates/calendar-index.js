@@ -16,7 +16,7 @@ const CalendarIndexTemplate = ({ data }) => {
     <>
       <SEO
         title={page.frontmatter.title}
-        description={page.frontmatter.description || page.excerpt}
+        description={page.excerpt}
       />
       <Header backgroundImg={image} height={image ? 500 : 100}>
         <div className="page-head-wrap">
@@ -63,7 +63,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
         image {
           publicURL
         }

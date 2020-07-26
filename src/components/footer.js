@@ -8,13 +8,13 @@ const Footer = () => {
   return (
     <footer className="footer align-center">
       <div className="social-bar">
-        <a href="http://www.facebook.com/PrimorisAcademyOrg" title="facebook" target="_blank">
+        <a href="http://www.facebook.com/PrimorisAcademyOrg" title="facebook" target="_blank" rel="noreferrer">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="140 -189 15.5 30">
             <path d="M150.1-159v-13.7h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6h2.8v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2c-4.1,0-6.9,2.5-6.9,7v4
               H140v5.3h4.6v13.7H150.1z"/>
           </svg>
         </a>
-        <a href="http://instagram.com/primorisacademy" title="instagram" target="_blank">
+        <a href="http://instagram.com/primorisacademy" title="instagram" target="_blank" rel="noreferrer">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-346 292 30 30">
           <path d="M-316.1,300.8c-0.1-1.6-0.3-2.7-0.7-3.6c-0.4-1-0.9-1.8-1.7-2.7c-0.8-0.8-1.7-1.3-2.7-1.7c-1-0.4-2-0.6-3.6-0.7
             c-1.6-0.1-2.1-0.1-6.2-0.1s-4.6,0-6.2,0.1c-1.6,0.1-2.7,0.3-3.6,0.7c-1,0.4-1.8,0.9-2.7,1.7c-0.8,0.8-1.3,1.7-1.7,2.7
@@ -31,7 +31,7 @@ const Footer = () => {
             C-321.2,298-322,297.2-323,297.2z"/>
           </svg>
         </a>
-        <a href="https://twitter.com/primorisacademy" title="twitter" target="_blank">
+        <a href="https://twitter.com/primorisacademy" title="twitter" target="_blank" rel="noreferrer">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-364 311 32 26">
             <path d="M-332,314.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6c-1.2-1.3-2.9-2.1-4.7-2.1
               c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5

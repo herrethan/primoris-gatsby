@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "primoris-built-with-gatsby",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Primoris Academy website powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ethan Herr <https://github.com/herrethan>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },

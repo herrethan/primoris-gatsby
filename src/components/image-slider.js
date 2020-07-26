@@ -23,7 +23,7 @@ const ImageSlider = ({ interval=4000, images }) => {
       clearTimeout(autoAdvancer);
     }
     return () => clearTimeout(autoAdvancer);
-  }, [index, isAuto])
+  }, [isAuto, interval]);
 
   return (
     <>

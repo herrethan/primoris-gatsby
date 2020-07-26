@@ -1983,11 +1983,12 @@ nav .subnav a:focus,nav .subnav a:hover {
 .contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]),.contact-form textarea,.contact-form select {
     border: 1px solid #dad8d8;
     background-color: #fafafa;
-    padding: 10px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 1em;
     margin: 0;
     outline: none;
     width: 100%;
-    font-size: 1em;
     transition: all 0.3s ease-in-out
 }
 

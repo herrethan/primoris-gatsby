@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import navData from "../../content/navigation.yml"
 
+const year = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <footer className="footer align-center">
@@ -47,9 +49,7 @@ const Footer = () => {
         ))}
       </ul>
       <p className="copyright">
-        &copy;
-        <script>document.write(new Date().getFullYear())</script>
-        Primoris Academy Inc. All rights reserved.
+        &copy; {year} Primoris Academy Inc. All rights reserved.
       </p>
     </footer>
   );

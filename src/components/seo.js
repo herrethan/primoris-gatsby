@@ -29,13 +29,13 @@ const SEO = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  console.log(`${title}${title? ' | ' : ''}${site.siteMetadata.title}`)
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s ${site.siteMetadata.title}`}
+      title={`${title}${title? ' | ' : ''}${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -43,7 +43,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: title || site.siteMetadata.title,
         },
         {
           property: `og:description`,
@@ -63,7 +63,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: title || site.siteMetadata.title,
         },
         {
           name: `twitter:description`,

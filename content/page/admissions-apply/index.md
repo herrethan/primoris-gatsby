@@ -14,8 +14,8 @@ You can reach us via phone at (201) 722-1000, or via email at [admissions@primor
 ###2. SUBMIT AN APPLICATION
 Download and complete the relevant application below. Send completed applications to [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org).
 <p style="margin-top:40px;margin-bottom:40px">
-<a class="submit-button" target="_blank" href="img/ElementarySchoolApplication.pdf">ELEMENTARY SCHOOL</a>
-<a class="submit-button" target="_blank" href="img/MiddleAndHighSchoolApplication.pdf">MIDDLE/HIGH SCHOOL</a>
+<a class="submit-button" target="_blank" href="/img/ElementarySchoolApplication.pdf">ELEMENTARY SCHOOL</a>
+<a class="submit-button" target="_blank" href="/img/MiddleAndHighSchoolApplication.pdf">MIDDLE/HIGH SCHOOL</a>
 </p>
 
 ###3. SCHEDULE SHADOW DAYS
@@ -29,8 +29,8 @@ Shadow days during the school year can be scheduled from October- May, pending s
 
 Teachers should email their recommendations to [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org) from their school email accounts. Recommendations sent from personal accounts will not be accepted.
 <p style="margin-top:40px;margin-bottom:40px">
-<a class="submit-button" target="_blank" href="img/RecommendationFormElementary.pdf">ELEMENTARY SCHOOL</a>
-<a class="submit-button" target="_blank" href="img/RecommendationFormMiddleAndHigh.pdf">MIDDLE/HIGH SCHOOL</a>
+<a class="submit-button" target="_blank" href="/img/RecommendationFormElementary.pdf">ELEMENTARY SCHOOL</a>
+<a class="submit-button" target="_blank" href="/img/RecommendationFormMiddleAndHigh.pdf">MIDDLE/HIGH SCHOOL</a>
 </p>
 
 ###UPON RECEIPT OF ALL MATERIALS

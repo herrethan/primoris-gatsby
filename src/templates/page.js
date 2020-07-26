@@ -3,12 +3,14 @@ import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { words, isEqual } from 'lodash';
+import { isEqual } from 'lodash';
+
+const pageTerms = (path) => path.split('/').filter(term => !!term);
 
 const PageTemplate = ({ data, location }) => {
   const page = data.markdownRemark;
   const image = page.frontmatter.image && page.frontmatter.image.publicURL;
-  const pathTerms = words(location.pathname);
+  const pathTerms = pageTerms(location.pathname);
   let subPages = [];
 
   if (pathTerms.length > 1) {
@@ -17,19 +19,21 @@ const PageTemplate = ({ data, location }) => {
         slug: edge?.node?.fields?.slug,
         title: edge?.node?.frontmatter?.title
       })
-    ).filter(node => words(node.slug).length > 1 && words(node.slug)[0] === pathTerms[0]);    
+    ).filter(node => pageTerms(node.slug).length > 1 && pageTerms(node.slug)[0] === pathTerms[0]);    
   }
 
   return (
     <>
       <SEO
-        title={`${page.frontmatter.title} | `}
+        title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
       />
       <Header backgroundImg={image} height={image ? 500 : 100}>
-        <div className="page-head-wrap">
-          <h1 className="uppercase">{page.frontmatter.title}</h1>
-        </div>
+        {!!image && !!page.frontmatter.title && (
+          <div className="page-head-wrap">
+            <h1 className="uppercase">{page.frontmatter.title}</h1>
+          </div>
+        )}
       </Header>
 
       {subPages.length > 0 && (
@@ -39,7 +43,7 @@ const PageTemplate = ({ data, location }) => {
               <h1 className="capitalize">{pathTerms[0]}</h1>
               <ul className="content-subnav">
                 {subPages.map(subpage => (
-                  <li key={subpage.slug} className={isEqual(words(subpage.slug), pathTerms) ? 'active' : ''}>
+                  <li key={subpage.slug} className={isEqual(pageTerms(subpage.slug), pathTerms) ? 'active' : ''}>
                     <h3><Link to={subpage.slug}>{subpage.title}</Link></h3>
                   </li>
                 ))}
@@ -73,7 +77,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           fields {

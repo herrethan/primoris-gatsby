@@ -50,6 +50,6 @@ image: robotics-soulder.jpg
     <p>Solved by Girls, established in 2017, is New Jersey's first-ever STEM conference for upper elementary (grades 3-5) and middle school (grades 6-8) girls. The conference offers third to eighth graders the opportunity to participate in a team Olympiad of STEM challenges, meet other like-minded girls, and hear from inspiring guest speakers. SBG aims to encourage young girls' interest in STEM studies and professions.
   </div>
   <div class="column medium-6">
-    <img src="img/solved-by-girls.jpg">
+    <img src="/img/solved-by-girls.jpg">
   </div>
 </div>

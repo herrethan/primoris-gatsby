@@ -15,7 +15,7 @@ const CalendarIndexTemplate = ({ data }) => {
   return (
     <>
       <SEO
-        title={`${page.frontmatter.title} | `}
+        title={page.frontmatter.title}
         description={page.frontmatter.description || page.excerpt}
       />
       <Header backgroundImg={image} height={image ? 500 : 100}>

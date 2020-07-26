@@ -11,7 +11,7 @@ const PageTemplate = ({ data }) => {
   return (
     <>
       <SEO
-        title={`${page.frontmatter.title} | `}
+        title={page.frontmatter.title}
         description={page.excerpt}
       />
       <Header />

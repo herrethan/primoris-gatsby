@@ -1,6 +1,6 @@
 ---
 name: partner with us
-title: Partner with Us
+title: Partner with us
 date: 2020-07-26T04:21:14.594Z
 ---
 

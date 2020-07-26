@@ -1,10 +1,12 @@
 ---
 name: programs
 title: Programs
-date: 2020-07-23T04:09:00.441Z
+date: 2020-07-26T03:48:10.547Z
 image: robotics-soulder.jpg
 ---
-<h1>School Programs</h1>
+
+#School Programs
+
 <div class="row">
   <div class="column medium-4">
     <h3>PRE-SCHOOL</h3>
@@ -25,22 +27,29 @@ image: robotics-soulder.jpg
     <a href="/programs/high-school">Learn More →</a>
   </div>
 </div>
-<hr>
-<h1>Programs Open to the Public</h1>
-<p>(No testing required)</p>
+
+---
+
+#Programs Open to the Public
+(No testing required)
+
 <div class="row">
   <div class="column medium-6">
     <h3>SUMMER PROGRAM</h3>
     <p>Due to COVID-19, our summer program will be moved online for ages 7-12. Please email <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
   </div>
 </div>
-<hr>
-<h1>Community Events</h1>
+
+---
+
+#Community Events
+
 <div class="row">
   <div class="column medium-6">
     <h3>SOLVED BY GIRLS CONFERENCE</h3>
     <p>Solved by Girls, established in 2017, is New Jersey's first-ever STEM conference for upper elementary (grades 3-5) and middle school (grades 6-8) girls. The conference offers third to eighth graders the opportunity to participate in a team Olympiad of STEM challenges, meet other like-minded girls, and hear from inspiring guest speakers. SBG aims to encourage young girls' interest in STEM studies and professions.
-  </p></div>
+  </div>
   <div class="column medium-6">
-    <img src="https://primoris.herokuapp.com/themes/angel/img/solved-by-girls.jpg"></div>
+    <img src="img/solved-by-girls.jpg">
+  </div>
 </div>

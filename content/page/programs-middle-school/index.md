@@ -1,7 +1,7 @@
 ---
 name: programs/middle-school
 title: Elementary and Middle School
-date: 2020-07-26T03:49:45.175Z
+date: 2020-07-25T03:49:45.175Z
 image: class-middleschool.jpg
 ---
 In elementary and middle school, we set the stage for well-rounded development and a lifelong love of learning. Curriculum-wise, a strong core of humanities and STEM subjects is complemented by foreign language, arts, and numerous other enrichment classes. Unlike most other elementary schools, Primoris does not use a single-teacher approach to instructing across multiple subjects. Each subject is taught by a different teacher, i.e. a subject matter expert! Additionally, we emphasize mastery over test scores.
@@ -23,7 +23,7 @@ On Fridays, dubbed “Innovative Fridays,” we offer a wide range of electives 
 </div>
 </div>
 <p class="row" style="margin-top:40px">
-<a href="/programs/elementary-school" style="float:left">← To Pre-School</a>
+<a href="/programs/pre-school" style="float:left">← To Pre-School</a>
 <a href="/programs/high-school" style="float:right">To High School →</a>
 </p>
 <p style="margin-top:40px; text-align: center;">

@@ -17,10 +17,9 @@ const PageTemplate = ({ data, location }) => {
         slug: edge?.node?.fields?.slug,
         title: edge?.node?.frontmatter?.title
       })
-    ).filter(node => words(node.slug)[0] === pathTerms[0]);    
+    ).filter(node => words(node.slug).length > 1 && words(node.slug)[0] === pathTerms[0]);    
   }
 
-  console.log(location);
   return (
     <>
       <SEO

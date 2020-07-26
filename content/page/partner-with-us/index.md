@@ -9,7 +9,7 @@ date: 2020-07-26T04:21:14.594Z
 If you believe your organization's mission or goals align with ours, we'd love to hear from you!
 
 <form class="contact-form" name="Partner with us" method="POST" netlify-honeypot="legit" data-netlify="true">
-  <input type="hidden" name="form-name" value="Contact us" />
+  <input type="hidden" name="form-name" value="Partner with us" />
   <div class="field text name required">
     <label>Full name<input name="name" required="" type="text" value="" /></label>
   </div>

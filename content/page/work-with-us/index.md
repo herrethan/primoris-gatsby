@@ -7,8 +7,8 @@ date: 2020-07-26T04:27:15.299Z
 
 If you're excited about Primoris and want to work with us, tell us a bit about yourself and let's discuss! We look forward to hearing from you.
 
-<form class="contact-form" name="Contact us" method="POST" netlify-honeypot="legit" data-netlify="true">
-  <input type="hidden" name="form-name" value="Contact us" />
+<form class="contact-form" name="Work with us" method="POST" netlify-honeypot="legit" data-netlify="true">
+  <input type="hidden" name="form-name" value="Work with us" />
   <div class="field text name required">
     <label>Full name<input name="name" required="" type="text" value="" /></label>
   </div>

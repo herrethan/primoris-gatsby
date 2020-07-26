@@ -38,7 +38,7 @@ image: boys-looking.jpg
     120 Washington Ave<br>
     Westwood, NJ 07675<br><br><br>
     <div id="map" style="width:100%;height:350px;">
-      <a href="https://www.google.com/maps/place/Primoris+Academy/@40.9926179,-74.0387749,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2e57b91b82aa1:0xad394ae9fedb0ca8!8m2!3d40.9926179!4d-74.0365862?hl=en-US" target="_blank">
+      <a href="https://www.google.com/maps/place/Primoris+Academy/@40.9926179,-74.0387749,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2e57b91b82aa1:0xad394ae9fedb0ca8!8m2!3d40.9926179!4d-74.0365862?hl=en-US" target="_blank" title="Open in google maps">
         <img src="/img/map.jpg" alt="Primoris Academy in Westwood NJ">
       </a>
     </div>

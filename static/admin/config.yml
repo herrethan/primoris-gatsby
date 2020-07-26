@@ -5,6 +5,7 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+collections:
   - label: 'Page'
     name: 'page'
     folder: 'content/page'

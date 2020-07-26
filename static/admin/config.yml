@@ -10,7 +10,6 @@ collections:
     name: 'blog'
     folder: 'content/blog'
     create: true
-    slug: 'index'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
@@ -26,7 +25,6 @@ collections:
     name: 'page'
     folder: 'content/page'
     create: true
-    slug: 'index'
     media_folder: ''
     public_folder: ''
     path: '{{name}}/index'
@@ -44,7 +42,6 @@ collections:
     folder: 'content/calendar'
     label_singular: 'Event'
     create: true
-    slug: 'index'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'

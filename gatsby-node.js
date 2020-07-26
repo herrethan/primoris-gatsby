@@ -57,7 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const source = post.node.fields.source;
     let component = templates[source];
 
-    // Use special calendar-index as main calendar page
+    // Use special calendar-index template as main calendar page
     if (slug === '/calendar/') {
       component = templates['calendar-index'];
     }
@@ -80,11 +80,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const parent = getNode(node.parent);
     const source = parent && parent.sourceInstanceName;
+    const name = node.frontmatter && node.frontmatter.name;
     let slug = createFilePath({ node, getNode });
 
     // Prepend /calendar only to source:calendar event entries
     if (source === 'calendar') {
       slug = `/calendar${slug}`;
+    }
+
+    // If slash exists in page name, generate a subnav page slug off it
+    if (name && name.indexOf('/') > -1) {
+      slug = `/${name.split('/').filter(text => !!text).join('/')}/`;
     }
 
     createNodeField({

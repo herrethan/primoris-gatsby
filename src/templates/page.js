@@ -1,13 +1,26 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { words, isEqual } from 'lodash';
 
-const PageTemplate = ({ data }) => {
+const PageTemplate = ({ data, location }) => {
   const page = data.markdownRemark;
   const image = page.frontmatter.image && page.frontmatter.image.publicURL;
+  const pathTerms = words(location.pathname);
+  let subPages = [];
 
+  if (pathTerms.length > 1) {
+    subPages = data.allMarkdownRemark && data.allMarkdownRemark.edges.map(
+      edge => ({
+        slug: edge?.node?.fields?.slug,
+        title: edge?.node?.frontmatter?.title
+      })
+    ).filter(node => words(node.slug)[0] === pathTerms[0]);    
+  }
+
+  console.log(location);
   return (
     <>
       <SEO
@@ -19,7 +32,28 @@ const PageTemplate = ({ data }) => {
           <h1 className="uppercase">{page.frontmatter.title}</h1>
         </div>
       </Header>
-      {page && <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />}
+
+      {subPages.length > 0 && (
+        <main className="content">
+          <div className="row">
+            <div className="column medium-3">
+              <h1 className="capitalize">{pathTerms[0]}</h1>
+              <ul className="content-subnav">
+                {subPages.map(subpage => (
+                  <li key={subpage.slug} className={isEqual(words(subpage.slug), pathTerms) ? 'active' : ''}>
+                    <h3><Link to={subpage.slug}>{subpage.title}</Link></h3>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="column medium-9" dangerouslySetInnerHTML={{ __html: page.html }}></div>
+          </div>
+        </main> 
+      )}
+
+      {subPages.length === 0 && (
+        <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />
+      )}
       <Footer />
     </>
   )
@@ -37,6 +71,18 @@ export const pageQuery = graphql`
         description
         image {
           publicURL
+        }
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }

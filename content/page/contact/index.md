@@ -37,28 +37,10 @@ image: boys-looking.jpg
     <h1>Visit Us</h1>
     120 Washington Ave<br>
     Westwood, NJ 07675<br><br><br>
-    <div id="map" style="width:100%;height:350px;"></div>
+    <div id="map" style="width:100%;height:350px;">
+      <a href="https://www.google.com/maps/place/Primoris+Academy/@40.9926179,-74.0387749,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2e57b91b82aa1:0xad394ae9fedb0ca8!8m2!3d40.9926179!4d-74.0365862?hl=en-US" target="_blank">
+        <img src="img/map.jpg" alt="Primoris Academy in Westwood NJ">
+      </a>
+    </div>
   </div>
 </div>
-
-<script>
-  var drawMap = function(){
-    var latlng = {lat: 40.9926178, lng: -74.0365862};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 13,
-      center: latlng,
-      streetViewControl: false,
-      mapTypeControl: false,
-      styles: [{
-        "featureType": "landscape.natural.terrain",
-        "stylers": [{ "visibility": "on" }]
-      }]
-    });
-    var marker = new google.maps.Marker({
-      position: latlng,
-      map: map
-    });
-  }
-</script>
-
-<script async defer src="//maps.googleapis.com/maps/api/js?v=3&libraries=places&callback=drawMap&key=AIzaSyD-wn1GNk7-ILhN23ZTBHacnT3T3WQRzY4"></script>

@@ -4,9 +4,9 @@ title: Partner with Us
 date: 2020-07-26T04:21:14.594Z
 ---
 
-<h1>Partner with us</h1>
+# Partner with us
 
-<p>If you believe your organization's mission or goals align with ours, we'd love to hear from you!</p>
+If you believe your organization's mission or goals align with ours, we'd love to hear from you!
 
 <form class="contact-form" name="Partner with us" method="POST" netlify-honeypot="legit" data-netlify="true">
   <input type="hidden" name="form-name" value="Contact us" />

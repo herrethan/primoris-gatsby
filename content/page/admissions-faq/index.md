@@ -30,4 +30,5 @@ image: ground-mural.jpg
        (917) 570-5735  
 
 7. **IS THE SCHOOL RELIGIOUSLY AFFILIATED?**
+
    The school is not religiously affiliated and welcomes students of all faiths. We respect and appreciate diversity within our school

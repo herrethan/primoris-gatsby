@@ -4,8 +4,8 @@ title: Faq
 date: 2020-07-23T04:10:52.224Z
 image: ground-mural.jpg
 ---
-1. **DO YOU HAVE AN APPLICATION DEADLINE? WHAT ABOUT AN APPLICATION FEE?**
-   <p>Admissions are rolling and our applications do not require a fee.</p>
+1. <p>**DO YOU HAVE AN APPLICATION DEADLINE? WHAT ABOUT AN APPLICATION FEE?**
+   Admissions are rolling and our applications do not require a fee.</p>
 2. **WHAT IS THE AVERAGE CLASS SIZE?**
    Classes average 7-8 students, and the maximum class size is 12 students. Class sizes are kept small to maximize close attention to each student.
 3. **DO YOU PROVIDE BUSING OR TRANSPORTATION?**

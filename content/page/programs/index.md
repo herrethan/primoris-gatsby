@@ -4,8 +4,7 @@ title: Programs
 date: 2020-07-26T03:48:10.547Z
 image: robotics-soulder.jpg
 ---
-
-#School Programs
+\#School Programs
 
 <div class="row">
   <div class="column medium-4">
@@ -16,7 +15,7 @@ image: robotics-soulder.jpg
   </div>
   <div class="column medium-4">
     <h3>ELEMENTARY/MIDDLE SCHOOL</h3>
-    <i>Ages 5-13</i>
+    <i>Ages 6-12</i>
     <p>A lively and exciting environment for continuous exploration, growth, and confidence-building</p>
     <a href="/programs/middle-school">Learn More →</a>
   </div>
@@ -28,9 +27,9 @@ image: robotics-soulder.jpg
   </div>
 </div>
 
----
+- - -
 
-#Programs Open to the Public
+\#Programs Open to the Public
 (No testing required)
 
 <div class="row">
@@ -40,14 +39,14 @@ image: robotics-soulder.jpg
   </div>
 </div>
 
----
+- - -
 
-#Community Events
+\#Community Events
 
 <div class="row">
   <div class="column medium-6">
     <h3>SOLVED BY GIRLS CONFERENCE</h3>
-    <p>Solved by Girls, established in 2017, is New Jersey's first-ever STEM conference for upper elementary (grades 3-5) and middle school (grades 6-8) girls. The conference offers third to eighth graders the opportunity to participate in a team Olympiad of STEM challenges, meet other like-minded girls, and hear from inspiring guest speakers. SBG aims to encourage young girls' interest in STEM studies and professions.
+    <p>Solved by Girls, established in 2017, is New Jersey's first-ever STEM conference for upper elementary (grades 3-5) and middle school (grades 6-8) girls. The conference offers third to eighth graders the opportunity to participate in a team Olympiad of STEM challenges, meet other like-minded girls, and hear from inspiring guest speakers. SBG aims to encourage young girls' interest in STEM studies and professions.  Please email <a href="mailto:SBG@primorisacademy.org">sbg@primorisacademy.org</a> for more information.</p>
   </div>
   <div class="column medium-6">
     <img src="/img/solved-by-girls.jpg">

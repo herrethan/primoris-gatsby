@@ -6,8 +6,7 @@ image: legos-carrying-rocks.jpg
 ---
 **Philosophy & Approach**
 
-**`<p>`**
-Primoris Academy was established on the firm belief that school should fuel, not stifle, a child's curiosity. We also believe that a learning environment befitting their level incites children to perform and develop at their true potential. Therefore, at Primoris, students are placed based on ability rather than by age, and experiential learning is at the core of our approach. Our program provides:
+<p>Primoris Academy was established on the firm belief that school should fuel, not stifle, a child's curiosity. We also believe that a learning environment befitting their level incites children to perform and develop at their true potential. Therefore, at Primoris, students are placed based on ability rather than by age, and experiential learning is at the core of our approach. Our program provides:
 
 * early exposure to all subjects (e.g. world history, foreign language, STEM) starting in our youngest grades;
 * frequent cross-curricular connections and interdisciplinary activities/assignments;
@@ -16,7 +15,7 @@ Primoris Academy was established on the firm belief that school should fuel, not
 
 Through an accelerated, rigorous program that emphasizes creativity and collaboration, we cultivate our students' ability to think critically and dream big.
 
-*Primoris Academy is a non-profit, independent, private school certified by the State of New Jersey and accredited by AdvancED.* `</p>`
+*Primoris Academy is a non-profit, independent, private school certified by the State of New Jersey and accredited by AdvancED.* </p>
 
 - - -
 

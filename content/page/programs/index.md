@@ -4,7 +4,7 @@ title: Programs
 date: 2020-07-26T03:48:10.547Z
 image: robotics-soulder.jpg
 ---
-\#School Programs
+**School Programs**
 
 <div class="row">
   <div class="column medium-4">
@@ -29,7 +29,7 @@ image: robotics-soulder.jpg
 
 - - -
 
-\#Programs Open to the Public
+**Programs Open to the Public**
 (No testing required)
 
 <div class="row">
@@ -41,7 +41,7 @@ image: robotics-soulder.jpg
 
 - - -
 
-\#Community Events
+**Community Events**
 
 <div class="row">
   <div class="column medium-6">

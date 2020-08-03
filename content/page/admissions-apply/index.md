@@ -4,7 +4,7 @@ title: Apply
 date: 2020-07-23T04:07:21.995Z
 image: pick-me.jpg
 ---
-In evaluating each candidate, the Admissions Committee considers many factors throughout a holistic review process. Overall, we look for bright individuals who demonstrate intellectual curiosity and passion; an innate drive to learn, explore, question, and tinker; and creativity or inventiveness. We do not rely solely on grades, IQ tests, or other standardized testing. We evaluate the candidate's fit for and potential contribution to the distinctive Primoris experience.
+In evaluating each candidate, the Admissions Committee considers many factors throughout a holistic review process. Overall, we look for individuals who demonstrate intellectual curiosity and passion; an innate drive to learn, explore, question, and tinker; and creativity or inventiveness. We do not rely solely on grades, IQ tests, or other standardized testing. We evaluate the candidate's fit for and potential contribution to the distinctive Primoris experience.
 To be considered for admission, please follow the steps below.
 
 **1. SCHEDULE A PRIVATE TOUR OF THE SCHOOL (OPTIONAL)**

@@ -14,7 +14,7 @@ You can reach us via phone at (201) 722-1000, or via email at [admissions@primor
 Download and complete the relevant application below. Send completed applications to [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org).
 
 <p style="margin-top:40px;margin-bottom:40px">
-<a class="submit-button" target="_blank" href="/img/ElementarySchoolApplication_Form.pdf">ELEMENTARY SCHOOL</a>
+<a class="submit-button" target="_blank" href="/img/Elementary-School-Application_Form.pdf">ELEMENTARY SCHOOL</a>
 <a class="submit-button" target="_blank" href="/img/MiddleAndHighSchoolApplication.pdf">MIDDLE/HIGH SCHOOL</a>
 </p>
 

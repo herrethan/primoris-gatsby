@@ -20,6 +20,15 @@ Through an accelerated, rigorous program that emphasizes creativity and collabor
 - - -
 
 **Mission & Vision**
+
 </p>Our mission is to foster children into thoughtful, inquisitive individuals with bold aspirations. Owing to a joyful, personal, and open education, our students will take natural interest and leadership in their school, local, and global communities.
 
 As an innovative educational institution, we challenge educators both within and beyond our school to redefine what a meaningful education constitutes in an era of rapid globalization and technological development. We challenge the world to rethink how they view young people, and young people how they view themselves—about what is possible, by whom, and when or at what age. Finally, we pledge to actively identify and create the educational opportunities greatly needed, such as STEM/STEAM programs for young girls and financial scholarships for students who may have unequal access to resources.</p>
+
+
+
+{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "primorisacademy.org",
+  "Id": "b20afd6d-1e5b-4051-8f49-409032d22ebc"
+}

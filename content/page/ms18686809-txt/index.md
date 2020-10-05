@@ -1,6 +1,6 @@
 ---
-name: ms18686809.txt.
-title: ms18686809.txt.
+name: ms18686809.txt
+title: ms18686809.txt
 date: 2020-10-05T13:03:28.608Z
 ---
 {

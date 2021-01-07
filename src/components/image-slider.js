@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 const ImageSlider = ({ interval=4000, images }) => {
-  const [index, setIndex] = useState(Math.floor(Math.random() * images.length));
+  const [index, setIndex] = useState(() => Math.floor(Math.random() * images.length));
   const [isAuto, setIsAuto] = useState(true);
 
-  const goForward = () => index + 1 >= images.length ? setIndex(0) : setIndex(index + 1);
-  const goBackward = () => index - 1 < 0 ? setIndex(images.length - 1) : setIndex(index - 1);
+  const goForward = () => setIndex(curr => curr + 1 >= images.length ? 0 : curr + 1);
+  const goBackward = () => setIndex(curr => curr - 1 < 0 ? images.length - 1 : curr - 1);
 
   const handleForward = () => {
     setIsAuto(false);
@@ -18,12 +18,14 @@ const ImageSlider = ({ interval=4000, images }) => {
   }
 
   useEffect(() => {
-    const autoAdvancer = setTimeout(goForward, interval);
+    const autoAdvancer = setInterval(goForward, interval);
     if (!isAuto) {
-      clearTimeout(autoAdvancer);
+      clearInterval(autoAdvancer);
     }
-    return () => clearTimeout(autoAdvancer);
+    return () => clearInterval(autoAdvancer);
   }, [isAuto, interval]);
+
+  console.log(index)
 
   return (
     <>

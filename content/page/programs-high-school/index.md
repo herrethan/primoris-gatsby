@@ -9,7 +9,7 @@ Our high school is a close-knit cohort of mature, driven peers who challenge and
 We offer three academic tracks, each of which is highly academically rigorous, which enables your adolescent child to progress towards his or her goals at a pace that's both comfortable and appropriately challenging.
 
 
-<img src="/img/primoris-hs-comparison.jpg" class="full-screen-toggle" alt="Comparison of three high school academic tracks offered by Primoris"/>
+<img src="/img/primoris-hs-comparison.jpg" class="full-screen-toggle" alt="Comparison of three high school academic tracks offered by Primoris" style="margin-top:20px; margin-bottom: 20px"/>
 
 ##Traditional with Intensive AP
 

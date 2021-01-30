@@ -1,1 +1,6 @@
 import "./src/styles/layout.css"
+import "./src/styles/colors.css"
+import "./src/styles/elements.css"
+import "./src/styles/page.css"
+import "./src/styles/full-screen-toggle.css"
+import "./src/styles/tables.css"

@@ -25,8 +25,6 @@ const ImageSlider = ({ interval=4000, images }) => {
     return () => clearInterval(autoAdvancer);
   }, [isAuto, interval]);
 
-  console.log(index)
-
   return (
     <>
       <div className="slideshow">

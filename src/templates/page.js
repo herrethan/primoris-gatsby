@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { isEqual } from 'lodash';
+import { initFullScreenToggle } from "../components/full-screen-toggle";
 
 const pageTerms = (path) => path.split('/').filter(term => !!term);
 
@@ -21,7 +22,9 @@ const PageTemplate = ({ data, location }) => {
       })
     ).filter(node => pageTerms(node.slug).length > 1 && pageTerms(node.slug)[0] === pathTerms[0]);    
   }
-
+  
+  useEffect(initFullScreenToggle, []);
+  
   return (
     <>
       <SEO

@@ -4,30 +4,55 @@ title: Faq
 date: 2020-07-23T04:10:52.224Z
 image: ground-mural.jpg
 ---
-1. **DO YOU HAVE AN APPLICATION DEADLINE? WHAT ABOUT AN APPLICATION FEE?** 
+##How do I arrange for a tour?
+After submitting an application, you will receive an email or phone call inviting you to make an appointment for an individual tour.
 
-   Admissions are rolling and our applications do not require a fee.
-2. **WHAT IS THE AVERAGE CLASS SIZE?**
+##Is there an application deadline?
+Primoris Academy has rolling admissions so there is no deadline to submit an application.
 
-   Classes average 7-8 students, and the maximum class size is 12 students. Class sizes are kept small to maximize close attention to each student.
-3. **DO YOU PROVIDE BUSING OR TRANSPORTATION?**
+##What grades or age range does Primoris offer?
+Primoris Academy serves students in K- 12th grade.
 
-   Primoris Academy currently does not offer any transportation. The decision to offer busing or transportation lies with your local school district. If the district offers transportation services, you are eligible for some level of reimbursement from the district, county, or state.
-4. **DO YOU OFFER ANY KIND OF BEFORE-SCHOOL OR AFTER-SCHOOL CARE?**
+##What is your tuition?
+At Primoris, our students are placed into classes based on their ability instead of by age. Therefore, the final tuition amount depends on which class the child is placed in. 
 
-   Before-care is available Monday through Friday, 7:30 a.m. to 8:10 a.m. After-care is available Monday through Friday, 3:00 p.m. to 5:30 p.m.
-5. **DO YOU OFFER A LUNCH PLAN?**
+##What is the student to teacher ratio/ average class size?
+Classes average 7-8 students, and the maximum class size is 12 students. Class sizes are kept small to maximize close attention to each student.
 
-   Yes, we currently offer an optional lunch service five days a week.
-6. **WHERE CAN MY CHILD TAKE AN INTELLIGENCE TEST?**
+##Is there an application fee?
+There is no fee to apply to Primoris Academy.
 
-   We recommend the following licensed psychologist:
+##Do you offer financial aid?
+Yes, Primoris Academy offers financial aid on a case-by-case basis.
 
-   Dr. Michele Opper\
-   71 N. Franklin Turnpike, 2nd Floor, Suite 9\
-    Waldwick, NJ 07463\
-   [micheleopper@gmail.com](mailto:micheleopper@gmail.com)\
-   (917) 570-5735  
-7. **IS THE SCHOOL RELIGIOUSLY AFFILIATED?**
+##Do you offer before or after care?
+Before care is available 7:30 a.m. - 8:00 a.m. and after care is available 3:00-5:30 p.m. Monday-Friday.
 
-   The school is not religiously affiliated and welcomes students of all faiths. We respect and appreciate diversity within our school
+##Are you accredited?
+Primoris is accredited by AdvancedED (now Cognia).
+
+##Do you provide busing or transportation?
+Primoris Academy currently does not offer any transportation. The decision to offer busing or transportation lies with your local school district. If the district offers transportation services, you are eligible for some level of reimbursement from the district, county, or state.
+
+
+#Shadowing
+##What are shadow days?
+Shadow days are 3 consecutive days in which an applying student will attend Primoris Academy from 8 a.m. to 3 p.m.
+
+##When can I set up shadow days for my student?
+Shadow days are typically set up once we receive a completed application. 
+
+##What should I expect during my child's shadow days?
+Shadow students are encouraged to become a part of our student body and participate as much as they'd like! We ask that shadow students wear navy and white (our school colors) and bring snack, lunch, and a water bottle.
+
+##Is there a fee for shadow days?
+There is no fee for shadow days during the normal school year. If your student is shadowing during our summer program, there is a fee in the amount of the summer session.
+
+##What hours is the school day?
+Regular school day is from 8 a.m.-3 p.m. Doors open at 7:55 a.m.
+
+##What do I need to do after the shadow days?
+Once the shadow days are completed, the rest of the necessary application materials (test (IQ, ERB, or SSAT/ISEE), teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.
+
+#Summer Program
+Primoris offers a summer program from late June to early August for K-12. Our information is typically released in late January. If you would like to be notified, please add your email to our mailing list.

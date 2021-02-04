@@ -36,6 +36,7 @@ Primoris Academy currently does not offer any transportation. The decision to of
 
 
 <h1 style="margin-top:2em">Shadowing</h1>
+
 ###What are shadow days?
 Shadow days are 3 consecutive days in which an applying student will attend Primoris Academy from 8 a.m. to 3 p.m.
 

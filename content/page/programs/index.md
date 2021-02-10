@@ -35,7 +35,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-6">
     <h3>SUMMER PROGRAM</h3>
-    <p>Due to COVID-19, our summer program will be moved online for ages 7-12. Please email <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
+    <p>Please email <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
   </div>
 </div>
 

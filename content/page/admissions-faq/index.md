@@ -17,10 +17,10 @@ Primoris Academy serves students in K- 12th grade.
 At Primoris, our students are placed into classes based on their ability instead of by age. Therefore, the final tuition amount depends on which class the child is placed in. 
 
 ###What is the student to teacher ratio/ average class size?
-Classes average 7-8 students, and the maximum class size is 12 students. Class sizes are kept small to maximize close attention to each student.
+The maximum student to teacher ratio is 12:1. Classes average 7-8 students. Class sizes are kept small to maximize close attention to each student.
 
 ###Is there an application fee?
-There is no fee to apply to Primoris Academy.
+Primoris Academy has rolling admissions, so there is no deadline to submit an application.
 
 ###Do you offer financial aid?
 Yes, Primoris Academy offers financial aid on a case-by-case basis.
@@ -50,7 +50,7 @@ Shadow students are encouraged to become a part of our student body and particip
 There is no fee for shadow days during the normal school year. If your student is shadowing during our summer program, there is a fee in the amount of the summer session.
 
 ###What hours is the school day?
-Regular school day is from 8 a.m.-3 p.m. Doors open at 7:55 a.m.
+Our regular school day is from 8 a.m.-2:50 p.m. Doors open at 7:55 a.m.
 
 ###What do I need to do after the shadow days?
 Once the shadow days are completed, the rest of the necessary application materials (test (IQ, ERB, or SSAT/ISEE), teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.

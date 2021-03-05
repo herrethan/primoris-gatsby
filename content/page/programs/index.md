@@ -35,7 +35,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-6">
     <h3>SUMMER PROGRAM</h3>
-    <p>Please email <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
+    <p>Our summer program registration is now open! Find our summer program informational brochure and registration forms HERE! Please email <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
   </div>
 </div>
 

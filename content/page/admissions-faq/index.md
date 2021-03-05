@@ -56,3 +56,5 @@ Once the shadow days are completed, the rest of the necessary application materi
 
 <h1 style="margin-top:2em">Summer Program</h1>
 Primoris offers a summer program from late June to early August for K-12. Our information is typically released in late January. If you would like to be notified, please add your email to our mailing list.
+
+Check out [the brochure](/img/SummerProgram2021.pdf) for more information.

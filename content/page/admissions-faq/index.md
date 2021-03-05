@@ -55,8 +55,4 @@ Our regular school day is from 8 a.m.-2:50 p.m. Doors open at 7:55 a.m.
 Once the shadow days are completed, the rest of the necessary application materials (test (IQ, ERB, or SSAT/ISEE), teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.
 
 <h1 style="margin-top:2em">Summer Program</h1>
-Primoris offers a summer program from late June to early August. <!--StartFragment-->
-
-Check out our \[Summer Program brochure](/img/​SummerProgram2021.pdf) for more information.
-
-<!--EndFragment-->
+Primoris offers a summer program from late June to early August for K-12. Our information is typically released in late January. If you would like to be notified, please add your email to our mailing list.

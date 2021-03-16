@@ -79,6 +79,16 @@ const SEO = ({ description, lang, meta, title }) => {
         gtag('config', 'G-9Y8CVJ5ET0');
         `}
       </script>
+
+      {/* Global site tag (gtag.js) - Google Ads: 403734083 */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-403734083"></script>
+      <script>{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-403734083');
+        `}
+      </script>
     </Helmet>
   );
 }

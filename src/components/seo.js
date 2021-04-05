@@ -71,12 +71,12 @@ const SEO = ({ description, lang, meta, title }) => {
       ].concat(meta)}
     >
       {/* Global site tag (gtag.js) - Google Analytics */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y8CVJ5ET0"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191783247-1"></script>
       <script>{`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-9Y8CVJ5ET0');
+        gtag('config', 'UA-191783247-1');
         `}
       </script>
     </Helmet>

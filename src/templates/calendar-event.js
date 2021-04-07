@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import moment from 'moment';
+import GTM from "../components/gtm";
 
 const PageTemplate = ({ data }) => {
   const page = data.markdownRemark;
@@ -14,6 +15,7 @@ const PageTemplate = ({ data }) => {
         title={page.frontmatter.title}
         description={page.excerpt}
       />
+      <GTM />
       <Header />
       {page && (
         <main className="content">

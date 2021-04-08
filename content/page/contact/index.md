@@ -8,7 +8,7 @@ image: boys-looking.jpg
 <div class="row">
   <div class="column medium-7">
     <h1>Learn more</h1>
-    <form class="contact-form" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
+    <form id="learn-more" class="contact-form" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
       <input type="hidden" name="form-name" value="Learn more" />
       <div class="field text name required">
         <label>Student name<input name="student-name" required="" type="text" value="" /></label>

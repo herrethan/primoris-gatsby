@@ -1,0 +1,85 @@
+.contact-form .field {
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+.contact-form label {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 5px
+}
+
+.contact-form label .description {
+  color: var(--alto);
+  float: right
+}
+
+.contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]),.contact-form textarea,.contact-form select {
+  border: 1px solid var(--alto);
+  background-color: var(--alabaster);
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  outline: none;
+  width: 100%;
+  transition: all 0.3s ease-in-out
+}
+
+.contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]):focus,.contact-form textarea:focus,.contact-form select:focus {
+  background-color: white
+}
+
+.contact-form .required label:before {
+  content: '* '
+}
+
+.contact-form .options input {
+  display: inline-block
+}
+
+.contact-form .error-msg {
+  color: var(--trinidad)
+}
+
+.contact-form .alert {
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px
+}
+
+.contact-form .alert.success {
+  color: var(--mine-shaft);
+  background-color: #bde4cb
+}
+
+.contact-form .alert.failed {
+  color: var(--trinidad);
+  background-color: #ffebe5
+}
+
+.contact-form .select-arrow {
+  position: relative;
+}
+
+.contact-form .select-arrow select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+}
+
+.contact-form .select-arrow:after {
+  content: '^';
+  display: block;
+  font-family: 'brandon-regular';
+  font-size: 22px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  transform: rotate(180deg);
+}
+
+[data-show-when-checked="speak-with-parent"] {
+  margin-left: 20px
+}

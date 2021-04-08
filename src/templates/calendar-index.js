@@ -5,7 +5,6 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import moment from 'moment';
 import { partition } from 'lodash';
-import GTM from "../components/gtm";
 
 const CalendarIndexTemplate = ({ data }) => {
   const page = data.markdownRemark;
@@ -19,7 +18,6 @@ const CalendarIndexTemplate = ({ data }) => {
         title={page.frontmatter.title}
         description={page.excerpt}
       />
-      <GTM />
       <Header backgroundImg={image} height={image ? 500 : 100}>
         <div className="page-head-wrap">
           <h1 className="uppercase">{page.frontmatter.title}</h1>

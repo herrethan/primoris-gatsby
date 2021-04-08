@@ -6,7 +6,6 @@ import homePageBody from "../../content/home-page-body.yml";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import ImageSlider from '../components/image-slider';
-import GTM from "../components/gtm";
 
 const SiteIndex = () => {
   return (
@@ -15,7 +14,6 @@ const SiteIndex = () => {
         title={''}
         description="A vibrant and nurturing school for the passionately curious"
       />
-      <GTM />
       <Header height={700}>
         {slider && slider.images && slider.images.length && <ImageSlider interval={slider.interval * 1000} images={slider.images} />}
         <div className="page-head-wrap">

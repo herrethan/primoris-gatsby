@@ -5,7 +5,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { isEqual } from 'lodash';
 import { initFullScreenToggle } from "../components/full-screen-toggle";
-import GTM from "../components/gtm";
+import { initForms } from "../components/forms";
 
 const pageTerms = (path) => path.split('/').filter(term => !!term);
 
@@ -25,7 +25,10 @@ const PageTemplate = ({ data, location }) => {
   }
   
   useEffect(initFullScreenToggle, []);
-  
+
+  useEffect(() => {
+    if (page.frontmatter.title === 'Contact') initForms();
+  }, [page.frontmatter.title])
   
   return (
     <>
@@ -33,7 +36,6 @@ const PageTemplate = ({ data, location }) => {
         title={page.frontmatter.title}
         description={page.excerpt}
       />
-      <GTM />      
       <Header backgroundImg={image} height={image ? 500 : 100}>
         {!!image && !!page.frontmatter.title && (
           <div className="page-head-wrap">

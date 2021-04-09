@@ -62,6 +62,12 @@ image: boys-looking.jpg
         </div>
         <div>
           <label>
+            <input type="checkbox" id="shadow-days" name="interest" value="shadow-days">
+            Having my child experience the school via 3 “Shadow Days”
+          </label>
+        </div>
+        <div>
+          <label>
             <input type="checkbox" id="summer-program" name="interest" value="summer-program">
             Receiving the summer program information
           </label>
@@ -70,12 +76,6 @@ image: boys-looking.jpg
           <label>
             <input type="checkbox" id="newsletters" name="interest" value="newsletters">
             Receiving Primoris activity newsletters
-          </label>
-        </div>
-        <div>
-          <label>
-            <input type="checkbox" id="speak-with-admin" name="interest" value="speak-with-admin">
-            Speaking with an administrator
           </label>
         </div>
         <div>
@@ -100,8 +100,8 @@ image: boys-looking.jpg
         </div>
         <div>
           <label>
-            <input type="checkbox" id="shadow-days" name="interest" value="shadow-days">
-            Having my child experience the school via 3 “Shadow Days”
+            <input type="checkbox" id="speak-with-admin" name="interest" value="speak-with-admin">
+            Speaking with our curriculum designer
           </label>
         </div>
       </div>

@@ -51,6 +51,7 @@ collections:
           - label: 'Entries'
             name: 'entries'
             widget: 'list'
+            label_singular: 'entry'
             summary: '{{fields.question}}'
             fields:
               - { label: 'Question', name: 'question', widget: 'string' }

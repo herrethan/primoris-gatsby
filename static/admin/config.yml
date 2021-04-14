@@ -38,19 +38,17 @@ collections:
       - { label: 'Event detail', name: 'detail', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
 
-  - label: 'Faq'
-    name: 'faq'
-    summary: '{{fields.question}}'
-    files: 'content/faq.yml'
-      - label: 'FAQ'
-        widget: 'list'
-        fields:
-          - { label: 'Question', name: 'question', widget: 'string' }
-          - { label: 'Answer', name: 'answer', widget: 'string' }
-
   - label: 'Config'
     name: 'config'
     files:
+      - label: 'FAQ'
+        name: 'faq'
+        widget: 'list'
+        file: 'content/faq.yml'
+        summary: '{{fields.question}}'
+        fields:
+          - { label: 'Question', name: 'question', widget: 'string' }
+          - { label: 'Answer', name: 'answer', widget: 'string' }    
       - label: 'Home page slider'
         name: 'home-page-slider'
         file: 'content/home-page-slider.yml'

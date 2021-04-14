@@ -48,12 +48,13 @@ collections:
           - label: 'Header'
             name: 'header'
             widget: 'string'
-          - label: 'entries'
+          - label: 'Entries'
+            name: 'entries'
             widget: 'list'
             summary: '{{fields.question}}'
             fields:
               - { label: 'Question', name: 'question', widget: 'string' }
-              - { label: 'Answer', name: 'answer', widget: 'string' }  
+              - { label: 'Answer', name: 'answer', widget: 'markdown' }  
 
   - label: 'Config'
     name: 'config'

@@ -1,10 +1,23 @@
 header: Frequently asked questions
 entries:
   - question: How do I arrange for a tour?
-    answer: After submitting an application, you will receive an email or phone call
-      inviting you to make an appointment for an individual tour.
+    answer: After submitting an application, you will receive an email or phone call inviting you to make an appointment for an individual tour.
   - question: Is there an application deadline?
-    answer: >+
-      Primoris Academy has rolling admissions so there is no deadline to submit
-      an application.
+    answer: Primoris Academy has rolling admissions so there is no deadline to submit an application.
+  - question: What grades or age range does primoris offer?
+    answer: Primoris Academy serves students in K-12th grade.
+  - question: What is your tuition?
+    answer: At Primoris, our students are placed into classes based on their ability instead of by age. Therefore, the final tuition amount depends on which class the child is placed in.
+  - question: What is the student to teacher ratio/ average class size?
+    answer: The maximum student to teacher ratio is 12:1. Classes average 7-8 students. Class sizes are kept small to maximize close attention to each student.
+  - question: Is there an application fee?
+    answer: Primoris Academy has rolling admissions, so there is no deadline to submit an application.
+  - question: Do you offer financial aid?
+    answer: Yes, Primoris Academy offers financial aid on a case-by-case basis.
+  - question: Do you offer before or after care?
+    answer: Before care is available 7:30 a.m. - 8:00 a.m. and after care is available 3:00-5:30 p.m. Monday-Friday.
+  - question: Are you accredited?
+    answer: Primoris is accredited by AdvancedED (now Cognia).
+  - question: Do you provide busing or transportation?
+    answer: Primoris Academy currently does not offer any transportation. The decision to offer busing or transportation lies with your local school district. If the district offers transportation services, you are eligible for some level of reimbursement from the district, county, or state.
 

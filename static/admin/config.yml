@@ -42,9 +42,11 @@ collections:
     name: 'faq'
     widget: 'list'
     summary: '{{fields.question}}'
-    fields:
-      - { label: 'Question', name: 'question', widget: 'string' }
-      - { label: 'Answer', name: 'answer', widget: 'string' }
+    files: 'content/faq.yml'
+      - label: 'FAQ'
+        fields:
+          - { label: 'Question', name: 'question', widget: 'string' }
+          - { label: 'Answer', name: 'answer', widget: 'string' }
 
   - label: 'Config'
     name: 'config'

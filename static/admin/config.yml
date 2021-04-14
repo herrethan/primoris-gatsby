@@ -38,17 +38,26 @@ collections:
       - { label: 'Event detail', name: 'detail', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
 
+  - label: 'FAQ'
+    name: 'faq'
+    files:
+      - label: 'Frequently asked questions'
+        name: 'frequently-asked-questions'
+        file: 'content/faq.yml'
+        fields:
+          - label: 'Header'
+            name: 'header'
+            widget: 'string'
+          - label: 'entries'
+            widget: 'list'
+            summary: '{{fields.question}}'
+            fields:
+              - { label: 'Question', name: 'question', widget: 'string' }
+              - { label: 'Answer', name: 'answer', widget: 'string' }  
+
   - label: 'Config'
     name: 'config'
-    files:
-      - label: 'FAQ'
-        name: 'faq'
-        widget: 'list'
-        file: 'content/faq.yml'
-        summary: '{{fields.question}}'
-        fields:
-          - { label: 'Question', name: 'question', widget: 'string' }
-          - { label: 'Answer', name: 'answer', widget: 'string' }    
+    files: 
       - label: 'Home page slider'
         name: 'home-page-slider'
         file: 'content/home-page-slider.yml'

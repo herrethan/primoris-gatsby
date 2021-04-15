@@ -57,6 +57,46 @@ collections:
               - { label: 'Question', name: 'question', widget: 'string' }
               - { label: 'Answer', name: 'answer', widget: 'markdown' }  
 
+  - label: 'Tesimonials'
+    name: 'testimonials'
+    files:
+      - label: 'Parent testimonials'
+        name: 'parent-testimonials'
+        file: 'content/parent-testimonials.yml'
+        fields:
+          - label: 'Entries'
+            name: 'entries'
+            widget: 'list'
+            label_singular: 'entry'
+            summary: '{{fields.author}}'
+            fields:
+              - label: 'Stars'
+                name: 'stars'
+                widget: 'select'
+                default: '5'
+                options: ['1', '2', '3', '4', '5']
+              - { label: 'Date', name: 'date', widget: 'datetime' }
+              - { label: 'Author', name: 'author', widget: 'string' }
+              - { label: 'Post', name: 'post', widget: 'text' }  
+      - label: 'Student testimonials'
+        name: 'student-testimonials'
+        file: 'content/student-testimonials.yml'
+        fields:
+          - label: 'Entries'
+            name: 'entries'
+            widget: 'list'
+            label_singular: 'entry'
+            summary: '{{fields.author}}'
+            fields:
+              - label: 'Stars'
+                name: 'stars'
+                widget: 'select'
+                default: '5'
+                options: ['1', '2', '3', '4', '5']
+              - { label: 'Date', name: 'date', widget: 'datetime' }
+              - { label: 'Author', name: 'author', widget: 'string' }
+              - { label: 'Post', name: 'post', widget: 'text' }  
+
   - label: 'Config'
     name: 'config'
     files: 

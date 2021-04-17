@@ -1,6 +1,10 @@
 ---
 name: programs/middle-school
 title: Elementary and Middle School
+blurb: >-
+  *Ages 6-12*
+
+  A lively and exciting environment for continuous exploration, growth, and confidence-building
 date: 2020-07-25T03:49:45.175Z
 image: class-middleschool.jpg
 ---

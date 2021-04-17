@@ -58,7 +58,7 @@ collections:
               - { label: 'Question', name: 'question', widget: 'string' }
               - { label: 'Answer', name: 'answer', widget: 'markdown' }  
 
-  - label: 'Tesimonials'
+  - label: 'Testimonials'
     name: 'testimonials'
     files:
       - label: 'Parent testimonials'

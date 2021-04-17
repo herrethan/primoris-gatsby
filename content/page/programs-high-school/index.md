@@ -1,6 +1,10 @@
 ---
 name: programs/high-school
 title: High School
+blurb: >-
+  *Ages 13-18*
+
+  An incubator of passionate young people, abundant creativity, and once-in-a-lifetime opportunities
 date: 2020-07-26T03:46:15.252Z
 image: class-highschool.jpg
 ---

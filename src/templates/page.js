@@ -23,7 +23,7 @@ const PageTemplate = ({ data, location }) => {
       })
     ).filter(node => pageTerms(node.slug).length > 1 && pageTerms(node.slug)[0] === pathTerms[0]);    
   }
-  
+  console.log(page.frontmatter.blurb)
   useEffect(initFullScreenToggle, []);
 
   useEffect(() => {
@@ -79,6 +79,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        blurb
         image {
           publicURL
         }

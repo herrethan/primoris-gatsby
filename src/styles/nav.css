@@ -117,8 +117,7 @@ nav>ul>li {
 }
 
 nav>ul>li:hover .subnav {
-  opacity: 1;
-  transform: translateY(0)
+  display: block;
 }
 
 nav>ul>li:hover .subnav li {
@@ -126,7 +125,6 @@ nav>ul>li:hover .subnav li {
 }
 
 nav .subnav {
-  opacity: 0;
   display: none;
   position: absolute;
   top: 20px;
@@ -134,19 +132,12 @@ nav .subnav {
   width: 100%;
   padding: 10px;
   background-color: white;
-  transform: translateY(-10px);
-  transition: transform 0.2s
+  border-radius: 2px;
 }
 
 /* hack to fit progam titles on one line in subnav */
 nav a[href="/programs"] ~ .subnav {
-  width: 150%;
-}
-
-@media (min-width: 768px) {
-  nav .subnav {
-    display: block
-  }
+  width: 130%;
 }
 
 nav .subnav li {

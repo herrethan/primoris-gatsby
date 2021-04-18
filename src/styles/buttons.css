@@ -43,7 +43,7 @@ button.primary:focus,
 .button.primary:hover,
 .button.primary:focus {
   color: white;
-  filter: brightness(0.95);
+  background-color: var(--bondi-blue-dark);
 }
 
 button.secondary:hover,
@@ -55,5 +55,5 @@ button.primary.inverted:focus,
 .button.primary.inverted:hover,
 .button.primary.inverted:focus {
   color: var(--bondi-blue);
-  filter: brightness(0.95);
+  background-color: #fafafa;
 }

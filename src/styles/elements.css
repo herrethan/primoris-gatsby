@@ -35,7 +35,7 @@ a {
 }
 
 a:focus,a:hover {
-  filter: brightness(0.75)
+  color: var(--bondi-blue-dark);
 }
 
 h1 a,h2 a,h3 a {

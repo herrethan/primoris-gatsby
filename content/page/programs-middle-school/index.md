@@ -2,9 +2,8 @@
 name: programs/middle-school
 title: Elementary and Middle School
 blurb: >-
-  *Ages 6-12*
-
-  A lively and exciting environment for continuous exploration, growth, and confidence-building
+  <i>Ages 6-12</i>
+  <span style="font-weight:600; display:block">A lively and exciting environment for continuous exploration, growth, and confidence-building</span>
 date: 2020-07-25T03:49:45.175Z
 image: class-middleschool.jpg
 ---
@@ -26,11 +25,13 @@ Beyond academics, students develop routines, habits, and characteristics that re
 On Fridays, dubbed “Innovative Fridays,” we offer a wide range of electives for students to discover and cultivate their passions. Innovative Fridays are so called not only because they are innovative in nature, but also because they encourage innovation in students—these electives inspire students to apply their knowledge, explore different perspectives, make connections, and think outside the box.
 </div>
 </div>
+
+<p style="margin-top:40px">
+  <a class="button primary" href="/admissions/apply">Apply now</a>
+</p>
+
 <p class="row" style="margin-top:40px">
 <a href="/programs/pre-school" style="float:left">← To Pre-School</a>
 <a href="/programs/high-school" style="float:right">To High School →</a>
-</p>
-<p style="margin-top:40px; text-align: center;">
-  <a class="submit-button" href="/admissions/apply">Apply now</a>
 </p>
 

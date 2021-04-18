@@ -1,20 +1,20 @@
 ---
 name: contact
-title: Contact
+title: Contact us
 date: 2020-07-19T15:52:32.007Z
 image: boys-looking.jpg
 ---
 
-<div class="row">
+<div class="row" style="margin-bottom:40px">
   <div class="column medium-7">
-    <h1>Learn more</h1>
+    <h2>Learn more</h2>
     <form id="learn-more" class="contact-form" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
       <input type="hidden" name="form-name" value="Learn more" />
       <div class="field text name required">
         <label>Student name<input name="student-name" required="" type="text" value="" /></label>
       </div>
       <div class="field">
-        <h2>Parent or guardian info</h2>
+        <h4>Parent or guardian info</h4>
         <div class="required">
           <label>First name<input name="parent-first-name" required="" type="text" value="" /></label>
         </div>
@@ -47,7 +47,7 @@ image: boys-looking.jpg
         </label>
       </div>
       <div class="field">
-        <h2>I am interested in:</h2>
+        <h4>I am interested in:</h4>
         <div>
           <label>
             <input type="checkbox" id="apply" name="interest" value="apply">
@@ -108,11 +108,11 @@ image: boys-looking.jpg
       <p class="display-none">
         <label>Hey, are you too legit to quit? <input name="legit" /></label>
       </p>
-      <input id="learn-more-submit" class="submit" type="submit" value="Submit">
+      <input id="learn-more-submit" class="button primary" type="submit" value="Submit">
     </form>
   </div>
   <div class="column medium-5">
-    <h1>Visit Us</h1>
+    <h2>Visit Us</h2>
     Phone: (201) 722-1000<br />
     Fax: (201) 722-1001<br />
     120 Washington Ave<br />

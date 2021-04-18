@@ -34,7 +34,7 @@ Primoris is accredited by AdvancedED (now Cognia).
 ###Do you provide busing or transportation?
 Primoris Academy currently does not offer any transportation. The decision to offer busing or transportation lies with your local school district. If the district offers transportation services, you are eligible for some level of reimbursement from the district, county, or state.
 
-<h1 style="margin-top:2em">Shadowing</h1>
+<h2 style="margin-top:2em">Shadowing</h2>
 
 ###What are shadow days?
 Shadow days are 3 consecutive days in which an applying student will attend Primoris Academy from 8 a.m. to 3 p.m.
@@ -54,7 +54,7 @@ Our regular school day is from 8 a.m.-2:50 p.m. Doors open at 7:55 a.m.
 ###What do I need to do after the shadow days?
 Once the shadow days are completed, the rest of the necessary application materials (test (IQ, ERB, or SSAT/ISEE), teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.
 
-<h1 style="margin-top:2em">Summer Program</h1>
+<h2 style="margin-top:2em">Summer Program</h2>
 Primoris offers a summer program from late June to early August for K-12. Our information is typically released in late January. If you would like to be notified, please add your email to our mailing list.
 
 Check out [the brochure](/img/SummerProgram2021.pdf) for more information.

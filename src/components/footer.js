@@ -6,8 +6,17 @@ const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="footer align-center">
-      <div className="social-bar">
+    <footer className="footer">
+      <ul className="nav-links">
+        {navData && navData.footer && navData.footer.map(item => (
+          <li key={item.url}>
+            <Link to={item.url}>{item.title}</Link>
+          </li>
+        ))}
+        <li className="copyright">&copy; {year} Primoris Academy Inc. All rights reserved.</li>
+      </ul>
+      <div style={{flexGrow: 1}}></div>
+      <div className="socials">
         <a href="http://www.facebook.com/PrimorisAcademyOrg" title="facebook" target="_blank" rel="noreferrer">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="140 -189 15.5 30">
             <path d="M150.1-159v-13.7h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6h2.8v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2c-4.1,0-6.9,2.5-6.9,7v4
@@ -41,16 +50,6 @@ const Footer = () => {
           </svg>
         </a>
       </div>
-      <ul className="nav-links">
-        {navData && navData.footer && navData.footer.map(item => (
-          <li key={item.url}>
-            <Link to={item.url}>{item.title}</Link>
-          </li>
-        ))}
-      </ul>
-      <p className="copyright">
-        &copy; {year} Primoris Academy Inc. All rights reserved.
-      </p>
     </footer>
   );
 };

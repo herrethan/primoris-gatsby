@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'proxima-nova';
-    src: url(/fonts/proximanova-regular-webfont.eot?#iefix) format("embedded-opentype"),url(/fonts/proximanova-regular-webfont.woff) format("woff"),url(/fonts/proximanova-regular-webfont.woff2) format("woff2"),url(/fonts/proximanova-regular-webfont.ttf) format("truetype"),url(/fonts/proximanova-regular-webfont.svg#proximanova-regular-webfont) format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
+/* @font-face {
     font-family: 'brandon-light';
     src: url(/fonts/BrandonGrotesque-Light.eot?#iefix) format("embedded-opentype"),url(/fonts/BrandonGrotesque-Light.otf) format("opentype"),url(/fonts/BrandonGrotesque-Light.woff) format("woff"),url(/fonts/BrandonGrotesque-Light.ttf) format("truetype"),url(/fonts/BrandonGrotesque-Light.svg#Brandon-Light) format("svg");
     font-weight: normal;
@@ -20,13 +13,6 @@
 }
 
 @font-face {
-    font-family: 'brandon-regular';
-    src: url(/fonts/BrandonGrotesque-Regular.eot?#iefix) format("embedded-opentype"),url(/fonts/BrandonGrotesque-Regular.otf) format("opentype"),url(/fonts/BrandonGrotesque-Regular.woff) format("woff"),url(/fonts/BrandonGrotesque-Regular.ttf) format("truetype"),url(/fonts/BrandonGrotesque-Regular.svg#Brandon-Regular) format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-
-@font-face {
     font-family: 'brandon-regular-italic';
     src: url(/fonts/BrandonGrotesque-RegularItalic.eot?#iefix) format("embedded-opentype"),url(/fonts/BrandonGrotesque-RegularItalic.otf) format("opentype"),url(/fonts/BrandonGrotesque-RegularItalic.woff) format("woff"),url(/fonts/BrandonGrotesque-RegularItalic.ttf) format("truetype"),url(/fonts/BrandonGrotesque-RegularItalic.svg#Brandon-RegularItalic) format("svg");
     font-weight: normal;
@@ -36,6 +22,13 @@
 @font-face {
     font-family: 'brandon-black';
     src: url(/fonts/BrandonGrotesque-Black.eot?#iefix) format("embedded-opentype"),url(/fonts/BrandonGrotesque-Black.otf) format("opentype"),url(/fonts/BrandonGrotesque-Black.woff) format("woff"),url(/fonts/BrandonGrotesque-Black.ttf) format("truetype"),url(/fonts/BrandonGrotesque-Black.svg#Brandon-Black) format("svg");
+    font-weight: normal;
+    font-style: normal
+} */
+
+@font-face {
+    font-family: 'brandon-regular';
+    src: url(/fonts/BrandonGrotesque-Regular.eot?#iefix) format("embedded-opentype"),url(/fonts/BrandonGrotesque-Regular.otf) format("opentype"),url(/fonts/BrandonGrotesque-Regular.woff) format("woff"),url(/fonts/BrandonGrotesque-Regular.ttf) format("truetype"),url(/fonts/BrandonGrotesque-Regular.svg#Brandon-Regular) format("svg");
     font-weight: normal;
     font-style: normal
 }

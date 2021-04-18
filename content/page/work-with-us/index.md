@@ -3,7 +3,7 @@ name: work with us
 title: Work with us
 date: 2020-07-26T04:27:15.299Z
 ---
-# Open positions
+## Open positions
 
 If you're excited about Primoris and want to work with us, tell us a bit about yourself and let's discuss! We look forward to hearing from you.
 

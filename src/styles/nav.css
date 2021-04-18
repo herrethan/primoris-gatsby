@@ -1,0 +1,265 @@
+nav {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 10;
+  height: 60px;
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.12),0px 3px 4px 0px rgba(0,0,0,0.075),0px 1px 8px 0px rgba(0,0,0,0.05);
+}
+
+@media (min-width: 768px) {
+  nav {
+    height: auto;
+  }
+}
+
+.site-title {
+  font-family: 'brandon-regular';
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  letter-spacing: 1px;
+  max-width: 240px;
+  font-size: 18px;
+  font-weight: normal;
+  top: 20px;
+  left: 10px
+}
+
+@media (min-width: 768px) {
+  .site-title {
+    top: 20px;
+    left: 20px
+  }
+}
+
+.site-title a {
+  color: var(--tundora);
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  filter: brightness(0.9)
+}
+
+.site-logo {
+  float: left;
+  width: 30px;
+  margin-right: 5px;
+  position: relative;
+  top: -10px
+}
+.site-logo ~ * {
+  display: none;
+}
+/* hide "Primoris Academy" text until there is room to show it */
+@media (min-width: 900px) {
+  .site-logo ~ * {
+    display: inline;
+  }
+}
+
+.nav-links {
+  color: white;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    color: var(--bondi-blue);
+  }
+  li.cta {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    margin-right: -10px;
+  }
+}
+
+.nav-links a {
+  text-decoration: none;
+  position: relative;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .05em;
+}
+
+.nav-links a:focus,.nav-links a:hover {
+  color: inherit
+}
+
+nav>ul, nav>ul>li svg {
+  display: none
+}
+
+@media (min-width: 768px) {
+  nav>ul {
+    display:block;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 20px 30px;
+  }
+  nav>ul>li svg {
+    display: inline;
+    margin-left: 5px;
+  }
+}
+
+nav>ul>li {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px
+}
+
+nav>ul>li:hover .subnav {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+nav>ul>li:hover .subnav li {
+  height: auto
+}
+
+nav .subnav {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  transform: translateY(-10px);
+  transition: transform 0.2s
+}
+
+/* hack to fit progam titles on one line in subnav */
+nav a[href="/programs"] ~ .subnav {
+  width: 150%;
+}
+
+@media (min-width: 768px) {
+  nav .subnav {
+    display: block
+  }
+}
+
+nav .subnav li {
+  height: 1px;
+  display: block
+}
+
+nav .subnav a:focus,nav .subnav a:hover {
+  text-decoration: underline
+}
+
+@media (max-width: 768px) {
+  .nav-opened nav {
+    z-index: 10
+  }
+
+  .nav-opened nav>ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-color: var(--mine-shaft);
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 15px;
+    padding-top: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    z-index: 10;
+  }
+
+  .nav-opened nav>ul li {
+    display: block;
+    animation: reo-fade-in .3s forwards;
+    -webkit-animation: reo-fade-in .3s forwards;
+    margin-bottom: 20px
+  }
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  user-select: none;
+  width: 22px;
+  height: 22px;
+  z-index: 100
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none
+  }
+}
+
+.hamburger .top-bun,.hamburger .meat,.hamburger .bottom-bun {
+  width: 22px;
+  height: 2px;
+  background-color: var(--bondi-blue);
+  -webkit-transition: -webkit-transform .1s 0s ease-in-out,top .1s .1s ease-in-out;
+  -moz-transition: -moz-transform .1s 0s ease-in-out,top .1s .1s ease-in-out;
+  transition: transform .1s 0s ease-in-out,top .1s .1s ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 0;
+  right: 0
+}
+
+.hamburger .meat {
+  -webkit-transition: opacity 0s .15s linear;
+  -moz-transition: opacity 0s .15s linear;
+  -ms-transition: opacity 0s .15s linear;
+  -o-transition: opacity 0s .15s linear;
+  transition: opacity 0s .15s linear;
+  top: 7px
+}
+
+.hamburger .bottom-bun {
+  top: 14px
+}
+
+.nav-opened .hamburger .top-bun,.nav-opened .hamburger .bottom-bun {
+  background-color: white;
+  -webkit-transition: top .1s .1s ease-in-out,-webkit-transform .1s .2s ease-in-out;
+  -moz-transition: top .1s .1s ease-in-out,-moz-transform .1s .2s ease-in-out;
+  -ms-transition: top .1s .1s ease-in-out,-ms-transform .1s .2s ease-in-out;
+  transition: top .1s .1s ease-in-out,transform .1s .2s ease-in-out
+}
+
+.nav-opened .hamburger .top-bun {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 7px
+}
+
+.nav-opened .hamburger .meat {
+  opacity: 0
+}
+
+.nav-opened .hamburger .bottom-bun {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 7px
+}

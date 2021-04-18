@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import navData from "../../content/navigation.yml";
+import ChevronDown from "./chevron";
 
 const Header = ({ backgroundImg, height, children }) => {
   const [navOpened, setNavOpened] = useState(false);
@@ -14,14 +15,14 @@ const Header = ({ backgroundImg, height, children }) => {
 
       {children}
 
-      <h1 className="site-title">
-        <Link to="/">
-          <img className="site-logo" src="/img/p-shadow.png" alt="" />
-          <span>Primoris Academy</span>
-        </Link>
-      </h1>
 
       <nav>
+        <h1 className="site-title">
+          <Link to="/">
+            <img className="site-logo" src="/img/p-shadow.png" alt="" />
+            <span>Primoris Academy</span>
+          </Link>
+        </h1>
         <a className="hamburger" onClick={toggleNav}>
           <span className="top-bun"></span>
           <span className="meat"></span>
@@ -30,7 +31,10 @@ const Header = ({ backgroundImg, height, children }) => {
         <ul className="nav-links">
           {navData && navData.main && navData.main.map(item => (
             <li key={item.url}>
-              <Link to={item.url}>{item.title}</Link>
+              <Link to={item.url}>
+                {item.title}
+                {item.subnav && <ChevronDown />}
+              </Link>
               {item.subnav && (
                 <ul className="subnav">
                   {item.subnav.map(subitem => (
@@ -42,6 +46,11 @@ const Header = ({ backgroundImg, height, children }) => {
               )}
             </li>
           ))}
+          <li className="cta">
+            <Link to="/contact" className="primary button">
+              Inquire
+            </Link>
+          </li>
         </ul>
       </nav>
     </header >

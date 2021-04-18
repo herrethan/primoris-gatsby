@@ -1,0 +1,59 @@
+button.primary,
+.button.primary {
+  padding: 0.75em 2.5em;
+  border-radius: 3em;
+  letter-spacing: 0.05em;
+  border: none;
+  color: white;
+  background-color: var(--bondi-blue);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+
+button.primary.inverted,
+.button.primary.inverted {
+  color: var(--bondi-blue);
+  background-color: white;
+}
+
+button.secondary,
+.button.secondary {
+  padding: 0.75em 2.5em;
+  border-radius: 3em;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--bondi-blue);
+  color: var(--bondi-blue);
+  background-color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+
+button.primary:hover,
+button.primary:focus,
+.button.primary:hover,
+.button.primary:focus {
+  color: white;
+  filter: brightness(0.95);
+}
+
+button.secondary:hover,
+button.secondary:focus,
+button.primary.inverted:hover,
+button.primary.inverted:focus,
+.button.secondary:hover,
+.button.secondary:focus,
+.button.primary.inverted:hover,
+.button.primary.inverted:focus {
+  color: var(--bondi-blue);
+  filter: brightness(0.95);
+}

@@ -3,6 +3,13 @@ main:
     url: /about
   - title: Programs
     url: /programs
+    subnav:
+      - title: High school
+        url: /programs/high-school
+      - title: Middle school
+        url: /programs/middle-school
+      - title: Pre school
+        url: /programs/pre-school
   - title: Admissions
     url: /admissions/apply
     subnav:

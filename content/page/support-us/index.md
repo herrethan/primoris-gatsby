@@ -3,7 +3,7 @@ name: support us
 title: Support us
 date: 2020-07-26T04:25:02.687Z
 ---
-# Primoris Academy is a 501(c)(3) non-profit organization and your donation is tax-deductible.
+## Primoris Academy is a 501(c)(3) non-profit organization and your donation is tax-deductible.
 
 Gifts in all amounts are deeply appreciated.
 

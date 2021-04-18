@@ -1,26 +1,38 @@
 entries:
   - stars: "5"
     date: 2021-01-05T21:54:32.803Z
-    author: JK
+    avatar: /img/avatar-josh.jpg
+    author: Josh Kindler
+    caption: Heading to The Univercity of Chicago
     post: In my six years of enrollment, Primoris Academy gave more to me than I
-      ever could have imagined. The sense of community and closeness at Primoris
-      is unlike anywhere else. Learning day after day, year after year, with the
-      same tight-knit group of students fostered deep friendships and a
-      completely welcoming environment that made coming to school every day
-      something I genuinely looked forward to. Continuing to learn under the
-      same deeply passionate teachers, as well, meant my classmates and I
-      received an education better suited to each of us individually, while
-      simultaneously developing meaningful and long-lasting relationships with
-      our teachers-many of whom I am certain I will maintain a close connection
-      with into college and my career. Academically, Primoris provided
-      tremendous flexibility to pursue my passion in any way I chose, allowing
-      me to take classes I was deeply and specifically passionate about, found
-      school clubs and initiatives to enrich the learning experience of my
-      classmates and I, and conduct my own field research under the mentorship
-      of an industry expert. Primoris Academy gave me the incredible opportunity
-      to attend school with my closest friends, learn from highly qualified
-      teachers that truly care about their students, and pursue my interests
-      with zeal and freedom, and this is something I am immensely thankful for.
+      ever could have imagined. 
+      # The sense of community and closeness at Primoris
+      # is unlike anywhere else. Learning day after day, year after year, with the
+      # same tight-knit group of students fostered deep friendships and a
+      # completely welcoming environment that made coming to school every day
+      # something I genuinely looked forward to. Continuing to learn under the
+      # same deeply passionate teachers, as well, meant my classmates and I
+      # received an education better suited to each of us individually, while
+      # simultaneously developing meaningful and long-lasting relationships with
+      # our teachers-many of whom I am certain I will maintain a close connection
+      # with into college and my career. Academically, Primoris provided
+      # tremendous flexibility to pursue my passion in any way I chose, allowing
+      # me to take classes I was deeply and specifically passionate about, found
+      # school clubs and initiatives to enrich the learning experience of my
+      # classmates and I, and conduct my own field research under the mentorship
+      # of an industry expert. Primoris Academy gave me the incredible opportunity
+      # to attend school with my closest friends, learn from highly qualified
+      # teachers that truly care about their students, and pursue my interests
+      # with zeal and freedom, and this is something I am immensely thankful for.
+  - stars: "5"
+    date: 2019-03-05T21:54:32.803Z
+    avatar: /img/avatar-david.jpg
+    author: David
+    post: The opportunities are endless.
+  - stars: "5"
+    date: 2020-10-05T21:54:32.803Z
+    author: Andrew
+    post: It's truly a special place.
   - stars: "5"
     date: 2021-04-07T21:54:53.257Z
     author: Alum
@@ -30,3 +42,13 @@ entries:
       help spark curiosity, ignite passion, and teach you to become lifelong
       learners and thinkers. Also, the friendships I made here are one of a
       kind.
+  - stars: "5"
+    date: 2018-01-05T21:54:32.803Z
+    avatar: /img/avatar-lele.jpg
+    author: Gabriele Herr
+    caption: Current student
+    post: As a student, this school is the best school ever! Really nice 
+      teachers, no bullying problems at all, extremely advanced, even innovative
+      Wednesdays, where there are electives and you can choose your own classes!
+      Awesome school! I wish I could rate it 6 stars...
+      

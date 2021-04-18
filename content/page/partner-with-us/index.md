@@ -4,7 +4,7 @@ title: Partner with us
 date: 2020-07-26T04:21:14.594Z
 ---
 
-# Partner with us
+## Partner with us
 
 If you believe your organization's mission or goals align with ours, we'd love to hear from you!
 

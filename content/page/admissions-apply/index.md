@@ -8,17 +8,22 @@ In evaluating each candidate, the Admissions Committee considers many factors th
 To be considered for admission, please follow the steps below.
 
 **1. SCHEDULE A PRIVATE TOUR OF THE SCHOOL (OPTIONAL)**
+
 You can reach us via phone at (201) 722-1000, or via email at [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org). Please see our school calendar.
 
 **2. SUBMIT AN APPLICATION**
+
 Download and complete the relevant application below. Send completed applications to [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org).
 
-<p style="margin-top:40px;margin-bottom:40px">
-<a class="submit-button" target="_blank" href="/img/Elementary-School-Application_Form.pdf">ELEMENTARY SCHOOL</a>
-<a class="submit-button" target="_blank" href="/img/Middle-And-High-School-Application_Form.pdf">MIDDLE/HIGH SCHOOL</a>
+<p style="margin-top:40px">
+<a class="button primary" target="_blank" href="/img/Elementary-School-Application_Form.pdf">Elementary school</a>
+</p>
+<p style="margin-bottom:40px">
+<a class="button primary" target="_blank" href="/img/Middle-And-High-School-Application_Form.pdf">Middle/High school</a>
 </p>
 
 **3. SCHEDULE SHADOW DAYS**
+
 Once you have submitted an application, contact us to schedule three consecutive school days for attending classes and shadowing students at Primoris. Applicants must commit to three full days.
 Shadow days during the school year can be scheduled from October- May, pending schedule availability. Shadow days may also be scheduled during our summer program.
 
@@ -30,9 +35,11 @@ Shadow days during the school year can be scheduled from October- May, pending s
 
 Teachers should email their recommendations to [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org) from their school email accounts. Recommendations sent from personal accounts will not be accepted.
 
-<p style="margin-top:40px;margin-bottom:40px">
-<a class="submit-button" target="_blank" href="/img/RecommendationFormElementary.pdf">ELEMENTARY SCHOOL</a>
-<a class="submit-button" target="_blank" href="/img/RecommendationFormMiddleAndHigh.pdf">MIDDLE/HIGH SCHOOL</a>
+<p style="margin-top:40px">
+<a class="button primary" target="_blank" href="/img/RecommendationFormElementary.pdf">Elementary school</a>
+</p?>
+<p style="margin-bottom:40px">
+<a class="button primary" target="_blank" href="/img/RecommendationFormMiddleAndHigh.pdf">Middle/High school</a>
 </p>
 
 **UPON RECEIPT OF ALL MATERIALS**

@@ -6,6 +6,12 @@
   --trinidad: #de3b04; /* dark red */
   --alabaster: #fafafa; /* off white */
   --alto: #dad8d8; /* medium grey */
-  --tundora: #4a3f3f; /* dark warm grey */
   --mine-shaft: #252222; /* darker warm grey */
+  
+  --bondi-blue: #00A5AE; /* primary teal */
+  --iceberg: #DAF3F4; /* secondary light teal */
+  --tundora: #4e4e4e; /* dark warm grey for text */
+  --governor-bay: #3142AD; /* navy */
+  --chetwode-blue: #8F99DF; /* violet */
+  --coral: #FF895A; /* coral */
 }

@@ -1,0 +1,58 @@
+header {
+  position: relative;
+  height: 230px;
+}
+
+.background-img {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--mine-shaft);
+  background-size: cover;
+  background-position: center center
+}
+
+.background-img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3)
+}
+
+.header-blurb {
+  position: relative;
+  top: 100px;
+  max-width: 300px;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+}
+
+.header-blurb h1 {
+  font-size: 36px;
+}
+
+@media (min-width: 768px) { 
+  
+  header {
+    margin-top: 62px; /* height of nav */
+  }
+
+  .header-blurb {
+    max-width: 440px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .header-blurb h1 {
+    font-size: 46px;
+  }
+}

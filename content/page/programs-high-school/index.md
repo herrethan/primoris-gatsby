@@ -31,7 +31,7 @@ image: hero-2.jpg
     <h3>Track 1</h3> 
     <p>All AP courses in years 1 and 2. Next two years spent between Primoris and Fairleigh Dickinson University campuses receiving instruction pursuant to an undergraduate degree.</p>
     <h3>Track 2</h3> 
-    <p>All honors coursers in year 1, APs in year 2. Next two years spent research projects and/or supervised internships tailored to accomplish professional learning goals.</p>
+    <p>All honors courses in year 1, APs in year 2. Next two years spent research projects and/or supervised internships tailored to accomplish professional learning goals.</p>
     <h3>Track 3</h3> 
     <p>Traditional High School Master with double science course load with primarily advanced honors courses in years 1- 2 and APs in years 3 - 4.</p>
   </div>

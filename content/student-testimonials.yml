@@ -28,10 +28,12 @@ entries:
     date: 2019-03-05T21:54:32.803Z
     avatar: /img/avatar-david.jpg
     author: David
+    caption: Johns Hopkins University
     post: The opportunities are endless.
   - stars: "5"
     date: 2020-10-05T21:54:32.803Z
     author: Andrew
+    caption: Vanderbilt University 
     post: It's truly a special place.
   - stars: "5"
     date: 2021-04-07T21:54:53.257Z

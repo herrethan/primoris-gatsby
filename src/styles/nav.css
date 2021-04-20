@@ -52,8 +52,10 @@ nav {
   position: relative;
   top: -10px
 }
-.site-logo ~ * {
-  display: none;
+@media (min-width: 768px) {
+  .site-logo ~ * {
+    display: none;
+  }
 }
 /* hide "Primoris Academy" text until there is room to show it */
 @media (min-width: 900px) {

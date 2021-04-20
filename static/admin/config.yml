@@ -103,27 +103,6 @@ collections:
   - label: 'Config'
     name: 'config'
     files: 
-      - label: 'Home page slider'
-        name: 'home-page-slider'
-        file: 'content/home-page-slider.yml'
-        fields:
-          - label: 'Slide duration (seconds)'
-            name: 'interval'
-            widget: 'number'
-            valueType: 'int'
-            default: 4
-            min: 2
-            max: 10
-          - label: 'Images'
-            name: 'images'
-            widget: 'list'
-            fields:
-              - { label: 'Image', name: 'thumbnail', widget: 'image' }
-      - label: 'Home page body'
-        name: 'home-page-body'
-        file: 'content/home-page-body.yml'
-        fields:
-          - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Navigation'
         name: 'navigation'
         file: 'content/navigation.yml'

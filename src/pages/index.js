@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import SEO from "../components/seo";
-import homePageBody from "../../content/home-page-body.yml";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Hero from '../../static/img/hero-1.jpg';
@@ -22,7 +21,6 @@ const SiteIndex = () => {
             <Link to="/contact" className="button primary inverted">
               Inquire
             </Link>
-            
           </div>
         </div>
       </Header>
@@ -45,7 +43,7 @@ const SiteIndex = () => {
               </Link>
             </div>
             <div className="column medium-6">
-              <img src="/img/blob-1.jpg" />
+              <img src="/img/blob-1.jpg" alt="Primoris First Lego League team Lions" />
             </div>
           </div>
           <div className="row">
@@ -63,7 +61,7 @@ const SiteIndex = () => {
               </ul>
             </div>
             <div className="column medium-6 medium-pull-6">
-              <img src="/img/blob-2.jpg" />
+              <img src="/img/blob-2.jpg" alt="Middle school students" />
             </div>
           </div>
         </main>

@@ -3,7 +3,7 @@ entries:
     date: 2021-01-05T21:54:32.803Z
     avatar: /img/avatar-josh.jpg
     author: Josh Kindler
-    caption: Univercity of Chicago
+    caption: University of Chicago
     post: In my six years of enrollment, Primoris Academy gave more to me than I
       ever could have imagined. 
       # The sense of community and closeness at Primoris
@@ -33,6 +33,7 @@ entries:
   - stars: "5"
     date: 2020-10-05T21:54:32.803Z
     author: Andrew
+    avatar: /img/avatar-andrew.jpg
     caption: Vanderbilt University 
     post: It's truly a special place.
   - stars: "5"

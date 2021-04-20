@@ -109,20 +109,20 @@ nav>ul, nav>ul>li svg {
     display: inline;
     margin-left: 5px;
   }
+  
+  nav>ul>li:hover .subnav {
+    display: block;
+  }
+  
+  nav>ul>li:hover .subnav li {
+    height: auto
+  }
 }
 
 nav>ul>li {
   display: inline-block;
   position: relative;
   padding-left: 20px
-}
-
-nav>ul>li:hover .subnav {
-  display: block;
-}
-
-nav>ul>li:hover .subnav li {
-  height: auto
 }
 
 nav .subnav {
@@ -184,6 +184,9 @@ nav .subnav a:focus,nav .subnav a:hover {
 
 .hamburger {
   display: block;
+  outline: none;
+  border: none;
+  background: transparent;
   position: absolute;
   top: 20px;
   right: 20px;

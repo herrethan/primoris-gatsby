@@ -1,29 +1,15 @@
 import React, { useEffect } from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { isEqual } from 'lodash';
 import { initFullScreenToggle } from "../components/full-screen-toggle";
 import { initForms } from "../components/forms";
 import StudentTestimonials from "../components/student-testimonials";
 
-const pageTerms = (path) => path.split('/').filter(term => !!term);
-
 const PageTemplate = ({ data, location }) => {
   const page = data.markdownRemark;
   const image = page.frontmatter.image && page.frontmatter.image.publicURL;
-  const pathTerms = pageTerms(location.pathname);
-  let subPages = [];
-
-  // if (pathTerms.length > 1) {
-  //   subPages = data.allMarkdownRemark && data.allMarkdownRemark.edges.map(
-  //     edge => ({
-  //       slug: edge?.node?.fields?.slug,
-  //       title: edge?.node?.frontmatter?.title
-  //     })
-  //   ).filter(node => pageTerms(node.slug).length > 1 && pageTerms(node.slug)[0] === pathTerms[0]);    
-  // }
 
   useEffect(() => {
     if (page.frontmatter.title === 'Contact us') initForms();
@@ -47,28 +33,10 @@ const PageTemplate = ({ data, location }) => {
         )}
       </Header>
 
-      {/* {subPages.length > 0 && (
-        <main className="content">
-          <div className="row">
-            <div className="column medium-3">
-              <h2 className="capitalize">{pathTerms[0]}</h2>
-              <ul className="content-subnav">
-                {subPages.map(subpage => (
-                  <li key={subpage.slug} className={isEqual(pageTerms(subpage.slug), pathTerms) ? 'active' : ''}>
-                    <h3><Link to={subpage.slug}>{subpage.title}</Link></h3>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="column medium-9" dangerouslySetInnerHTML={{ __html: page.html }}></div>
-          </div>
-        </main> 
-      )} */}
+      <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />
 
-      {/* {subPages.length === 0 && ( */}
-        <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />
-      {/* )} */}
-        {page.frontmatter.title == 'High school' && <StudentTestimonials />}
+      {page.frontmatter.title === 'High school' && <StudentTestimonials />}
+
       <Footer />
     </>
   )

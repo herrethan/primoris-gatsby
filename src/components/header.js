@@ -23,11 +23,11 @@ const Header = ({ backgroundImg, height, children }) => {
             <span>Primoris Academy</span>
           </Link>
         </h1>
-        <a className="hamburger" onClick={toggleNav}>
+        <button className="hamburger" onClick={toggleNav}>
           <span className="top-bun"></span>
           <span className="meat"></span>
           <span className="bottom-bun"></span>
-        </a>
+        </button>
         <ul className="nav-links">
           {navData && navData.main && navData.main.map(item => (
             <li key={item.url}>

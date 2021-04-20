@@ -7,10 +7,12 @@ const Accordion = ({ question, answer }) => {
 
   return (
     <div className="accordion">
-      <h4 className={`accordion-header ${isOpen && 'open'}`} onClick={() => setIsOpen(open => !open)}>
-        {question}
-        <ChevronDown />
-      </h4>
+      <button onClick={() => setIsOpen(open => !open)} className="no-style">
+        <h4 className={`accordion-header ${isOpen && 'open'}`}>
+          {question}
+          <ChevronDown />
+        </h4>
+      </button>
       {isOpen && <p dangerouslySetInnerHTML={{ __html: answer }}></p>}
     </div>
   )

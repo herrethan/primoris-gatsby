@@ -57,3 +57,13 @@ button.primary.inverted:focus,
   color: var(--bondi-blue);
   background-color: #fafafa;
 }
+
+.no-style {
+  background: transparent;
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

@@ -15,7 +15,7 @@ const Card = ({ testimonial }) => {
     <div className="student-testimonial-card">
       <div className="student-testimonial-card-header">
         <div className="student-avatar">
-          {testimonial.avatar && <img src={testimonial.avatar} />}
+          {testimonial.avatar && <img src={testimonial.avatar} alt="Primoris student testimonial headshot" />}
           {!testimonial.avatar && <h2 className="student-avatar-initial">{testimonial.author.slice(0, 1)}</h2>}
         </div>
         <div style={{paddingLeft: 20}}>
@@ -32,7 +32,7 @@ const Card = ({ testimonial }) => {
 }
 
 const StudentTestimonials = () => {
-  if (!studentTestimonials || !studentTestimonials.entries || studentTestimonials.entries.length == 0) return null;
+  if (!studentTestimonials || !studentTestimonials.entries || studentTestimonials.entries.length === 0) return null;
 
   const columns = partition(studentTestimonials.entries);
 

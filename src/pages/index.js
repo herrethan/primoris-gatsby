@@ -17,7 +17,7 @@ const SiteIndex = () => {
         <div className="content">
           <div className="header-blurb">
             <h1>Never Bored, Always Inspired</h1>
-            <p>Discover limitless opportunities to learn, and explore the endless possibilities of the world and our own.</p>
+            <p>Discover limitless opportunities to learn, and explore the endless possibilities of the world and your own.</p>
             <Link to="/contact" className="button primary inverted">
               Inquire
             </Link>

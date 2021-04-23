@@ -50,57 +50,57 @@ image: boys-looking.jpg
         <h4>I am interested in:</h4>
         <div>
           <label>
-            <input type="checkbox" id="apply" name="interest" value="apply">
+            <input type="checkbox" id="apply" name="interest[]" value="apply">
             Applying for my child to attend
           </label>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="tour" name="interest" value="tour">
+            <input type="checkbox" id="tour" name="interest[]" value="tour">
             Touring the school facility
           </label>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="shadow-days" name="interest" value="shadow-days">
+            <input type="checkbox" id="shadow-days" name="interest[]" value="shadow-days">
             Having my child experience the school via 3 “Shadow Days”
           </label>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="summer-program" name="interest" value="summer-program">
+            <input type="checkbox" id="summer-program" name="interest[]" value="summer-program">
             Receiving the summer program information
           </label>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="newsletters" name="interest" value="newsletters">
+            <input type="checkbox" id="newsletters" name="interest[]" value="newsletters">
             Receiving Primoris activity newsletters
           </label>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="speak-with-parent" name="interest" value="speak-with-parent">
+            <input type="checkbox" id="speak-with-parent" name="interest[]" value="speak-with-parent">
             Speaking with a parent of a current Primoris student
           </label>
         </div>
         <div data-show-when-checked="speak-with-parent" class="display-none">
           <label>
-            <input type="radio" id="speak-with-parent-elementary" name="interest" value="speak-with-parent-elementary">
+            <input type="radio" id="speak-with-parent-elementary" name="interest[]" value="speak-with-parent-elementary">
             Pre-K/Elementary
           </label>
           <label>
-            <input type="radio" id="speak-with-parent-middle" name="interest" value="speak-with-parent-middle">
+            <input type="radio" id="speak-with-parent-middle" name="interest[]" value="speak-with-parent-middle">
             Middle school
           </label>
           <label>
-            <input type="radio" id="speak-with-parent-high" name="interest" value="speak-with-parent-high">
+            <input type="radio" id="speak-with-parent-high" name="interest[]" value="speak-with-parent-high">
             High school
           </label>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="speak-with-admin" name="interest" value="speak-with-admin">
+            <input type="checkbox" id="speak-with-curriculum-designer" name="interest[]" value="speak-with-curriculum-designer">
             Speaking with our curriculum designer
           </label>
         </div>

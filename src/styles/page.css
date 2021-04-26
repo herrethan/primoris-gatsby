@@ -70,6 +70,7 @@ ul.bullets li::before {
 .faq {
   background-color: var(--iceberg);
   background-image: url(/img/background-books.png);
+  background-size: contain;
   padding-top: 50px;
   padding-bottom: 50px;
 }

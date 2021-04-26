@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import { initFullScreenToggle } from "../components/full-screen-toggle";
 import { initForms } from "../components/forms";
 import StudentTestimonials from "../components/student-testimonials";
+import Faq from "../components/faq";
 
 const PageTemplate = ({ data, location }) => {
   const page = data.markdownRemark;
@@ -36,6 +37,8 @@ const PageTemplate = ({ data, location }) => {
       <main className="content" dangerouslySetInnerHTML={{ __html: page.html }} />
 
       {page.frontmatter.title === 'High school' && <StudentTestimonials />}
+
+      {page.frontmatter.title === 'Elementary and Middle School' && <Faq />}
 
       <Footer />
     </>

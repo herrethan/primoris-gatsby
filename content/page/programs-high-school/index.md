@@ -5,7 +5,7 @@ blurb: >-
   <i>Ages 13-18</i>
   <span style="font-weight:600; display:block">An incubator of passionate young people, abundant creativity, and once-in-a-lifetime opportunities</span>
 date: 2020-07-26T03:46:15.252Z
-image: hero-2.jpg
+image: hero-3.jpg
 ---
 
 <div class="row">

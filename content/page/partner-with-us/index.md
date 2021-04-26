@@ -25,5 +25,5 @@ If you believe your organization's mission or goals align with ours, we'd love t
   <p class="display-none">
     <label>Hey bots, fill this out: <input name="legit" /></label>
   </p>
-  <input class="submit" type="submit" value="Submit">
+  <input class="button primary" type="submit" value="Submit">
 </form>

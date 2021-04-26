@@ -1,6 +1,4 @@
 main:
-  - title: About
-    url: /about
   - title: Programs
     url: /programs
     subnav:
@@ -22,6 +20,8 @@ main:
   - title: Contact
     url: /contact
 footer:
+  - title: About us
+    url: /about
   - title: Partner with us
     url: /partner-with-us
   - title: Support us

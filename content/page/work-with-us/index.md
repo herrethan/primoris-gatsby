@@ -30,5 +30,5 @@ If you're excited about Primoris and want to work with us, tell us a bit about y
   <p class="display-none">
     <label>Hey bots, fill this out: <input name="legit" /></label>
   </p>
-  <input class="submit" type="submit" value="Submit">
+  <input class="button primary" type="submit" value="Submit">
 </form>

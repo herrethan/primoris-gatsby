@@ -15,7 +15,6 @@ const Header = ({ backgroundImg, height, children }) => {
 
       {children}
 
-
       <nav>
         <h1 className="site-title">
           <Link to="/">

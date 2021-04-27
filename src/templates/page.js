@@ -8,6 +8,11 @@ import { initForms } from "../components/forms";
 import StudentTestimonials from "../components/student-testimonials";
 import Faq from "../components/faq";
 
+const departmentPages = [
+  'English/Language Arts',
+  'Science'
+]
+
 const PageTemplate = ({ data, location }) => {
   const page = data.markdownRemark;
   const image = page.frontmatter.image && page.frontmatter.image.publicURL;
@@ -15,7 +20,10 @@ const PageTemplate = ({ data, location }) => {
   useEffect(() => {
     if (page.frontmatter.title === 'Contact us') initForms();
     if (page.frontmatter.title === 'High school') initFullScreenToggle();
-  }, [page.frontmatter.title])
+  }, [page.frontmatter.title]);
+  
+
+  const headerHeight = image ? (departmentPages.indexOf(page.frontmatter.title) > -1 ? 300 : 380) : 100;
   
   return (
     <>
@@ -23,7 +31,7 @@ const PageTemplate = ({ data, location }) => {
         title={page.frontmatter.title}
         description={page.excerpt}
       />
-      <Header backgroundImg={image} height={image ? 380 : 100}>
+      <Header backgroundImg={image} height={headerHeight}>
         {!!image && !!page.frontmatter.title && (
           <div className="content">
             <div className="header-blurb">

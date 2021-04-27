@@ -25,7 +25,7 @@ image: hero-4.jpg
       <li>Physical Education, Mandarin, and Intro to STEM (lower elementary) or Robotics/Coding (upper elementary-middle)</li>
       <li>Instrumental Music and Art (combined art history & studio work approach), 2x a week each</li>
     </ul>
-    <h3>Innovative Fridays: Elective Schedule</h3>
+    <h3 style="margin-top: 40px">Innovative Fridays: Elective Schedule</h3>
     <p>
       On Fridays, dubbed “Innovative Fridays,” we offer a wide range of electives for students to discover and cultivate their passions. Innovative Fridays are so called not only because they are innovative in nature, but also because they encourage innovation in students—these electives inspire students to apply their knowledge, explore different perspectives, make connections, and think outside the box.
     </p>
@@ -35,7 +35,7 @@ image: hero-4.jpg
   </div>
 </div>
 
-<p class="row" style="margin-top:40px">
+<p style="margin-top:40px; margin-bottom: 80px">
 <a href="/programs/pre-school" style="float:left">← To Pre-School</a>
 <a href="/programs/high-school" style="float:right">To High School →</a>
 </p>

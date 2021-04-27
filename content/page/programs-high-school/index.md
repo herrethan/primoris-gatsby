@@ -18,7 +18,6 @@ image: hero-3.jpg
       <li>Get in the driver seat in our open studio lab environment</li>
       <li>Always be at the centre of instruction online or in person</li>
     </ul>
-    <!-- <a class="button secondary" style="margin-top:20px; margin-bottom:40px">Departments</a> -->
   </div>
   <div class="column medium-6 medium-pull-6">
     <img src="/img/blob-3.jpg" />
@@ -39,5 +38,6 @@ image: hero-3.jpg
     <img src="/img/primoris-hs-comparison.jpg" class="full-screen-toggle" alt="Comparison of three high school academic tracks offered by Primoris"/>
   </div>
 </div>
+<a href="/contact" class="button secondary" style="margin-top:20px; margin-bottom:40px">Inquire</a>
 
 

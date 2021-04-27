@@ -29,6 +29,7 @@ image: hero-4.jpg
     <p>
       On Fridays, dubbed “Innovative Fridays,” we offer a wide range of electives for students to discover and cultivate their passions. Innovative Fridays are so called not only because they are innovative in nature, but also because they encourage innovation in students—these electives inspire students to apply their knowledge, explore different perspectives, make connections, and think outside the box.
     </p>
+    <a href="/contact" class="button secondary" style="margin-top:20px">Inquire</a>
   </div>
   <div class="column medium-6 medium-pull-6">
     <img src="/img/blob-1.jpg" alt="Middle school students" />

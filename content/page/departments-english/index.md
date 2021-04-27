@@ -11,7 +11,7 @@ image: hero-7.jpg
     <p>Students begin with foundational literacy, phonics, and handwriting, as well as exposure to text in supported instruction and independently. Students gradually build upon these skills using discussion strategies, workshops, and activities supported by student interest. We strive to build a culture of love and appreciation for reading and writing thorughout all levels and disciplines.</p>
   </div>
   <div class="column medium-6 medium-push-6"> 
-    <img src="/img/english-1.jpg" alt="Physics experiment" />
+    <img src="/img/english-1.jpg" alt="Student english project poster" />
   </div>
   <div class="column medium-6 medium-pull-6">
     <h3>Reading Instruction</h3>
@@ -22,7 +22,7 @@ image: hero-7.jpg
 </div>
 <div class="row" style="margin-top:20px">
   <div class="column medium-5">
-    <img src="/img/english-2.jpg" alt="Hands on learning at hospital" />
+    <img src="/img/english-2.jpg" alt="Students studying" />
   </div>
   <div class="column medium-7">
     <p>Continuing the same philsophy, middle and high school English courses follow a workshop and seminar format. Students will engage with a variety of complex texts through discussion and debate, while also honing their written expression skills in narrative, analytical, and argumentative formats.</p>

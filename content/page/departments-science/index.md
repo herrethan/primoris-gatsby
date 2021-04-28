@@ -7,7 +7,7 @@ image: hero-6.jpg
 
 <div class="row">
   <div class="column medium-7">
-    <p>Science instruction follows a hands-on interactive approach throughout all elementary levels. Students engage in a variety of complex, scientific topics derived from multiple fields of study (astronomy, biology, ecology, geology, physics, chemistry, engineering, etc.).  The scientific method and engineering design loopa are practiced throughout all study in these coures, and students create their own experiments to test concepts starting at a very young age.</p>
+    <p>Science instruction follows a hands-on interactive approach throughout all elementary levels. Students engage in a variety of complex, scientific topics derived from multiple fields of study (astronomy, biology, ecology, geology, physics, chemistry, engineering, etc.).  The scientific method and engineering design loop are practiced throughout all study in these courses, and students create their own experiments to test concepts starting at a very young age.</p>
   </div>
   <div class="column medium-5">
     <img src="/img/science-1.jpg" alt="Physics experiment" />

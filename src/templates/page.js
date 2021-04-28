@@ -10,7 +10,14 @@ import Faq from "../components/faq";
 
 const departmentPages = [
   'English/Language Arts',
-  'Science'
+  'Science',
+  'Math',
+  'Programming and Robotics',
+  'Mandarin',
+  'History',
+  'Music and Performing Arts',
+  'Fine and Visual Arts',
+  'Athletics and Health'
 ]
 
 const PageTemplate = ({ data, location }) => {

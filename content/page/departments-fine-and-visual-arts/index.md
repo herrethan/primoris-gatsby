@@ -14,4 +14,3 @@ image: hero-art.jpg
     <img src="/img/art-1.jpg" alt="Primoris student art project" />
   </div>
 </div>
-

@@ -67,6 +67,19 @@ ul.bullets li::before {
   }
 }
 
+.video-container {
+  background-color: var(--mine-shaft);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.video-container > iframe {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .faq {
   background-color: var(--iceberg);
   background-image: url(/img/background-books.png);

@@ -11,7 +11,7 @@ image: hero-music.jpg
     <a href="/contact" class="button secondary" style="margin-top:20px; margin-bottom:40px">Inquire</a>
   </div>
   <div class="column medium-6">
-    <img src="/img/music-2.jpg" alt="Primoris students practicing for a concert" />
+    <img src="/img/music-4.jpg" alt="Primoris students practicing for a concert" />
   </div>
 </div>
 

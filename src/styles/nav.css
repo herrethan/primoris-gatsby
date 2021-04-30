@@ -143,6 +143,11 @@ nav a[href="/programs"] ~ .subnav {
   width: 130%;
 }
 
+/* hack to fit department titles on one line in subnav */
+nav a[href="/departments/math"] ~ .subnav {
+  width: 150%;
+}
+
 nav .subnav li {
   height: 1px;
   display: block

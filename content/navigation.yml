@@ -1,4 +1,23 @@
 main:
+  - title: Departments
+    url: /departments/math
+    subnav:
+      - title: Math
+        url: /departments/math
+      - title: English
+        url: /departments/english
+      - title: Science
+        url: /departments/science/   
+      - title: History
+        url: /departments/history
+      - title: Programming/Robotics
+        url: /departments/programming-and-robotics
+      - title: Mandarin
+        url: /departments/mandarin
+      - title: Music/Performing Arts
+        url: /departments/music-and-performing-arts
+      - title: Fine/Visual Arts
+        url: /departments/fine-and-visual-arts
   - title: Programs
     url: /programs
     subnav:
@@ -17,8 +36,6 @@ main:
         url: /admissions/faq
   - title: Calendar
     url: /calendar
-  - title: Contact
-    url: /contact
 footer:
   - title: About us
     url: /about

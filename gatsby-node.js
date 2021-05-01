@@ -3,6 +3,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const templates = {
   'page': path.resolve(`./src/templates/page.js`),
+  'contact': path.resolve(`./src/templates/contact.js`),
   'calendar': path.resolve(`./src/templates/calendar-event.js`),
   'calendar-index': path.resolve(`./src/templates/calendar-index.js`)
 }
@@ -45,6 +46,11 @@ exports.createPages = async ({ graphql, actions }) => {
     // Use special calendar-index template as main calendar page
     if (slug === '/calendar/') {
       component = templates['calendar-index'];
+    }
+
+    // Use special contact template for contact page
+    if (slug === '/contact/') {
+      component = templates['contact'];
     }
     
     console.log(slug, source);

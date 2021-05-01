@@ -9,12 +9,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--mine-shaft);
+  background-image: url(/img/hero-gallery.png);
+  background-color: var(--tundora);
   background-size: cover;
-  background-position: center center
+  background-position: center center;
 }
 
-.background-img:after {
+.background-img-darken:after {
   content: '';
   position: absolute;
   top: 0;

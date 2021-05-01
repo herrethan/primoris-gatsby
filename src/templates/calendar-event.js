@@ -16,7 +16,7 @@ const PageTemplate = ({ data }) => {
       />
       <Header />
       {page && (
-        <main className="content">
+        <main className="content" style={{marginBottom: 40}}>
           <h1>{page.frontmatter.title}</h1>
           <p>
             {moment(page.frontmatter.date).format('dddd, MMMM Do, YYYY')}

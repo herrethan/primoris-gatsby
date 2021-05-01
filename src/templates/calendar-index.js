@@ -18,7 +18,7 @@ const CalendarIndexTemplate = ({ data }) => {
         title={page.frontmatter.title}
         description={page.excerpt}
       />
-      <Header backgroundImg={image} height={image ? 300 : 100}>
+      <Header backgroundImg={image} height={image ? 300 : 100} darken>
         <div className="content">
           <div className="header-blurb">
             <h1 className="capitalize">{page.frontmatter.title}</h1>

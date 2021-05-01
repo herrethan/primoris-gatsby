@@ -3,15 +3,18 @@ import { Link } from "gatsby";
 import navData from "../../content/navigation.yml";
 import ChevronDown from "./chevron";
 
-const Header = ({ backgroundImg, height, children }) => {
+const Header = ({ backgroundImg, height, children, darken=false }) => {
   const [navOpened, setNavOpened] = useState(false);
-
+  
   const toggleNav = () => setNavOpened(!navOpened);
 
   return (
     <header style={{ height: height || 100 }} className={navOpened ? 'nav-opened' : ''}>
       
-      <div className="background-img" style={{ backgroundImage: `url(${backgroundImg})` }}></div>
+      <div 
+        className={`background-img${darken ? ' background-img-darken' : ''}`} 
+        style={backgroundImg && { backgroundImage: `url(${backgroundImg})` }}>
+      </div>
 
       {children}
 

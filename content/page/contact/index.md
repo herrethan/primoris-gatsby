@@ -1,12 +1,12 @@
 ---
 name: contact
 title: Contact us
-date: 2020-07-19T15:52:32.007Z
-image: boys-looking.jpg
+date: 2021-05-01T15:52:32.007Z
+image: hero-contact.png
 ---
 
-<div class="row" style="margin-bottom:40px">
-  <div class="column medium-7">
+<div class="stars-background">
+  <main class="content row" style="margin-bottom:40px; max-width: 600px">
     <h2>Learn more</h2>
     <form id="learn-more" class="contact-form" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
       <input type="hidden" name="form-name" value="Learn more" />
@@ -48,6 +48,7 @@ image: boys-looking.jpg
       </div>
       <div class="field">
         <h4>I am interested in:</h4>
+        <p style="margin-top:-20px; opacity:0.5">(Please check all that apply)</p>
         <div>
           <label>
             <input type="checkbox" id="apply" name="interest[]" value="apply">
@@ -110,17 +111,20 @@ image: boys-looking.jpg
       </p>
       <input id="learn-more-submit" class="button primary" type="submit" value="Submit">
     </form>
-  </div>
-  <div class="column medium-5">
+  </main>
+</div>
+<div style="height:250px; background-image: url(/img/class-grid-single.jpg);"></div>
+<main class="content row" style="margin-top:40px; margin-bottom:40px">
+  <div class="column medium-6">
     <h2>Visit Us</h2>
-    Phone: (201) 722-1000<br />
-    Fax: (201) 722-1001<br />
-    120 Washington Ave<br />
-    Westwood, NJ 07675<br><br><br>
-    <div id="map" style="width:100%;height:350px;">
+    <p class="contact-icon marker">120 Washington Ave, Westwood, NJ 07675</p>
+    <p class="contact-icon phone">Phone: (201) 722-1000, Fax: (201) 722-1001</p>
+  </div>
+  <div class="column medium-6">
+    <div id="map" style="width:100%;">
       <a href="https://www.google.com/maps/place/Primoris+Academy/@40.9926179,-74.0387749,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2e57b91b82aa1:0xad394ae9fedb0ca8!8m2!3d40.9926179!4d-74.0365862?hl=en-US" target="_blank" title="Open in google maps">
         <img src="/img/map.jpg" alt="Primoris Academy in Westwood NJ">
       </a>
     </div>
   </div>
-</div>
+</main>

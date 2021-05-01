@@ -7,7 +7,7 @@ image: hero-contact.png
 
 <div class="stars-background">
   <main class="content row" style="margin-bottom:40px; max-width: 600px">
-    <p>Please leave your details below and we will be in touch with you soon to discuss how your child can benefit from our unique learning approach.</p>
+    <h2>Learn more about Primoris</h2>
     <form id="learn-more" class="contact-form" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
       <input type="hidden" name="form-name" value="Learn more" />
       <div class="field text name required">

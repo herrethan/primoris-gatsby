@@ -21,8 +21,8 @@ image: hero-math.jpg
 </div>
 <div class="row">
   <div class="column medium-7 medium-push-5">
-    <p>While practicing foundational skills, as well as divergent thinking, students continue their matematical study through the following course sequence: Prealgebra, Algebra I, Geometry, Intermediate Algebra/Trigonometry, Precalculus, AP Calculus AB/BC.</p>
-    <p>In keeping with our overall school philosophy, students progress through the matematical course of study based on their academic readiness and maturity.</p>
+    <p>While practicing foundational skills, as well as divergent thinking, students continue their mathematical study through the following course sequence: Prealgebra, Algebra I, Geometry, Intermediate Algebra/Trigonometry, Precalculus, AP Calculus AB/BC.</p>
+    <p>In keeping with our overall school philosophy, students progress through the mathematical course of study based on their academic readiness and maturity.</p>
     <a href="/contact" class="button secondary" style="margin-top:20px; margin-bottom:40px">Inquire</a>
   </div>
   <div class="column medium-5 medium-pull-7">

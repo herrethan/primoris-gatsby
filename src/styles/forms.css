@@ -16,7 +16,7 @@
 
 .contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]),.contact-form textarea,.contact-form select {
   border: 1px solid;
-  border-color: var(--bondi-blue-bright);
+  border-color: var(--bondi-blue);
   border-radius: 3px;
   background-color: white;
   padding: 8px 10px;
@@ -25,11 +25,11 @@
   margin: 0;
   outline: none;
   width: 100%;
-  transition: all 0.3s ease-in-out
+  transition: all 0.2s ease-in-out
 }
 
 .contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]):focus,.contact-form textarea:focus,.contact-form select:focus {
-  border-color: var(--bondi-blue-dark);
+  border-color: var(--bondi-blue-bright);
 }
 
 .contact-form .required label:before {

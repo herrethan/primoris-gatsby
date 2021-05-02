@@ -23,6 +23,7 @@ const departmentPages = [
 const darkHeaderPages = [
   'About',
   'Faq',
+  'Programs',
   'Pre School'
 ];
 

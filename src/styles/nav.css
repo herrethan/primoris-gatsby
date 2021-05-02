@@ -69,7 +69,19 @@ nav {
   list-style: none;
 }
 
+.desktop-nav-item {
+  display: none;
+}
+
 @media (min-width: 768px) {
+  .mobile-nav-item {
+    display: none;
+  }
+
+  .desktop-nav-item {
+    display: inline;
+  }
+
   .nav-links {
     color: var(--bondi-blue);
   }
@@ -81,25 +93,60 @@ nav {
   }
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links button {
   text-decoration: none;
+  border: none;
+  background-color: transparent;
   position: relative;
   color: inherit;
   text-transform: uppercase;
+  font-family: inherit;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: .05em;
 }
 
-.nav-links a:focus,.nav-links a:hover {
+.nav-links a:focus,
+.nav-links a:hover {
   color: inherit
 }
 
-nav>ul, nav>ul>li svg {
+nav > ul {
   display: none
 }
 
+nav > ul > li svg {
+  display: inline;
+  margin-left: 5px;
+}
+
+nav .subnav {
+  display: none;
+  padding: 0;
+}
+
+nav>ul>li:focus .subnav,
+nav>ul>li:hover .subnav {
+  display: block;
+}
+
+nav>ul>li:focus .subnav li,
+nav>ul>li:hover .subnav li {
+  height: auto;
+}
+
 @media (min-width: 768px) {
+  nav .subnav {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
   nav>ul {
     display:block;
     text-align: right;
@@ -107,17 +154,15 @@ nav>ul, nav>ul>li svg {
     margin-bottom: 0;
     padding: 20px 30px;
   }
-  nav>ul>li svg {
-    display: inline;
-    margin-left: 5px;
+
+  /* hack to fit progam titles on one line in subnav */
+  nav a[href="/programs"] ~ .subnav {
+    width: 130%;
   }
   
-  nav>ul>li:hover .subnav {
-    display: block;
-  }
-  
-  nav>ul>li:hover .subnav li {
-    height: auto
+  /* hack to fit department titles on one line in subnav */
+  nav a[href="/departments/math"] ~ .subnav {
+    width: 150%;
   }
 }
 
@@ -127,33 +172,11 @@ nav>ul>li {
   padding-left: 30px
 }
 
-nav .subnav {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  width: 100%;
-  padding: 10px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-/* hack to fit progam titles on one line in subnav */
-nav a[href="/programs"] ~ .subnav {
-  width: 130%;
-}
-
-/* hack to fit department titles on one line in subnav */
-nav a[href="/departments/math"] ~ .subnav {
-  width: 150%;
-}
-
 nav .subnav li {
-  height: 1px;
-  display: block
+  display: block;
 }
 
-nav .subnav a:focus,nav .subnav a:hover {
+nav .subnav a:focus, nav .subnav a:hover {
   text-decoration: underline
 }
 
@@ -174,18 +197,23 @@ nav .subnav a:focus,nav .subnav a:hover {
     text-align: center;
     margin: 0;
     font-size: 15px;
-    padding-top: 120px;
+    padding-top: 100px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
     z-index: 10;
   }
 
+  nav>ul>li:focus .subnav,
+  nav>ul>li:hover .subnav {
+    margin-top: 20px;
+  }
+
   .nav-opened nav>ul li {
+    /* animation: reo-fade-in .3s forwards;
+    -webkit-animation: reo-fade-in .3s forwards; */
     display: block;
-    animation: reo-fade-in .3s forwards;
-    -webkit-animation: reo-fade-in .3s forwards;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 }
 

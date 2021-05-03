@@ -24,7 +24,7 @@ image: hero-history.jpg
 </div>
 <div class="row" style="margin-top:20px">
   <div class="column medium-6 medium-push-6">
-    <p>In middle and high school, studetns begin to engage with historical topics and their connection to current events, while continuing to practice foundational skills of document analysis, debate and argument construction, and teamwork and cooperation. Historical instruction is designed to revisit topics to expand and deepen understanding with student maturity through an overarching connection between English instruction and History instruction. </p>
+    <p>In middle and high school, students begin to engage with historical topics and their connection to current events, while continuing to practice foundational skills of document analysis, debate and argument construction, and teamwork and cooperation. Historical instruction is designed to revisit topics to expand and deepen understanding with student maturity through an overarching connection between English instruction and History instruction.</p>
     <p>Higher level courses offered are AP United States History and AP Government and Politics.</p>
     <a href="/contact" class="button secondary" style="margin-top:20px; margin-bottom:40px">Inquire</a>
   </div>

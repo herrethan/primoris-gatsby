@@ -214,6 +214,7 @@ nav .subnav a:focus, nav .subnav a:hover {
     -webkit-animation: reo-fade-in .3s forwards; */
     display: block;
     margin-bottom: 20px;
+    padding-left: 0;
   }
 }
 

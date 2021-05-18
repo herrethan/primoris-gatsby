@@ -4,7 +4,6 @@ title: Programming and Robotics
 date: 2021-04-27T03:49:45.175Z
 image: hero-stem.jpg
 ---
-
 <div class="row">
   <div class="column medium-6">
     <p>The Programming and Robotics course sequence is designed to encourage students to apply logical reasoning and problem solving. Students are introduced to coding through MIT's Scratch program and progress writing code in Python.  
@@ -16,7 +15,6 @@ image: hero-stem.jpg
 </div>
 <div class="row" style="margin-top:20px">
   <div class="column medium-6 medium-push-6">
-    <p>In upper levels, students continue their practice of problem solving and logical thinking. Students ultimately progress through Harvard's CS50 course, AP Computer Science Principles and AP Computer Science A.</p>
     <p>The courses concern the following major topics:</p>
     <ul class="bullets">
       <li>Abstraction</li>
@@ -39,4 +37,3 @@ image: hero-stem.jpg
 </div>
 <p>Students also have the opportunity to participate in FTC Robotics.</p>
 <a href="/contact" class="button secondary" style="margin-top:20px; margin-bottom:40px">Inquire</a>
-

@@ -1,6 +1,6 @@
 ---
 name: admissions/faq
-title: Faq
+title: FAQ
 date: 2020-07-23T04:10:52.224Z
 image: ground-mural.jpg
 ---

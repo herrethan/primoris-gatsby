@@ -1,20 +1,22 @@
-.contact-form .field {
+.form-style .field {
   margin-top: 30px;
   margin-bottom: 30px
 }
 
-.contact-form label {
+.form-style label {
   display: block;
   font-weight: normal;
   margin-bottom: 10px
 }
 
-.contact-form label .description {
+.form-style label .description {
   color: var(--alto);
   float: right
 }
 
-.contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]),.contact-form textarea,.contact-form select {
+.form-style input:not([type=radio]):not([type=checkbox]):not([type=submit]),
+.form-style textarea,
+.form-style select {
   border: 1px solid;
   border-color: var(--bondi-blue);
   border-radius: 3px;
@@ -28,50 +30,52 @@
   transition: all 0.2s ease-in-out
 }
 
-.contact-form input:not([type=radio]):not([type=checkbox]):not([type=submit]):focus,.contact-form textarea:focus,.contact-form select:focus {
+.form-style input:not([type=radio]):not([type=checkbox]):not([type=submit]):focus,
+.form-style textarea:focus,
+.form-style select:focus {
   border-color: var(--bondi-blue-bright);
 }
 
-.contact-form .required label:before {
+.form-style .required label:before {
   content: '* '
 }
 
-.contact-form .options input {
+.form-style .options input {
   display: inline-block
 }
 
-.contact-form .error-msg {
+.form-style .error-msg {
   color: var(--trinidad)
 }
 
-.contact-form .alert {
+.form-style .alert {
   padding: 20px;
   margin-bottom: 20px;
   margin-top: 20px
 }
 
-.contact-form .alert.success {
+.form-style .alert.success {
   color: var(--mine-shaft);
   background-color: #bde4cb
 }
 
-.contact-form .alert.failed {
+.form-style .alert.failed {
   color: var(--trinidad);
   background-color: #ffebe5
 }
 
-.contact-form .select-arrow {
+.form-style .select-arrow {
   position: relative;
 }
 
-.contact-form .select-arrow select {
+.form-style .select-arrow select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   padding-right: 30px;
 }
 
-.contact-form .select-arrow:after {
+.form-style .select-arrow:after {
   content: '^';
   display: block;
   font-family: 'brandon-regular';

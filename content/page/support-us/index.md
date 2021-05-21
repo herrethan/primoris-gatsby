@@ -7,7 +7,7 @@ date: 2020-07-26T04:25:02.687Z
 
 Gifts in all amounts are deeply appreciated.
 
-<form class="contact-form" name="Support us" method="POST" netlify-honeypot="legit" data-netlify="true">
+<form class="form-style" name="Support us" method="POST" netlify-honeypot="legit" data-netlify="true">
   <input type="hidden" name="form-name" value="Support us" />
   <div class="field text name required">
     <label>Full name<input name="name" required="" type="text" value="" /></label>

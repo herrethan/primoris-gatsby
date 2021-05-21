@@ -86,6 +86,39 @@ module.exports = {
         icon: `content/assets/primoris-icon.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+          name: 'pages',
+          engine: 'flexsearch',
+          query: `
+            query {
+              allMarkdownRemark {
+                nodes {
+                  id
+                  excerpt(pruneLength: 5000, format: HTML)
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                  }
+                }
+              }
+            }
+          `,
+          ref: 'id',
+          index: ['title', 'excerpt'],
+          store: ['id', 'title', 'excerpt', 'slug'],
+          normalizer: ({ data }) =>
+            data.allMarkdownRemark.nodes.map(node => ({
+                id: node.id,
+                excerpt: node.excerpt,
+                slug: node.fields.slug,
+                title: node.frontmatter.title,
+            })),
+      }
+    },
     `gatsby-plugin-react-helmet`,
     // {
     //   resolve: `gatsby-plugin-typography`,

@@ -124,6 +124,7 @@ nav > ul > li svg {
 nav .subnav {
   display: none;
   padding: 0;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
 }
 
 nav>ul>li:focus .subnav,
@@ -140,8 +141,9 @@ nav>ul>li:hover .subnav li {
   nav .subnav {
     position: absolute;
     top: 20px;
-    right: 0;
-    width: 100%;
+    left: -10px;
+    text-align: left;
+    min-width: calc(100% + 10px);
     padding: 10px;
     background-color: white;
     border-radius: 2px;
@@ -155,21 +157,16 @@ nav>ul>li:hover .subnav li {
     padding: 20px 30px;
   }
 
-  /* hack to fit progam titles on one line in subnav */
-  nav a[href="/programs"] ~ .subnav {
-    width: 130%;
+  nav>ul>li {
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  
-  /* hack to fit department titles on one line in subnav */
-  nav a[href="/departments/math"] ~ .subnav {
-    width: 150%;
-  }
+
 }
 
 nav>ul>li {
   display: inline-block;
   position: relative;
-  padding-left: 30px
 }
 
 nav .subnav li {

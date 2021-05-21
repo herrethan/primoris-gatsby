@@ -8,7 +8,7 @@ image: hero-contact.png
 <div class="stars-background">
   <main class="content row" style="margin-bottom:40px; max-width: 600px">
     <h2>Learn more about Primoris</h2>
-    <form id="learn-more" class="contact-form" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
+    <form id="learn-more" class="form-style" name="Learn more" method="POST" netlify-honeypot="legit" data-netlify="true">
       <input type="hidden" name="form-name" value="Learn more" />
       <div class="field text name required">
         <label>Student name<input name="student-name" required="" type="text" value="" /></label>

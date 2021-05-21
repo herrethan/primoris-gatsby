@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import navData from "../../content/navigation.yml";
 import ChevronDown from "./chevron";
+import Magnifier from "./magnifier";
 
 const NavItem = ({ item }) => {
   return (
@@ -66,8 +67,11 @@ const Header = ({ backgroundImg, height, children, darken=false }) => {
         </button>
         <ul className="nav-links">
           {navData && navData.main && navData.main.map(item => (
-            <NavItem item={item} />
+            <NavItem key={item.title} item={item} />
           ))}
+          <li className="icon-button">
+            <Link to="/search"><Magnifier /></Link>
+          </li>
           <li className="cta">
             <Link to="/contact" className="primary button">
               Inquire

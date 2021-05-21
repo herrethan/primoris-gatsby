@@ -58,6 +58,24 @@ button.primary.inverted:focus,
   background-color: #fafafa;
 }
 
+.icon-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.icon-button svg {
+  color: var(--bondi-blue);
+  margin: 0;
+  vertical-align: middle;
+}
+
+.icon-button:focus svg,
+.icon-button:hover svg {
+  color: var(--bondi-blue-dark)
+}
+
 .no-style {
   background: transparent;
   outline: none;

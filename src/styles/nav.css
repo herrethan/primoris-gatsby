@@ -171,6 +171,7 @@ nav>ul>li {
 
 nav .subnav li {
   display: block;
+  white-space: nowrap;
 }
 
 nav .subnav a:focus, nav .subnav a:hover {

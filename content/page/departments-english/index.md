@@ -4,7 +4,6 @@ title: English/Language Arts
 date: 2021-04-25T03:49:45.175Z
 image: hero-7.jpg
 ---
-
 <div class="row">
   <div class="column">
     <p>While fundamental concepts such as spelling and grammar are incorporated into our instruction, English/Language Arts courses are built on discussion, debate, and argument construction and defense. Students read and respond to a variety of complex texts throughout their course of study, as well as learn multiple writing styles to express both creative and analytical viewpoints.</p>
@@ -27,8 +26,6 @@ image: hero-7.jpg
   <div class="column medium-7">
     <p>Continuing the same philsophy, middle and high school English courses follow a workshop and seminar format. Students will engage with a variety of complex texts through discussion and debate, while also honing their written expression skills in narrative, analytical, and argumentative formats.</p>
     <p>Students also begin to engage with complex research topics, and examine thematic issues through a variety of lenses and perspectives. Students complete at least one extensive research project each year through interdisciplinary study in history and the sciences.</p>
-    <p>By the end of their course of study, students will have taken AP Language and Composition and AP Seminar. Students may elect to take AP Literature and AP Research. Students may also take a college level seminar course.</p>
     <a href="/contact" class="button secondary" style="margin-top:20px; margin-bottom:40px">Inquire</a>
   </div>
 </div>
-

@@ -58,9 +58,9 @@ const Search = ({
       allMarkdownRemark: { nodes }
     }
   }) => {
-  const { search } = window.location;
-  const query = new URLSearchParams(search).get('s');
-  const [searchQuery, setSearchQuery] = React.useState(query || '');
+  // const { search } = window.location;
+  // const query = new URLSearchParams(search).get('s');
+  const [searchQuery, setSearchQuery] = React.useState('');
   const allowedQuery = searchQuery.length > 1 ? searchQuery : '';
   const searchResults = useFlexSearch(allowedQuery, index, store);
   const results = allowedQuery ? searchResults : flattenNodes(nodes);

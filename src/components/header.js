@@ -69,9 +69,9 @@ const Header = ({ backgroundImg, height, children, darken=false }) => {
           {navData && navData.main && navData.main.map(item => (
             <NavItem key={item.title} item={item} />
           ))}
-          <li className="icon-button">
+          {/* <li className="icon-button">
             <Link to="/search"><Magnifier /></Link>
-          </li>
+          </li> */}
           <li className="cta">
             <Link to="/contact" className="primary button">
               Inquire

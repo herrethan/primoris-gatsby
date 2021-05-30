@@ -36,6 +36,8 @@ main:
         url: /admissions/faq
   - title: Calendar
     url: /calendar
+  - title: Awards
+    url: /awards
 footer:
   - title: About us
     url: /about

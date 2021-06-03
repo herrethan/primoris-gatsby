@@ -35,7 +35,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-6">
     <h3>SUMMER PROGRAM</h3>
-    <p>Our summer program registration is now open! Check out our <a href="/img/SummerProgram2021.pdf">Summer Program</a> brochure for more information. Sessions are filling up quickly! Please reach out to <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> to inquire about availablilty before registering.</p>
+    <p>Our summer program registration is now closed. If you are interested in being the first to know about our 2022 summer program, please reach out to <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> to be added to our mailing list.</p>
   </div>
 </div>
 

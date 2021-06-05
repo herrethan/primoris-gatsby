@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
+// TODO: figure out why Links don't work after 3 clicks in production builds
+// import { Link } from "gatsby"; 
 import navData from "../../content/navigation.yml";
 import ChevronDown from "./chevron";
 import Magnifier from "./magnifier";
@@ -8,10 +9,10 @@ const NavItem = ({ item }) => {
   return (
     <li key={item.url}>
       {!item.subnav && (
-        <Link to={item.url}>
+        <a href={item.url}>
           {item.title}
           {item.subnav && <ChevronDown />}
-        </Link>
+        </a>
       )}
       {item.subnav && (
         <>
@@ -19,17 +20,17 @@ const NavItem = ({ item }) => {
             {item.title}
             {item.subnav && <ChevronDown />}
           </button>
-          <Link to={item.url} className="desktop-nav-item">
+          <a href={item.url} className="desktop-nav-item">
             {item.title}
             {item.subnav && <ChevronDown />}
-          </Link>
+          </a>
         </>
       )}
       {item.subnav && (
         <ul className="subnav">
           {item.subnav.map(subitem => (
             <li key={subitem.url}>
-              <Link to={subitem.url}>{subitem.title}</Link>
+              <a href={subitem.url}>{subitem.title}</a>
             </li>
           ))}
         </ul>
@@ -55,10 +56,10 @@ const Header = ({ backgroundImg, height, children, darken=false }) => {
 
       <nav>
         <h1 className="site-title">
-          <Link to="/">
+          <a href="/">
             <img className="site-logo" src="/img/p-shadow.png" alt="" />
             <span>Primoris Academy</span>
-          </Link>
+          </a>
         </h1>
         <button className="hamburger" onClick={toggleNav}>
           <span className="top-bun"></span>
@@ -70,12 +71,12 @@ const Header = ({ backgroundImg, height, children, darken=false }) => {
             <NavItem key={item.title} item={item} />
           ))}
           <li className="icon-button">
-            <Link to="/search"><Magnifier /></Link>
+            <a href="/search"><Magnifier /></a>
           </li>
           <li className="cta">
-            <Link to="/contact" className="primary button">
+            <a href="/contact" className="primary button">
               Inquire
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>

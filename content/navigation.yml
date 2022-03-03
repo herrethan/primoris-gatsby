@@ -7,7 +7,7 @@ main:
       - title: English
         url: /departments/english
       - title: Science
-        url: /departments/science/   
+        url: /departments/science/
       - title: History
         url: /departments/history
       - title: Programming/Robotics
@@ -27,6 +27,8 @@ main:
         url: /programs/middle-school
       - title: Pre school
         url: /programs/pre-school
+      - title: Summer Program
+        url: static/img/summer-2022-info-registration.pdf
   - title: Admissions
     url: /admissions/apply
     subnav:

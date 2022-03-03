@@ -35,7 +35,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-6">
     <h3>SUMMER PROGRAM</h3>
-    <p>Our summer 2022 registration is now OPEN!<a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
+    <p>Our summer 2022 registration is now OPEN! Please reach out to <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> for more information.</p>
   </div>
 </div>
 

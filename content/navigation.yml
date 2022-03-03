@@ -27,8 +27,6 @@ main:
         url: /programs/middle-school
       - title: Pre school
         url: /programs/pre-school
-      - title: Summer Program
-        url: static/img/summer-2022-info-registration.pdf
   - title: Admissions
     url: /admissions/apply
     subnav:

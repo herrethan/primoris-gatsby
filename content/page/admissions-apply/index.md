@@ -36,7 +36,7 @@ Shadow days during the school year can be scheduled from October- May, pending s
 Teachers should email their recommendations to [admissions@primorisacademy.org](mailto:admissions@primorisacademy.org) from their school email accounts. Recommendations sent from personal accounts will not be accepted.
 
 <p style="margin-top:40px">
-<a class="button primary" target="_blank" href="/img/RecommendationFormElementary.pdf">Elementary school</a>
+<a class="button primary" target="_blank" href="/img/recommendation-form-elementary-school.pdf">Elementary school</a>
 </p?>
 <p style="margin-bottom:40px">
 <a class="button primary" target="_blank" href="/img/RecommendationFormMiddleAndHigh.pdf">Middle/High school</a>

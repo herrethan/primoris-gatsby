@@ -39,7 +39,7 @@ Teachers should email their recommendations to [admissions@primorisacademy.org](
 <a class="button primary" target="_blank" href="/img/recommendation-form-elementary-school.pdf">Elementary school</a>
 </p?>
 <p style="margin-bottom:40px">
-<a class="button primary" target="_blank" href="/img/RecommendationFormMiddleAndHigh.pdf">Middle/High school</a>
+<a class="button primary" target="_blank" href="/img/recommendation-form-middle-high-school.pdf">Middle/High school</a>
 </p>
 
 **UPON RECEIPT OF ALL MATERIALS**

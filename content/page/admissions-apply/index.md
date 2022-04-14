@@ -19,7 +19,7 @@ Download and complete the relevant application below. Send completed application
 <a class="button primary" target="_blank" href="/img/Elementary-School-Application_Form.pdf">Elementary school</a>
 </p>
 <p style="margin-bottom:40px">
-<a class="button primary" target="_blank" href="/img/Middle-And-High-School-Application_Form.pdf">Middle/High school</a>
+<a class="button primary" target="_blank" href="/static/img/middle-and-high-school-application.pdf">Middle/High school</a> 
 </p>
 
 **3. SCHEDULE SHADOW DAYS**

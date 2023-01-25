@@ -9,7 +9,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-4">
     <h3>PRE-SCHOOL</h3>
-    <i>Ages 3-5</i>
+    <i>Ages 4-5</i>
     <p>A joyful, encouraging start to the learning journey</p>
     <a href="/programs/pre-school">Learn More →</a>
   </div>

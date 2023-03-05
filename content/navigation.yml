@@ -7,7 +7,7 @@ main:
       - title: English
         url: /departments/english
       - title: Science
-        url: /departments/science/   
+        url: /departments/science/
       - title: History
         url: /departments/history
       - title: Programming/Robotics
@@ -36,6 +36,8 @@ main:
         url: /admissions/faq
   - title: Calendar
     url: /calendar
+  - title: Awards
+    url: /awards
 footer:
   - title: About us
     url: /about

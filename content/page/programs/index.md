@@ -9,7 +9,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-4">
     <h3>PRE-SCHOOL</h3>
-    <i>Ages 3-5</i>
+    <i>Ages 4-5</i>
     <p>A joyful, encouraging start to the learning journey</p>
     <a href="/programs/pre-school">Learn More →</a>
   </div>
@@ -35,7 +35,7 @@ image: robotics-soulder.jpg
 <div class="row">
   <div class="column medium-6">
     <h3>SUMMER PROGRAM</h3>
-    <p>Our summer program registration is now open! Check out our <a href="/img/SummerProgram2021.pdf">Summer Program</a> brochure for more information. Sessions are filling up quickly! Please reach out to <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org</a> to inquire about availablilty before registering.</p>
+    <p>Our summer 2022 registration is currently closed. If you would like to be added to our mailing list for next year, please reach out to <a href="mailto:summer@primorisacademy.org">summer@primorisacademy.org.</a> See <a href="/img/summer-2022-info-registration.pdf" target="_blank">our brochure and registration form </a> for more information about what we offer.</p>
   </div>
 </div>
 

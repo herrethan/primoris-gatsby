@@ -45,13 +45,17 @@ ul.bullets {
   list-style: none;
 }
 
-ul.bullets li::before {
+ul.bullets > li::before {
   content: "\2022";
   color: var(--bondi-blue);
   font-weight: bold;
   display: inline-block;
   width: 1em; 
   margin-left: -1em;
+}
+
+ul.bullets li::marker {
+  color: var(--bondi-blue)
 }
 
 .kid-grid {

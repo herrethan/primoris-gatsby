@@ -2,7 +2,7 @@
 name: programs/pre-school
 title: Pre-School
 blurb: >-
-  <i>Ages 3-5</i>
+  <i>Ages 4-5</i>
 
   <span style="font-weight:600; display:block">A joyful, encouraging start to the learning journey</span>
 date: 2020-07-24T03:51:00.967Z

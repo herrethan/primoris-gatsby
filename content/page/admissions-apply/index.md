@@ -25,11 +25,11 @@ Download and complete the relevant application below. Send completed application
 **3. SCHEDULE SHADOW DAYS**
 
 Once you have submitted an application, contact us to schedule three consecutive school days for attending classes and shadowing students at Primoris. Applicants must commit to three full days.
-Shadow days during the school year can be scheduled from October- May, pending schedule availability. Shadow days may also be scheduled during our summer program.
+Shadow days during the school year can be scheduled from October- May, pending schedule availability. Shadow days may also be scheduled during our summer program if there is space available.
 
 **4. SUBMIT REMAINING APPLICATION MATERIALS**
 
-* IQ Test (for ages 5 and older)
+* IQ Test (for ages 5 and older, optional)
 * School Transcripts
 * Two Teacher Recommendations
 

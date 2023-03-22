@@ -24,10 +24,6 @@ At Primoris, our students are placed into classes based on their ability instead
 
 The maximum student to teacher ratio is 12:1. Classes average 7-8 students. Class sizes are kept small to maximize close attention to each student.
 
-### Is there an application fee?
-
-There is no application fee to apply.
-
 ### Do you offer financial aid?
 
 Yes, Primoris Academy offers financial aid on a case-by-case basis.
@@ -45,6 +41,10 @@ Primoris is accredited by AdvancedED (now Cognia).
 Primoris Academy currently does not offer any transportation. The decision to offer busing or transportation lies with your local school district. If the district offers transportation services, you are eligible for some level of reimbursement from the district, county, or state.
 
 <h2 style="margin-top:2em">Shadowing</h2>
+
+### Is there an application fee?
+
+There is $300 shadow days fee. 
 
 ### What are shadow days?
 

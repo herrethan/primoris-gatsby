@@ -1,5 +1,5 @@
 ---
 title: Holiday Recess
-date: 2021-12-23T15:41:50.270Z
-detail: No School 12/23/21-1/4/22. Happy Holidays!
+date: 2023-12-22T15:41:50.270Z
+detail: No School 12/22/23-1/2/24. Happy Holidays!
 ---

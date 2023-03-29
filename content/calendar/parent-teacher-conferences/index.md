@@ -1,5 +1,5 @@
 ---
 title: Parent/Teacher Conferences
-date: 2020-12-09T18:23:36.848Z
-detail: 12/8-12/10 (12/9 and 12/10 are half days)
+date: 2023-12-06T18:23:36.848Z
+detail: 12/6-12/8 (12/7 and 12/8 are half days)
 ---

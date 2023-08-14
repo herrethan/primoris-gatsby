@@ -10,11 +10,7 @@ After submitting an application, you will receive an email or phone call invitin
 
 ### Is there an application deadline?
 
-Primoris Academy has rolling admissions so there is no deadline to submit an application.
-
-### What grades or age range does Primoris offer?
-
-Primoris Academy serves students in K- 12th grade.
+Primoris Academy has rolling admissions (for K-3rd) so there is no deadline to submit an application. 
 
 ### What is your tuition?
 
@@ -44,7 +40,7 @@ Primoris Academy currently does not offer any transportation. The decision to of
 
 ### Is there an application fee?
 
-There is $300 shadow days fee. 
+There is no application fee.
 
 ### What are shadow days?
 
@@ -60,12 +56,12 @@ Shadow students are encouraged to become a part of our student body and particip
 
 ### Is there a fee for shadow days?
 
-There is no fee for shadow days during the normal school year. If your student is shadowing during our summer program, there is a fee in the amount of the summer session. Summer shadow days depend on availability in our summer program.
+There is $300 shadow days fee. 
 
 ### What hours is the school day?
 
-Our regular school day is from 8 a.m.-2:50 p.m. Doors open at 7:55 a.m.
+Our regular school day is from 8 a.m.-2:50 p.m. Doors open at 7:55 a.m. Dismissal is 2:50-3:00 p.m.
 
 ### What do I need to do after the shadow days?
 
-Once the shadow days are completed, the rest of the necessary application materials (test (IQ, ERB, or SSAT/ISEE), teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.
+Once the shadow days are completed, the rest of the necessary application materials (teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.

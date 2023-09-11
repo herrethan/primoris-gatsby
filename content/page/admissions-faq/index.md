@@ -46,7 +46,7 @@ There is no application fee.
 
 Shadow days are 3 consecutive days in which an applying student will attend Primoris Academy from 8 a.m. to 3 p.m.
 
-### When can I set up shadow days for my student?
+### When can I set up shadow days for my child?
 
 Once we receive your child's application, someone from our office will reach out to coordinate shadow days.
 
@@ -56,7 +56,7 @@ Shadow students are encouraged to become a part of our student body and particip
 
 ### Is there a fee for shadow days?
 
-There is $300 shadow days fee. 
+There is a $300 shadow days fee. 
 
 ### What hours is the school day?
 
@@ -64,4 +64,4 @@ Our regular school day is from 8 a.m.-2:50 p.m. Doors open at 7:55 a.m. Dismissa
 
 ### What do I need to do after the shadow days?
 
-Once the shadow days are completed, the rest of the necessary application materials (teacher recommendation(s), copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.
+Once the shadow days are completed, the rest of the necessary application materials (teacher recommendation(s), and copy of school transcripts) will need to be submitted to complete the application package. Once we have received all of the materials, a decision letter will be mailed home typically within 1-2 weeks.

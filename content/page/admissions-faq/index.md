@@ -40,7 +40,7 @@ Primoris Academy currently does not offer any transportation. The decision to of
 
 ### Is there an application fee?
 
-There is no application fee.
+There is no application fee..
 
 ### What are shadow days?
 

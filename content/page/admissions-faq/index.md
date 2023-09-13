@@ -1,7 +1,7 @@
 ---
 name: admissions/faq
 title: FAQ
-date: 2020-07-23T04:10:52.224Z
+date: 2023-09-13T15:15:31.996Z
 image: ground-mural.jpg
 ---
 ### How do I arrange for a tour?

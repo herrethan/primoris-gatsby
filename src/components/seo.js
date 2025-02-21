@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import headData from "../../content/head.yml";
 
 const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
@@ -30,6 +31,7 @@ const SEO = ({ description, lang, meta, title }) => {
   const metaDescription = description || site.siteMetadata.description;
 
   return (
+    <>
     <Helmet
       htmlAttributes={{
         lang,
@@ -73,8 +75,12 @@ const SEO = ({ description, lang, meta, title }) => {
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
     </Helmet>
+    {/* no idea how this can be inserted into head */}
+    {headData && headData.post && <div dangerouslySetInnerHTML={{ __html: headData.post }} />}
+    </>
   );
 }
+
 
 SEO.defaultProps = {
   lang: `en`,

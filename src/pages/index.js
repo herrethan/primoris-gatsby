@@ -70,7 +70,6 @@ const SiteIndex = () => {
           <iframe width="720" height="405" src="https://www.youtube.com/embed/-5RoySZkJEU" title="Primoris Academy video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
         <Faq />
-
       <Footer />
     </>
   )

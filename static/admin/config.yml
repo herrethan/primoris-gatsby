@@ -127,3 +127,10 @@ collections:
             fields:
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Url', name: 'url', widget: 'string' }
+      - label: 'Head'
+        name: 'head'
+        file: 'content/head.yml'
+        editor:
+          preview: false
+        fields:
+          - { label: 'Arbitrary HTML', name: 'post', widget: 'text', required: false }

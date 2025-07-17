@@ -5,7 +5,6 @@ blurb: ""
 date: 2021-05-01T15:52:32.007Z
 image: hero-contact.png
 ---
-
 <div class="stars-background">
   <main class="content row" style="margin-bottom:40px; max-width: 600px">
     <h2>Learn more about Primoris</h2>
@@ -118,13 +117,13 @@ image: hero-contact.png
 <main class="content row" style="margin-top:40px; margin-bottom:40px">
   <div class="column medium-6">
     <h2>Visit Us</h2>
-    <p class="contact-icon marker">120 Washington Ave, Westwood, NJ 07675</p>
+    <p class="contact-icon marker">64 E Midland Ave, Paramus, NJ 07652</p>
     <p class="contact-icon phone">Phone: (201) 722-1000, Fax: (201) 722-1001</p>
   </div>
   <div class="column medium-6">
     <div id="map" style="width:100%;">
       <a href="https://www.google.com/maps/place/Primoris+Academy/@40.9926179,-74.0387749,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2e57b91b82aa1:0xad394ae9fedb0ca8!8m2!3d40.9926179!4d-74.0365862?hl=en-US" target="_blank" title="Open in google maps">
-        <img src="/img/map.jpg" alt="Primoris Academy in Westwood NJ">
+        <img src="/img/map.jpg" alt="Primoris Academy in Paramus NJ">
       </a>
     </div>
   </div>

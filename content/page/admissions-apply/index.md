@@ -30,7 +30,6 @@ Shadow days during the school year can be scheduled from October- May, pending s
 
 **4. SUBMIT REMAINING APPLICATION MATERIALS**
 
-* IQ Test (for ages 5 and older, optional)
 * School Transcripts
 * Two Teacher Recommendations
 

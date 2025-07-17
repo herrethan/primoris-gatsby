@@ -13,9 +13,7 @@ entries:
       instead of by age. Therefore, the final tuition amount depends on which
       class the child is placed in.
   - question: What is the student to teacher ratio/ average class size?
-    answer: The maximum student to teacher ratio is 12:1. Classes average 7-8
-      students. Class sizes are kept small to maximize close attention to each
-      student.
+    answer: Class sizes are kept small to maximize close attention to each student.
   - question: Is there an application fee?
     answer: There is no application fee..
   - question: Do you offer financial aid?

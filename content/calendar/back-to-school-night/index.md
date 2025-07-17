@@ -1,5 +1,5 @@
 ---
 title: Back to School Night
-date: 2023-09-14T22:00:27.327Z
-detail: 6:00 pm
+date: 2024-09-17T22:00:00.000Z
+detail: ""
 ---

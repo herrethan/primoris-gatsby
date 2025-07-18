@@ -1,5 +1,5 @@
 ---
-title: Teacher Development Day
-date: 2023-09-25T17:28:31.891Z
-detail: No school for students.
+title: Staff Development Day—No School for Students
+date: 2026-03-20T13:00:31.891Z
+detail: ""
 ---

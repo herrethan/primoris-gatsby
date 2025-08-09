@@ -96,4 +96,19 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-blog)
 
+## 🖼️ Netlify CDN
+
+This project is deployed on Netlify, which automatically serves all static assets (including images) through their global CDN. This provides:
+
+- **Global CDN delivery**: Images are served from edge locations worldwide for faster loading
+- **Automatic caching**: Static assets are cached for optimal performance
+- **No configuration needed**: All existing image paths continue to work as-is
+
+### How It Works
+
+- All images in your `/static/img/` folder are automatically served through Netlify's CDN
+- No changes to existing image paths are required
+- Gatsby's built-in image processing continues to work normally
+- The `netlify.toml` file configures caching headers for optimal performance
+
 <!-- AUTO-GENERATED-CONTENT:END -->

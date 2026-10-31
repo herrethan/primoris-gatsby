@@ -1,3 +1,14 @@
+## Inquiry form integration
+
+The existing Netlify inquiry form can additionally send submissions to Google Apps
+Script to save a Google Sheet row, notify admissions and optionally send personalized
+applicant replies based on grade and selected interests. Google automation
+runs after Netlify accepts the submission and does not block form intake.
+
+See [the inquiry guide](integrations/inquiry-production/README.md) for webhook setup,
+Google account migration, recovery and validation. Run `npm test` for mocked backend
+checks and `npm run build` for Gatsby.
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

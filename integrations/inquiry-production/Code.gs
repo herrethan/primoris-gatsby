@@ -396,18 +396,91 @@ function applicantReply_(row, config) {
     'Tolle Ingenium: Lift Up Your Talent'];
   const body = sections.map(section => (section.title ? section.title + '\n' : '') + section.paragraphs.join('\n\n') +
     (section.action ? '\n\n' + section.action.label + ': ' + section.action.url : '')).join('\n\n') + '\n\n' + signature.join('\n');
-  const htmlSections = sections.map(section => '<tr><td style="padding:24px;background:#ffffff;border-bottom:1px solid #e5e7eb">' +
-    (section.image ? '<img src="' + assetBase + section.image + '" width="552" alt="Students and learning at Primoris Academy" style="display:block;width:100%;height:auto;border:0;margin-bottom:20px">' : '') +
-    (section.title ? '<h2 style="margin:0 0 16px;color:#029651;font-size:22px">' + escapeHtml_(section.title) + '</h2>' : '') +
-    section.paragraphs.map(text => '<p style="margin:0 0 14px;line-height:1.7">' + escapeHtml_(text) + '</p>').join('') +
-    (section.action ? '<table role="presentation" cellspacing="0" cellpadding="0"><tr><td bgcolor="#029651" style="border-radius:5px"><a href="' + escapeHtml_(section.action.url) + '" style="display:inline-block;padding:14px 20px;color:#ffffff;text-decoration:none;font-weight:bold">' + escapeHtml_(section.action.label) + '</a></td></tr></table>' : '') + '</td></tr>').join('');
-  const htmlBody = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Welcome to Primoris Academy</title></head>' +
-    '<body style="margin:0;padding:0;background:#f0f1f5;font-family:Arial,Helvetica,sans-serif;color:#202020">' +
-    '<table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center" style="padding:20px 8px">' +
-    '<table role="presentation" width="600" cellspacing="0" cellpadding="0" style="width:100%;max-width:600px">' +
-    '<tr><td bgcolor="#029651" style="padding:26px 24px;color:white"><img src="' + assetBase + 'admissions-email/primoris-logo.jpg" width="80" height="80" alt="Primoris Academy logo" style="display:block;border:0;margin-bottom:16px"><p style="margin:0;font-size:26px;font-weight:bold">Primoris Academy</p><p style="margin:8px 0 0">Welcome to our community</p></td></tr>' + htmlSections +
-    '<tr><td bgcolor="#edf5ef" style="padding:24px;line-height:1.7">' + signature.map(escapeHtml_).join('<br>') +
-    '</td></tr></table></td></tr></table></body></html>';
+  const htmlBody = renderApplicantHtml_(sections, upper, assetBase, admissions);
   return { to: value(6), name: 'Primoris Admissions', replyTo: admissions,
     subject: 'Thank you for your interest in Primoris Academy', body: body, htmlBody: htmlBody };
+}
+
+
+// Table layouts and inline styles keep the primary design usable in email clients.
+// The two variants follow the supplied lower- and upper-school references.
+function renderApplicantHtml_(sections, upper, assetBase, admissions) {
+  const green = '#029651';
+  const darkGreen = '#17523b';
+  const panel = '#edeced';
+  const image = (file, width, alt) => '<img src="' + assetBase + file + '" width="' + width +
+    '" alt="' + escapeHtml_(alt) + '" style="display:block;border:0;outline:none;width:100%;max-width:' + width + 'px;height:auto">';
+  const paragraphs = (texts, color, leading) => texts.map(text =>
+    '<p style="margin:0 0 16px;color:' + color + ';font-size:16px;line-height:' + leading + '">' + escapeHtml_(text) + '</p>').join('');
+  const button = (action, filled) => action ?
+    '<table role="presentation" border="0" cellspacing="0" cellpadding="0" style="border-collapse:separate;margin:4px 0 8px"><tr><td bgcolor="' + (filled ? darkGreen : panel) +
+    '" style="border-radius:5px;text-align:center"><a href="' + escapeHtml_(action.url) +
+    '" style="display:inline-block;padding:16px 22px;color:' + (filled ? '#ffffff' : darkGreen) +
+    ';font-size:16px;line-height:23px;font-weight:bold;text-decoration:none">' + escapeHtml_(action.label) + '</a></td></tr></table>' : '';
+  const heading = (text, color) => text ? '<h2 style="margin:0 0 16px;color:' + color +
+    ';font-size:22px;font-weight:700;line-height:1.35;letter-spacing:-0.3px">' + escapeHtml_(text) + '</h2>' : '';
+  let htmlSections = '';
+  for (const section of sections) {
+    const intro = !section.title;
+    const recap = section.title === 'Your inquiry';
+    const visit = section.title === 'Visit Us!' || section.title === 'Shadowing';
+    const learning = section.title === 'Learning at Primoris';
+    if (upper) {
+      // Original upper-school reference: white paper, generous horizontal padding,
+      // simple section headings and no repeated photo banners between paragraphs.
+      htmlSections += '<tr><td class="email-pad" bgcolor="#ffffff" style="padding:' + (intro ? '28px' : '8px') + ' 24px 8px">' +
+        (recap ? '<table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td bgcolor="#f3f6f3" style="padding:20px;border:1px solid #dce6de;border-radius:8px">' : '') +
+        heading(section.title, darkGreen) + paragraphs(section.paragraphs, '#202020', '1.5') + button(section.action, true) +
+        (recap ? '</td></tr></table>' : '') + '</td></tr>';
+      continue;
+    }
+    if (intro) {
+      htmlSections += '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:24px 24px 16px">' +
+        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:separate"><tr><td style="padding:28px 30px 12px;border:3px solid ' + green + ';border-radius:15px">' +
+        paragraphs(section.paragraphs, '#202020', '1.6') + '</td></tr></table></td></tr>';
+    } else if (learning) {
+      const text = section.paragraphs.slice(0, -1);
+      const highlights = section.paragraphs[section.paragraphs.length - 1].replace(/^Program highlights: /, '').replace(/\.$/, '').split('; ');
+      htmlSections += '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:12px 24px 8px">' +
+        '<table role="presentation" width="360" align="center" cellspacing="0" cellpadding="0" style="width:100%;max-width:360px;margin:0 auto 24px"><tr><td>' +
+        image('blob-1.jpg', 360, 'Hands-on learning at Primoris Academy') + '</td></tr></table>' +
+        paragraphs(text, '#202020', '1.7') + '</td></tr>' +
+        '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:0 24px 24px">' +
+        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:separate"><tr><td style="padding:24px 30px;border:3px solid ' + green + ';border-radius:15px">' +
+        heading('Program highlights', darkGreen) + '<ul style="margin:0;padding-left:22px;color:' + darkGreen + ';font-size:16px;line-height:1.8">' +
+        highlights.map(text => '<li>' + escapeHtml_(text.charAt(0).toUpperCase() + text.slice(1)) + '</li>').join('') + '</ul></td></tr></table></td></tr>';
+    } else {
+      const background = visit ? green : recap ? '#f3f6f3' : panel;
+      const color = visit ? '#ffffff' : '#202020';
+      htmlSections += '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:0 24px 20px">' +
+        '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:separate"><tr><td bgcolor="' + background + '" style="padding:24px;border-radius:' + (visit ? '15px' : '8px') +
+        (recap ? ';border:1px solid #dce6de' : '') + '">' +
+        (visit && section.image ? '<div style="margin-bottom:20px">' + image(section.image, 480, section.title === 'Visit Us!' ? 'Explore Primoris Academy' : 'Experience a day of learning at Primoris') + '</div>' : '') +
+        heading(section.title, visit ? '#ffffff' : darkGreen) + paragraphs(section.paragraphs, color, '1.7') + button(section.action, !visit) + '</td></tr></table></td></tr>';
+    }
+  }
+  const headerPhoto = upper ? 'hero-3.jpg' : 'hero-4.jpg';
+  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
+    '<meta name="color-scheme" content="light"><title>Thank you for your interest in Primoris Academy</title>' +
+    '<style>@media only screen and (max-width:480px){.email-pad{padding-left:16px!important;padding-right:16px!important}.email-shell{width:100%!important}}</style></head>' +
+    '<body style="margin:0;padding:0;background:#f0f1f5;font-family:Arial,Helvetica,sans-serif;color:#202020;-webkit-text-size-adjust:100%">' +
+    '<div style="display:none;max-height:0;overflow:hidden;mso-hide:all">Thank you for reaching out. Discover Primoris and the next steps for your family.</div>' +
+    '<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f1f5"><tr><td align="center" style="padding:24px 0">' +
+    '<!--[if mso]><table role="presentation" width="600" align="center"><tr><td><![endif]-->' +
+    '<table role="presentation" class="email-shell" width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="' + (upper ? '#ffffff' : panel) + '" style="width:100%;max-width:600px;margin:0 auto">' +
+    '<tr><td bgcolor="#ffffff" style="padding:22px 24px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>' +
+    '<td width="76" valign="middle"><img src="' + assetBase + 'admissions-email/primoris-logo.jpg" width="64" height="64" alt="Primoris Academy crest" style="display:block;width:64px;height:64px;border:0"></td>' +
+    '<td valign="middle"><p style="margin:0;color:' + darkGreen + ';font-size:25px;line-height:1.25;font-weight:bold">PRIMORIS ACADEMY</p>' +
+    '<p style="margin:6px 0 0;color:#496253;font-size:13px;line-height:1.5;letter-spacing:1px">TOLLE INGENIUM · LIFT UP YOUR TALENT</p></td></tr></table></td></tr>' +
+    '<tr><td>' + image(headerPhoto, 600, upper ? 'Discover Middle School and High School at Primoris' : 'Welcome to Primoris Academy') + '</td></tr>' + htmlSections +
+    '<tr><td class="email-pad" bgcolor="' + (upper ? '#ffffff' : panel) + '" style="padding:20px 24px 28px;color:#202020;font-size:15px;line-height:1.7">' +
+    'Sincerely,<br><strong>Primoris Admissions</strong><br>We look forward to getting to know your family.</td></tr>' +
+    '<tr><td bgcolor="' + (upper ? darkGreen : green) + '" align="center" style="padding:28px 24px;color:#ffffff;font-size:13px;line-height:1.8">' +
+    '<strong style="font-size:16px">Primoris Academy</strong><br>64 E. Midland Avenue, Paramus, New Jersey<br>' +
+    '<a href="tel:+12017221000" style="color:#ffffff;text-decoration:none">Office: (201) 722-1000</a> · ' +
+    '<a href="tel:+12015008629" style="color:#ffffff;text-decoration:none">Text &amp; Call: (201) 500-8629</a><br>' +
+    '<a href="mailto:' + admissions + '" style="color:#ffffff;text-decoration:underline">' + admissions + '</a><br>' +
+    '<a href="https://primorisacademy.org" style="color:#ffffff;text-decoration:underline">Visit our website</a>' +
+    '<p style="margin:18px 0 0;font-size:14px;font-style:italic">Tolle Ingenium: Lift Up Your Talent</p></td></tr>' +
+    '</table><!--[if mso]></td></tr></table><![endif]--></td></tr></table></body></html>';
 }

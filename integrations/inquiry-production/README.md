@@ -271,3 +271,27 @@ the existing deployment** to retain the webhook URL. Verify the deployed website
 hosts the email logo. Submit controlled lower/upper-school tests and check Netlify,
 Sheet rows, admissions notification and family reply. Do not create a new deployment
 URL unless the Netlify owner will update the webhook destination too.
+
+## Email appearance and preview
+
+The HTML reply follows the two supplied email references separately. Lower school
+uses the original pale-gray canvas, rounded green welcome/highlights borders,
+centered learning photo, solid green tour/shadow panels, light buttons and a green
+footer. Upper school uses a white body, compact section headings and a dark-green
+footer. Both include a branded crest header, school photo banner, personalized
+content and a subdued answer recap. Upper school does not repeat large photos
+between sections. Plain-text fallbacks contain the same content and working links.
+
+Original Canva image downloads returned HTTP 403, so the template uses existing
+school-hosted photos and the locally saved crest rather than depending on those
+unavailable images. Exact original banners would require source image files from
+the email designer. The template uses inline styling and presentation tables, a
+600px desktop maximum with no forced mobile minimum width, meaningful image alt
+text, tappable buttons, and telephone/email links. Outlook's legacy renderer may
+show square corners; the content and calls to action do not depend on rounding.
+
+Use `npm run preview:inquiry` to regenerate the lower-school, upper-school and
+newsletter-only samples. Preview files substitute local image paths for offline
+review. Check a real Gmail/Outlook/iPhone test email after updating the deployment:
+browser previews are useful for layout, but cannot prove every email client's
+rendering or image-loading settings.

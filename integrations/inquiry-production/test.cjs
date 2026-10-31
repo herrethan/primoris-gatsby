@@ -417,3 +417,31 @@ assert(!f.messages[5].body.includes('November Open House'))
 f.context.submitInquiry_({...data, id: 'lower-tour', grade: '3', interests: ['tour']})
 assert(!f.messages[7].body.includes('November Open House'))
 console.log('Passed: updated recommendations and upper-school tour invitation expiry.')
+
+// Reference-inspired email layouts remain fluid, branded and email-client friendly.
+f = replyFixture()
+f.context.submitInquiry_({...data, interests: ['tour', 'shadow-days']})
+const lowerHtml = f.messages[1].htmlBody
+assert(lowerHtml.includes('border:3px solid #029651;border-radius:15px'))
+assert(lowerHtml.includes('<li>Small class sizes</li>'))
+assert(lowerHtml.includes('bgcolor="#029651"'))
+assert(lowerHtml.includes('max-width:600px'))
+assert(!lowerHtml.includes('min-width:600px'))
+assert(lowerHtml.includes('<!--[if mso]>'))
+assert(lowerHtml.includes('tel:+12017221000'))
+assert(lowerHtml.includes('mailto:admissions@primorisacademy.org'))
+f.context.submitInquiry_({...data, id: 'upper-layout', grade: '7', interests: ['tour', 'shadow-days']})
+const upperHtml = f.messages[3].htmlBody
+assert(upperHtml.includes('bgcolor="#17523b"'))
+assert(!upperHtml.includes('Program highlights'))
+assert(!upperHtml.includes('border:3px solid #029651'))
+assert.strictEqual((upperHtml.match(/<img /g) || []).length, 2)
+for (const html of [lowerHtml, upperHtml]) {
+  for (const match of html.matchAll(/<img [^>]*src="([^"]+)"/g)) {
+    assert(match[1].startsWith('https://primorisacademy.org/img/'))
+  }
+  assert(!html.includes('canva-cdn'))
+  assert(!html.includes('Unsubscribe'))
+  assert(!html.includes('Annie Woo'))
+}
+console.log('Passed: reference-inspired lower/upper layouts, hosted images, responsive widths and email-compatible markup.')

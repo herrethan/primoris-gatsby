@@ -509,3 +509,39 @@ assert(!lowerHtml.includes('upper-header.jpg'))
 assert(!lowerHtml.includes('hero-4.jpg'))
 assert(!lowerHtml.includes('primoris-logo.jpg'))
 console.log('Passed: original lower/upper template artwork and local asset availability.')
+
+// One-time trigger cleanup preserves other jobs and creates before deleting.
+const cleanupCode = fs.readFileSync(path.join(__dirname, 'TriggerCleanup.gs'), 'utf8')
+f = fixture()
+vm.runInContext(cleanupCode, f.context)
+const schoolIdentity = () => ({getEmail: () => 'school@example.com'})
+f.context.Session = {getActiveUser: schoolIdentity, getEffectiveUser: schoolIdentity}
+const trigger = handler => ({getHandlerFunction: () => handler})
+const otherJob = trigger('otherJob')
+let ownedTriggers = [trigger('retryNotifications_'), trigger('retryNotifications_'), otherJob]
+let createFails = false
+f.context.ScriptApp = {
+  getProjectTriggers: () => ownedTriggers.slice(),
+  newTrigger: handler => ({timeBased: () => ({everyMinutes: minutes => {
+    assert.strictEqual(minutes, 10)
+    return {create: () => {
+      if (createFails) throw new Error('Simulated quota failure')
+      ownedTriggers.push(trigger(handler))
+    }}
+  }})}),
+  deleteTrigger: old => {ownedTriggers = ownedTriggers.filter(t => t !== old)}
+}
+f.context.resetRecoveryTrigger()
+assert.strictEqual(ownedTriggers.length, 2)
+assert(ownedTriggers.includes(otherJob))
+assert.strictEqual(ownedTriggers.filter(t => t.getHandlerFunction() === 'retryNotifications_').length, 1)
+f.context.resetRecoveryTrigger()
+assert.strictEqual(ownedTriggers.length, 2)
+createFails = true
+const originalTriggers = ownedTriggers.slice()
+assert.throws(() => f.context.resetRecoveryTrigger(), /quota failure/)
+assert.deepStrictEqual(ownedTriggers, originalTriggers)
+f.context.Session.getActiveUser = () => ({getEmail: () => ''})
+assert.throws(() => f.context.resetRecoveryTrigger(), /from the editor/)
+assert.deepStrictEqual(ownedTriggers, originalTriggers)
+console.log('Passed: recovery trigger cleanup, other-job preservation, repeated runs, identity guard and creation failure safety.')

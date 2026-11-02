@@ -341,3 +341,27 @@ flow/redaction and simulated redirects, not Google's actual live HTTP behavior.
 References: [Google ContentService redirects](https://developers.google.com/apps-script/guides/content),
 [Google's supported web-app outputs](https://developers.google.com/apps-script/guides/web),
 [Netlify support thread with a matching Apps Script failure report](https://answers.netlify.com/t/webhooks-deploy-notiifcations-being-disabled-due-to-non-200s/18776).
+
+## Remove duplicate recovery schedules without changing the deployment
+
+In the school account's Apps Script editor, add a **Script** file named
+`TriggerCleanup` and paste `TriggerCleanup.gs` from this directory into it. Save,
+select **resetRecoveryTrigger**, and run once. No web-app redeployment, webhook URL
+change, or secret change is needed. This helper does not process inquiries or send
+emails. It creates a ten-minute `retryNotifications_` trigger first, then removes
+that signed-in account's previous triggers for that same function. Other scheduled
+functions are preserved. A failure creating the replacement leaves old schedules
+in place. If deletion fails partway through, inspect Triggers and run cleanup again.
+
+Check the editor's **Triggers** page afterward: the school account should have one
+`retryNotifications_` time-driven schedule. Google only exposes triggers owned by
+the current account. If the other schedule belongs to your personal account, sign
+into that account and manually delete its recovery trigger after verifying the
+school-owned one exists. Do not run the helper under the personal account: that
+would create a new personal schedule. The helper verifies an authenticated editor
+identity; it cannot determine which email address your organization designates as
+the school account.
+
+After cleanup, remove the one-time `TriggerCleanup` editor file if desired. The
+installed schedule calls the existing `retryNotifications_` function, not the helper.
+See [Google's trigger ownership rules](https://developers.google.com/apps-script/guides/triggers/installable).

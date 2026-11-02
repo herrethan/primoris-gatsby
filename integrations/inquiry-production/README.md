@@ -20,11 +20,12 @@ interests receive a brief acknowledgment. There are no PDF attachments.
 
 ## Enable applicant replies
 
-1. Deploy the website assets first. Email images use school-hosted URLs under
-   `https://primorisacademy.org/img/`: existing school photos (`blob-1.jpg`,
-   `blob-3.jpg`, `hero-4.jpg`, `hero-1.jpg`) and the locally saved Primoris logo
-   (`admissions-email/primoris-logo.jpg`). The original Canva links failed TLS hostname
-   validation and are not used. There are no Canva/Google-hosted image dependencies.
+1. Deploy the website assets first. Email images use exact artwork copied from
+   the supplied `.eml` references into `static/img/admissions-email/`. Lower school
+   uses `lower-header.jpg`, `lower-learning.png`, `lower-tour.png`,
+   `lower-shadow.png` and `lower-motto.png`; upper school uses `upper-header.jpg`.
+   Email URLs are `https://primorisacademy.org/img/admissions-email/...`.
+   No email image is loaded from Canva or Google at send/read time.
 2. Replace `Code.gs` in Apps Script with the entire updated file. Keep the current
    Sheet ID. Run **setupProduction** again before updating the deployment. It adds
    four reply-tracking columns to the known old layout without changing old rows;
@@ -278,14 +279,16 @@ The HTML reply follows the two supplied email references separately. Lower schoo
 uses the original pale-gray canvas, rounded green welcome/highlights borders,
 centered learning photo, solid green tour/shadow panels, light buttons and a green
 footer. Upper school uses a white body, compact section headings and a dark-green
-footer. Both include a branded crest header, school photo banner, personalized
+footer. Both use their original designed image headers, personalized
 content and a subdued answer recap. Upper school does not repeat large photos
 between sections. Plain-text fallbacks contain the same content and working links.
 
-Original Canva image downloads returned HTTP 403, so the template uses existing
-school-hosted photos and the locally saved crest rather than depending on those
-unavailable images. Exact original banners would require source image files from
-the email designer. The template uses inline styling and presentation tables, a
+The original Canva images were recovered with browser-style request headers and
+saved unchanged in the repository. Earlier versions used substitute school photos
+because the CDN returned 403 responses. The emails now use the original lower-school
+artwork (including its designed logo/banner and footer) and original upper-school
+banner, with school-hosted URLs. Do not remove/crop the built-in image branding.
+The template uses inline styling and presentation tables, a
 600px desktop maximum with no forced mobile minimum width, meaningful image alt
 text, tappable buttons, and telephone/email links. Outlook's legacy renderer may
 show square corners; the content and calls to action do not depend on rounding.
@@ -295,3 +298,46 @@ newsletter-only samples. Preview files substitute local image paths for offline
 review. Check a real Gmail/Outlook/iPhone test email after updating the deployment:
 browser previews are useful for layout, but cannot prove every email client's
 rendering or image-loading settings.
+
+## Diagnose Netlify retries without changing the webhook
+
+A saved row plus repeated completed `doPost` executions can mean successful
+processing but unsuccessful HTTP acknowledgment. Google documents that ContentService
+responses redirect; actual Netlify status/redirect behavior must be measured rather
+than inferred from the Apps Script Completed label.
+
+The candidate fix returns a minimal HtmlService acknowledgment after a submission
+has been saved (including duplicate submissions). It does not change the URL, token,
+validation, email templates or deduplication. This is not a verified live fix until
+the deployed response and Netlify delivery have been checked.
+
+1. Copy the updated complete `Code.gs` into the existing Google project. Publish a
+   **new version of the existing web-app deployment**, retaining its URL/secret.
+2. Add Script Property `DIAGNOSTIC_WEB_APP_URL`: the existing base URL ending in
+   `/exec`, with no `?token=...` or other query string. This is used only by the
+   diagnostic; it does not alter the actual Netlify destination.
+3. Select **diagnoseWebhook** in the editor and run it. Authorize external requests
+   if prompted. It sends two authenticated probes to that deployment, comparing
+   `content` and `html` response methods, without saving rows or sending emails.
+4. Read the two JSON log lines. `initialStatus` is what a client sees without
+   following redirects. `finalStatus` is after following up to five permitted
+   Google redirects with GET; `markerFound` rejects generic Google error/login pages
+   masquerading as HTTP success. `directAcknowledgment: true` for `html` is the
+   desired result. The report contains no URL, token, student data or email body.
+5. If `html` has a direct acknowledgment, have the Netlify owner enable the existing
+   webhook once, submit one controlled inquiry, and check that the notification
+   stays enabled without repeated `doPost` calls. Do not repeatedly re-enable while
+   the response still fails.
+6. If the diagnostic fails or Netlify still disables, the one targeted request for
+   the owner is: **What HTTP status did Netlify record for the failed delivery?**
+   No account reconfiguration, payload inspection or broad log investigation is
+   needed. If unavailable, ask support about the hook/site ID and exact timestamp.
+
+The probe bypasses inquiry validation only after the normal secret check. It never
+calls submission or email processing. Existing deployments predating the probe will
+not return its marker; update the version first. The helper tests cover control
+flow/redaction and simulated redirects, not Google's actual live HTTP behavior.
+
+References: [Google ContentService redirects](https://developers.google.com/apps-script/guides/content),
+[Google's supported web-app outputs](https://developers.google.com/apps-script/guides/web),
+[Netlify support thread with a matching Apps Script failure report](https://answers.netlify.com/t/webhooks-deploy-notiifcations-being-disabled-due-to-non-200s/18776).

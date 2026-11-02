@@ -122,11 +122,68 @@ function doPost(e) {
     difference |= config.secret.charCodeAt(i) ^ (typeof token === 'string' ? token.charCodeAt(i) : 0);
   }
   if (difference !== 0) throw new Error('Unauthorized webhook.');
+  // Authenticated HTTP probes exercise response delivery without saving or emailing.
+  const probe = e.parameter.probe;
+  if (probe === 'html' || probe === 'content') {
+    const marker = 'primoris-webhook-probe-v1';
+    return probe === 'html' ? HtmlService.createHtmlOutput(marker) :
+      ContentService.createTextOutput(marker);
+  }
   const contents = e && e.postData && e.postData.contents;
   if (typeof contents !== 'string' || contents.length > 32000) throw new Error('Invalid webhook body.');
-  const response = receiveSubmission_(JSON.parse(contents), config);
-  return ContentService.createTextOutput(JSON.stringify({ ok: true, response: response }))
-    .setMimeType(ContentService.MimeType.JSON);
+  receiveSubmission_(JSON.parse(contents), config);
+  // Netlify needs an HTTP acknowledgment, not JSON. ContentService introduces a
+  // documented redirect; test this HTML acknowledgment with diagnoseWebhook.
+  return HtmlService.createHtmlOutput('Primoris inquiry received.');
+}
+
+// Run only from the editor after updating the EXISTING web-app deployment.
+// DIAGNOSTIC_WEB_APP_URL must be its base /exec URL, without token or query string.
+// This logs status/timing only, never URLs, secrets, request data or response bodies.
+function diagnoseWebhook() {
+  const config = configuration_();
+  const base = config.p.getProperty('DIAGNOSTIC_WEB_APP_URL') || '';
+  if (!/^https:\/\/script\.google\.com\/macros\/s\/[a-zA-Z0-9_-]+\/exec$/.test(base)) {
+    throw new Error('Set DIAGNOSTIC_WEB_APP_URL to the existing base /exec URL, with no query string.');
+  }
+  for (const mode of ['content', 'html']) {
+    const started = Date.now();
+    let response;
+    try {
+      response = UrlFetchApp.fetch(base + '?token=' + encodeURIComponent(config.secret) + '&probe=' + mode, {
+        method: 'post', contentType: 'application/json', payload: '{}',
+        followRedirects: false, muteHttpExceptions: true
+      });
+    } catch (_) {
+      console.log(JSON.stringify({ mode: mode, networkError: true }));
+      continue;
+    }
+    const report = { mode: mode, initialStatus: response.getResponseCode(),
+      initialMs: Date.now() - started, redirects: 0 };
+    // Follow only Google's response hosts. A redirect GET carries no token/body.
+    // A loop or non-Google redirect stops here rather than leaking credentials.
+    for (let hop = 0; hop < 5 && response.getResponseCode() >= 300 && response.getResponseCode() < 400; hop++) {
+      const headers = response.getAllHeaders();
+      const key = Object.keys(headers).find(name => name.toLowerCase() === 'location');
+      const location = key && String(headers[key]);
+      const match = location && /^https:\/\/([a-zA-Z0-9.-]+)(?:[/?#]|$)/.exec(location);
+      report.redirectHost = match ? match[1] : 'unrecognized';
+      if (!match || ['script.google.com', 'script.googleusercontent.com'].indexOf(match[1]) === -1) break;
+      try {
+        response = UrlFetchApp.fetch(location, { followRedirects: false, muteHttpExceptions: true });
+        report.redirects++;
+      } catch (_) {
+        report.redirectError = true;
+        break;
+      }
+    }
+    report.finalStatus = response.getResponseCode();
+    report.markerFound = response.getContentText().indexOf('primoris-webhook-probe-v1') !== -1;
+    report.totalMs = Date.now() - started;
+    report.directAcknowledgment = report.initialStatus >= 200 && report.initialStatus < 300 &&
+      report.redirects === 0 && report.markerFound;
+    console.log(JSON.stringify(report));
+  }
 }
 
 function receiveSubmission_(submission, config) {
@@ -443,7 +500,7 @@ function renderApplicantHtml_(sections, upper, assetBase, admissions) {
       const highlights = section.paragraphs[section.paragraphs.length - 1].replace(/^Program highlights: /, '').replace(/\.$/, '').split('; ');
       htmlSections += '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:12px 24px 8px">' +
         '<table role="presentation" width="360" align="center" cellspacing="0" cellpadding="0" style="width:100%;max-width:360px;margin:0 auto 24px"><tr><td>' +
-        image('blob-1.jpg', 360, 'Hands-on learning at Primoris Academy') + '</td></tr></table>' +
+        image('admissions-email/lower-learning.png', 360, 'A Primoris lower-school student reading in class') + '</td></tr></table>' +
         paragraphs(text, '#202020', '1.7') + '</td></tr>' +
         '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:0 24px 24px">' +
         '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:separate"><tr><td style="padding:24px 30px;border:3px solid ' + green + ';border-radius:15px">' +
@@ -455,11 +512,11 @@ function renderApplicantHtml_(sections, upper, assetBase, admissions) {
       htmlSections += '<tr><td class="email-pad" bgcolor="' + panel + '" style="padding:0 24px 20px">' +
         '<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:separate"><tr><td bgcolor="' + background + '" style="padding:24px;border-radius:' + (visit ? '15px' : '8px') +
         (recap ? ';border:1px solid #dce6de' : '') + '">' +
-        (visit && section.image ? '<div style="margin-bottom:20px">' + image(section.image, 480, section.title === 'Visit Us!' ? 'Explore Primoris Academy' : 'Experience a day of learning at Primoris') + '</div>' : '') +
+        (visit && section.image ? '<div style="margin-bottom:20px">' + image(section.title === 'Visit Us!' ? 'admissions-email/lower-tour.png' : 'admissions-email/lower-shadow.png', 480, section.title === 'Visit Us!' ? 'A Primoris student exploring science through a hands-on activity' : 'A Primoris student writing in class') + '</div>' : '') +
         heading(section.title, visit ? '#ffffff' : darkGreen) + paragraphs(section.paragraphs, color, '1.7') + button(section.action, !visit) + '</td></tr></table></td></tr>';
     }
   }
-  const headerPhoto = upper ? 'hero-3.jpg' : 'hero-4.jpg';
+  const headerPhoto = upper ? 'admissions-email/upper-header.jpg' : 'admissions-email/lower-header.jpg';
   return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
     '<meta name="color-scheme" content="light"><title>Thank you for your interest in Primoris Academy</title>' +
     '<style>@media only screen and (max-width:480px){.email-pad{padding-left:16px!important;padding-right:16px!important}.email-shell{width:100%!important}}</style></head>' +
@@ -468,11 +525,8 @@ function renderApplicantHtml_(sections, upper, assetBase, admissions) {
     '<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f1f5"><tr><td align="center" style="padding:24px 0">' +
     '<!--[if mso]><table role="presentation" width="600" align="center"><tr><td><![endif]-->' +
     '<table role="presentation" class="email-shell" width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="' + (upper ? '#ffffff' : panel) + '" style="width:100%;max-width:600px;margin:0 auto">' +
-    '<tr><td bgcolor="#ffffff" style="padding:22px 24px"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr>' +
-    '<td width="76" valign="middle"><img src="' + assetBase + 'admissions-email/primoris-logo.jpg" width="64" height="64" alt="Primoris Academy crest" style="display:block;width:64px;height:64px;border:0"></td>' +
-    '<td valign="middle"><p style="margin:0;color:' + darkGreen + ';font-size:25px;line-height:1.25;font-weight:bold">PRIMORIS ACADEMY</p>' +
-    '<p style="margin:6px 0 0;color:#496253;font-size:13px;line-height:1.5;letter-spacing:1px">TOLLE INGENIUM · LIFT UP YOUR TALENT</p></td></tr></table></td></tr>' +
-    '<tr><td>' + image(headerPhoto, 600, upper ? 'Discover Middle School and High School at Primoris' : 'Welcome to Primoris Academy') + '</td></tr>' + htmlSections +
+    '<tr><td>' + image(headerPhoto, 600, upper ? 'Upper School at Primoris Academy — Taking the next step' : 'Primoris Academy — Dare to be curious. Always inspired, never bored.') + '</td></tr>' + htmlSections +
+    (!upper ? '<tr><td bgcolor="' + green + '" align="center" style="padding:0 24px">' + image('admissions-email/lower-motto.png', 532, 'Thank you for your interest in Primoris Academy, where curiosity thrives and potential soars.') + '</td></tr>' : '') +
     '<tr><td class="email-pad" bgcolor="' + (upper ? '#ffffff' : panel) + '" style="padding:20px 24px 28px;color:#202020;font-size:15px;line-height:1.7">' +
     'Sincerely,<br><strong>Primoris Admissions</strong><br>We look forward to getting to know your family.</td></tr>' +
     '<tr><td bgcolor="' + (upper ? darkGreen : green) + '" align="center" style="padding:28px 24px;color:#ffffff;font-size:13px;line-height:1.8">' +

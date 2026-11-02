@@ -71,6 +71,7 @@ function fixture(overrides = {}) {
         },
       }),
     },
+    HtmlService: { createHtmlOutput: text => ({text, kind: 'html'}) },
     Date: Clock,
     console: { log: () => {} },
     PropertiesService: {
@@ -230,7 +231,7 @@ assert.throws(() => f.context.doPost({}), /Unauthorized/)
 assert.throws(() => f.context.doPost(event({...submission, form_id: "other"})), /Unexpected form/)
 assert.throws(() => f.context.doPost(event({...submission, is_spam: true})), /spam/)
 assert.strictEqual(f.rows.length, 1)
-assert.strictEqual(JSON.parse(f.context.doPost(event()).text).response.saved, true)
+assert.strictEqual(f.context.doPost(event()).kind, 'html')
 f.context.doPost(event())
 assert.strictEqual(f.rows.length, 2)
 assert.strictEqual(f.sends, 1)
@@ -435,7 +436,7 @@ const upperHtml = f.messages[3].htmlBody
 assert(upperHtml.includes('bgcolor="#17523b"'))
 assert(!upperHtml.includes('Program highlights'))
 assert(!upperHtml.includes('border:3px solid #029651'))
-assert.strictEqual((upperHtml.match(/<img /g) || []).length, 2)
+assert.strictEqual((upperHtml.match(/<img /g) || []).length, 1)
 for (const html of [lowerHtml, upperHtml]) {
   for (const match of html.matchAll(/<img [^>]*src="([^"]+)"/g)) {
     assert(match[1].startsWith('https://primorisacademy.org/img/'))
@@ -445,3 +446,66 @@ for (const html of [lowerHtml, upperHtml]) {
   assert(!html.includes('Annie Woo'))
 }
 console.log('Passed: reference-inspired lower/upper layouts, hosted images, responsive widths and email-compatible markup.')
+
+// Probe handling never writes rows or attempts delivery, and still authenticates.
+f = fixture()
+for (const mode of ['html', 'content']) {
+  const output = f.context.doPost({parameter: {token: f.props.WEBHOOK_SECRET, probe: mode}})
+  assert(output.text.includes('primoris-webhook-probe-v1'))
+  assert.strictEqual(f.rows.length, 1)
+  assert.strictEqual(f.sends, 0)
+}
+assert.throws(() => f.context.doPost({parameter: {token: 'wrong', probe: 'html'}}), /Unauthorized/)
+f.props.DIAGNOSTIC_WEB_APP_URL = 'https://script.google.com/macros/s/sample-deployment/exec'
+const requests = [], reports = []
+f.context.console.log = value => reports.push(JSON.parse(value))
+f.context.UrlFetchApp = {fetch: (url, options) => {
+  requests.push({url, options})
+  if (url.includes('probe=content')) return {
+    getResponseCode: () => 302,
+    getAllHeaders: () => ({Location: 'https://script.googleusercontent.com/macros/echo?sample=1'}),
+    getContentText: () => 'Moved'
+  }
+  return {getResponseCode: () => 200, getAllHeaders: () => ({}), getContentText: () => 'primoris-webhook-probe-v1'}
+}}
+f.context.diagnoseWebhook()
+assert.strictEqual(reports[0].initialStatus, 302)
+assert.strictEqual(reports[0].directAcknowledgment, false)
+assert.strictEqual(reports[1].directAcknowledgment, true)
+assert.strictEqual(requests[1].options.payload, undefined)
+assert(!requests[1].url.includes(f.props.WEBHOOK_SECRET))
+assert(!JSON.stringify(reports).includes(f.props.WEBHOOK_SECRET))
+assert.strictEqual(f.rows.length, 1)
+assert.strictEqual(f.sends, 0)
+requests.length = reports.length = 0
+f.context.UrlFetchApp.fetch = () => ({getResponseCode: () => 200, getAllHeaders: () => ({}), getContentText: () => 'Google error page'})
+f.context.diagnoseWebhook()
+assert(reports.every(report => !report.directAcknowledgment))
+f.props.DIAGNOSTIC_WEB_APP_URL = 'https://other.example/exec'
+assert.throws(() => f.context.diagnoseWebhook(), /existing base/)
+console.log('Passed: HTML acknowledgments, authenticated no-email probes, redirect diagnostics and redacted reporting.')
+f = fixture({DIAGNOSTIC_WEB_APP_URL:'https://script.google.com/macros/s/sample/exec'})
+let fetchCount = 0
+const redirectReports = []
+f.context.console.log = value => redirectReports.push(JSON.parse(value))
+f.context.UrlFetchApp = {fetch: () => {
+  fetchCount++
+  return {getResponseCode: () => 302, getAllHeaders: () => ({Location:'https://untrusted.example/redirect'}), getContentText: () => ''}
+}}
+f.context.diagnoseWebhook()
+assert.strictEqual(fetchCount, 2)
+assert(redirectReports.every(report => !report.directAcknowledgment && report.redirects === 0))
+assert.strictEqual(f.sends, 0)
+console.log('Passed: diagnostic refuses non-Google redirect destinations.')
+
+// Use the exact reference artwork, kept in school-hosted static assets.
+for (const name of ['lower-header.jpg', 'lower-learning.png', 'lower-tour.png', 'lower-shadow.png', 'lower-motto.png']) {
+  assert(lowerHtml.includes('admissions-email/' + name))
+  assert(fs.existsSync(path.join(__dirname, '../../static/img/admissions-email', name)))
+  assert(!upperHtml.includes(name))
+}
+assert(upperHtml.includes('admissions-email/upper-header.jpg'))
+assert(!lowerHtml.includes('upper-header.jpg'))
+assert(!lowerHtml.includes('hero-4.jpg'))
+assert(!lowerHtml.includes('primoris-logo.jpg'))
+console.log('Passed: original lower/upper template artwork and local asset availability.')

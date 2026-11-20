@@ -64,6 +64,7 @@
     "clean": "gatsby clean",
     "test": "npm run test:inquiry",
     "test:inquiry": "node integrations/inquiry-production/test.cjs",
+    "test:calendar": "node scripts/test-calendar.cjs",
     "preview:inquiry": "node integrations/inquiry-production/preview.cjs"
   }
 }

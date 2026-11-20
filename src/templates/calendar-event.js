@@ -3,28 +3,28 @@ import { Link, graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import moment from 'moment';
+import { categories, eventDateLabel } from "../utils/calendar";
+import settings from "../../content/calendar-settings.json";
+import "../styles/calendar.css";
 
 const PageTemplate = ({ data }) => {
-  const page = data.markdownRemark;
+  const event = data.calendarEvent;
 
   return (
     <>
       <SEO
-        title={page.frontmatter.title}
-        description={page.excerpt}
+        title={event.title}
+        description={event.detail || `${event.title} · ${eventDateLabel(event)}`}
       />
       <Header />
-      {page && (
-        <main className="content" style={{marginBottom: 40}}>
-          <h1>{page.frontmatter.title}</h1>
-          <p>
-            {moment(page.frontmatter.date).format('dddd, MMMM Do, YYYY')}
-            <br />
-            {page.frontmatter.detail}
-          </p>
-          <div dangerouslySetInnerHTML={{ __html: page.html }}></div>
-          <Link to="/calendar">&larr; Back to calendar</Link>
+      {event && (
+        <main className="content calendar-page calendar-event-page">
+          <p className="calendar-eyebrow">{settings.schoolYear} · {categories[event.category]}</p>
+          <h1>{event.title}</h1>
+          <p className="calendar-event-full-date">{eventDateLabel(event)}{event.time && ` · ${event.time} ET`}</p>
+          {event.detail && <p style={{ whiteSpace: "pre-line" }}>{event.detail}</p>}
+          {settings.preliminary && <p className="calendar-empty">Preliminary calendar. Dates are subject to change.</p>}
+          <Link className="calendar-back" to="/calendar/">Back to calendar</Link>
         </main>
       )}
       <Footer />
@@ -35,15 +35,15 @@ const PageTemplate = ({ data }) => {
 export default PageTemplate
 
 export const pageQuery = graphql`
-  query EventBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      excerpt(pruneLength: 120)
-      html
-      frontmatter {
+  query CalendarEventById($id: String!) {
+    calendarEvent(id: { eq: $id }) {
         detail
         title
-        date
-      }
+        date(formatString: "YYYY-MM-DD")
+        endDate(formatString: "YYYY-MM-DD")
+        category
+        noSchool
+        time
     }
   }
 `

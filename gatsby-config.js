@@ -93,6 +93,14 @@ module.exports = {
           engine: 'flexsearch',
           query: `
             query {
+              allCalendarEvent {
+                nodes {
+                  id
+                  slug
+                  title
+                  excerpt: detail
+                }
+              }
               allMarkdownRemark {
                 nodes {
                   id
@@ -110,13 +118,15 @@ module.exports = {
           ref: 'id',
           index: ['title', 'excerpt'],
           store: ['id', 'title', 'excerpt', 'slug'],
-          normalizer: ({ data }) =>
-            data.allMarkdownRemark.nodes.map(node => ({
+          normalizer: ({ data }) => [
+            ...data.allMarkdownRemark.nodes.map(node => ({
                 id: node.id,
                 excerpt: node.excerpt,
                 slug: node.fields.slug,
                 title: node.frontmatter.title,
             })),
+            ...data.allCalendarEvent.nodes,
+          ],
       }
     },
     `gatsby-plugin-react-helmet`,

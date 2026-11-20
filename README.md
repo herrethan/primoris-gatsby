@@ -1,3 +1,33 @@
+## Editing the school calendar
+
+All events live in **[`content/calendar/events.csv`](content/calendar/events.csv)**,
+with one row per event. Open it in Excel or Google Sheets, make changes, then
+save/export it as **CSV (UTF-8, comma-separated)** back to the same path. Keep
+the header row. Gatsby reads the CSV directly; there are no per-event Markdown
+files to maintain. CSV saves update the running local preview automatically.
+
+| Column | What to enter |
+| --- | --- |
+| `slug` | Unique event URL such as `/calendar/family-picnic/`. Keep existing values to preserve bookmarks. |
+| `title` | Event name. |
+| `date` | First day, formatted `YYYY-MM-DD`. |
+| `endDate` | Optional last day, inclusive, formatted `YYYY-MM-DD`. |
+| `category` | `school`, `closed`, `formal`, `theme`, or `conferences`. |
+| `time` | Optional Eastern time, for example `6:00 PM`. Leave blank when unspecified. |
+| `noSchool` | `true` or `false`; include conferences that close school in the No school filter. |
+| `detail` | Optional notes, such as a rain date or field-trip details. |
+
+Spreadsheet exports quote commas and multiline notes automatically. When editing
+the CSV by hand, enclose those cells in double quotes and escape a quote as `""`.
+Invalid dates, categories, duplicate URLs, and malformed rows produce errors with
+the CSV row number. Removing a row removes that event from the calendar and its
+detail page. Events remain included in site search.
+
+School-year boundaries, preliminary status, and trimester dates live in
+`content/calendar-settings.json`. The calendar introduction is still editable as
+a Page in the CMS; events are maintained in the CSV rather than a CMS collection.
+Run `npm run test:calendar` to validate CSV data and calendar behavior.
+
 ## Inquiry form integration
 
 The existing Netlify inquiry form can additionally send submissions to Google Apps

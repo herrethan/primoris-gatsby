@@ -64,6 +64,8 @@
     "clean": "gatsby clean",
     "test": "npm run test:inquiry",
     "test:inquiry": "node integrations/inquiry-production/test.cjs",
-    "preview:inquiry": "node integrations/inquiry-production/preview.cjs"
+    "test:calendar": "node scripts/test-calendar.cjs",
+    "preview:inquiry": "node integrations/inquiry-production/preview.cjs",
+    "develop:lan": "gatsby develop --host 0.0.0.0 --port 8000"
   }
 }

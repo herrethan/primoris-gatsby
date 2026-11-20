@@ -12,51 +12,21 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
-    path: '{{name}}/index'
+    path: '{{slug}}/{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Header title', name: 'title', widget: 'string' }
+      - { label: 'School or department content reviewed (hides Not reviewed banner)', name: 'reviewed', widget: 'boolean', default: false, required: false }
       - { label: 'Header blurb', name: 'blurb', widget: 'markdown', required: false }
       - { label: 'Publish date', name: 'date', widget: 'datetime' }
       - { label: 'Featured image', name: 'image', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
 
-  - label: 'Calendar'
-    name: 'calendar'
-    folder: 'content/calendar'
-    label_singular: 'Event'
-    create: true
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Event date', name: 'date', widget: 'datetime' }
-      - { label: 'Event detail', name: 'detail', widget: 'string', required: false }
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+  # Calendar events are maintained in content/calendar/events.csv.
 
-  - label: 'FAQ'
-    name: 'faq'
-    files:
-      - label: 'Frequently asked questions'
-        name: 'frequently-asked-questions'
-        file: 'content/faq.yml'
-        fields:
-          - label: 'Header'
-            name: 'header'
-            widget: 'string'
-          - label: 'Entries'
-            name: 'entries'
-            widget: 'list'
-            label_singular: 'entry'
-            summary: '{{fields.question}}'
-            fields:
-              - { label: 'Question', name: 'question', widget: 'string' }
-              - { label: 'Answer', name: 'answer', widget: 'markdown' }  
+  # FAQ content lives in the admissions-faq Page body, alongside its metadata.
 
   - label: 'Testimonials'
     name: 'testimonials'
@@ -120,6 +90,7 @@ collections:
                 fields:
                   - { label: 'Title', name: 'title', widget: 'string' }
                   - { label: 'Url', name: 'url', widget: 'string' }
+                  - { label: 'Department group', name: 'group', widget: 'select', options: ['Science', 'Humanities', 'Enrichment'], required: false }
           - label: 'Footer'
             name: 'footer'
             widget: 'list'
@@ -127,6 +98,30 @@ collections:
             fields:
               - { label: 'Title', name: 'title', widget: 'string' }
               - { label: 'Url', name: 'url', widget: 'string' }
+      - label: 'Teachers'
+        name: 'teachers'
+        file: 'content/teachers.json'
+        fields:
+          - { label: 'Show fictional profile label', name: 'placeholder', widget: 'boolean', default: true }
+          - label: 'Profiles'
+            name: 'profiles'
+            widget: 'list'
+            summary: '{{fields.name}}'
+            fields:
+              - { label: 'ID', name: 'id', widget: 'string' }
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Portrait', name: 'portrait', widget: 'image' }
+              - { label: 'Teaching focus', name: 'focus', widget: 'string' }
+              - label: 'Highlight'
+                name: 'highlight'
+                widget: 'object'
+                fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+                  - label: 'Article paragraphs'
+                    name: 'paragraphs'
+                    widget: 'list'
+                    field: { label: 'Paragraph', name: 'paragraph', widget: 'text' }
       - label: 'Head'
         name: 'head'
         file: 'content/head.yml'

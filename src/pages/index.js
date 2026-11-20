@@ -4,7 +4,7 @@ import SEO from "../components/seo";
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Hero from '../../static/img/hero-1.jpg';
-import Faq from "../components/faq";
+import "../styles/summer-camp.css";
 
 const SiteIndex = () => {
   return (
@@ -13,10 +13,10 @@ const SiteIndex = () => {
         title={''}
         description="A vibrant and nurturing school for the passionately curious"
       />
-      <Header height={480} backgroundImg={Hero}>
+      <Header height={300} backgroundImg={Hero}>
         <div className="content">
-          <div className="header-blurb" style={{maxWidth: 440}}>
-            <h1>Never Bored, Always Inspired</h1>
+          <div className="header-blurb" style={{maxWidth: 640, top: 30}}>
+            <h1 style={{fontSize: "clamp(2rem, 3vw, 2.75rem)"}}>Never Bored, Always Inspired</h1>
             <p>Discover limitless opportunities to learn, and explore the endless possibilities of the world and your own.</p>
             <Link to="/contact" className="button primary inverted">
               Inquire
@@ -24,6 +24,11 @@ const SiteIndex = () => {
           </div>
         </div>
       </Header>
+        <section className="summer-camp-banner" aria-labelledby="summer-camp-banner-title">
+          <h2 id="summer-camp-banner-title">
+            <Link to="/departments/summer-camp/" className="content">Register for our summer camp</Link>
+          </h2>
+        </section>
         <main className="content">
           <div className="row">
             <div className="column medium-6">
@@ -69,7 +74,6 @@ const SiteIndex = () => {
         <div className="video-container">
           <iframe width="720" height="405" src="https://www.youtube.com/embed/-5RoySZkJEU" title="Primoris Academy video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
-        <Faq />
       <Footer />
     </>
   )

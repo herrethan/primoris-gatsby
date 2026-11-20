@@ -55,7 +55,8 @@ const PageEntry = ({ slug, title, excerpt, query }) => {
 const Search = ({ 
     data: { 
       localSearchPages: { index, store }, 
-      allMarkdownRemark: { nodes }
+      allMarkdownRemark: { nodes },
+      allCalendarEvent: { nodes: calendarEvents }
     },
     location
   }) => {
@@ -64,7 +65,7 @@ const Search = ({
   const [searchQuery, setSearchQuery] = React.useState(query || '');
   const allowedQuery = searchQuery.length > 1 ? searchQuery : '';
   const searchResults = useFlexSearch(allowedQuery, index, store);
-  const results = allowedQuery ? searchResults : flattenNodes(nodes);
+  const results = allowedQuery ? searchResults : [...flattenNodes(nodes), ...calendarEvents];
 
   return (
     <>
@@ -114,6 +115,14 @@ export const pageQuery = graphql`
     localSearchPages {
       index
       store
+    }
+    allCalendarEvent {
+      nodes {
+        id
+        slug
+        title
+        excerpt: detail
+      }
     }
     allMarkdownRemark {
       nodes {

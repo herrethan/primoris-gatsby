@@ -5,8 +5,29 @@
 [build.environment]
   NODE_VERSION = "16"
 
+# Keep existing school links working after the Our Schools reorganization.
+[[redirects]]
+  from = "/programs"
+  to = "/schools/"
+  status = 301
+
+[[redirects]]
+  from = "/programs/high-school"
+  to = "/schools/high-school/"
+  status = 301
+
+[[redirects]]
+  from = "/programs/middle-school"
+  to = "/schools/middle-school/"
+  status = 301
+
+[[redirects]]
+  from = "/programs/pre-school"
+  to = "/schools/preschool/"
+  status = 301
+
 # Cache static assets (including images) for 1 year
 [[headers]]
   for = "/static/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable" 
+    Cache-Control = "public, max-age=31536000, immutable"

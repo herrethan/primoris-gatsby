@@ -1,0 +1,61 @@
+{
+  "placeholder": true,
+  "profiles": [
+    {
+      "id": "maya-bennett",
+      "name": "Maya Bennett",
+      "portrait": "/img/teachers/maya-bennett.jpg",
+      "focus": "Inquiry & discovery",
+      "highlight": {
+        "title": "Start with a better question",
+        "excerpt": "How one thoughtful question can turn a familiar lesson into an investigation.",
+        "paragraphs": [
+          "This sample teaching story begins with a question that has more than one plausible answer. Students make an initial prediction, explain the thinking behind it, and decide what would help them investigate further.",
+          "The proposed feature would follow the question through discussion, a first attempt, and a revision. Along the way, students would record what changed their minds and which questions remain open."
+        ]
+      }
+    },
+    {
+      "id": "daniel-park",
+      "name": "Daniel Park",
+      "portrait": "/img/teachers/daniel-park.jpg",
+      "focus": "Ideas across disciplines",
+      "highlight": {
+        "title": "Make the thinking visible",
+        "excerpt": "A sketch, a model, or a few lines of code can reveal the reasoning behind an answer.",
+        "paragraphs": [
+          "A finished answer does not always show the choices that produced it. This sample feature would invite students to represent an idea in more than one way, then explain what each representation makes easier to see.",
+          "The proposed article would compare an early representation with a revised version. Rather than presenting only polished work, it would show the moments when a diagram, a conversation, or a model helped a student notice something new."
+        ]
+      }
+    },
+    {
+      "id": "clara-ellis",
+      "name": "Clara Ellis",
+      "portrait": "/img/teachers/clara-ellis.jpg",
+      "focus": "Discussion & reflection",
+      "highlight": {
+        "title": "Feedback that leads somewhere",
+        "excerpt": "A useful conversation gives a learner a concrete next step and room to make a choice.",
+        "paragraphs": [
+          "This sample classroom story would focus on feedback that names something specific: a detail that needs evidence, a choice that needs explanation, or a part of a design that could be tested more carefully.",
+          "Students would consider a suggestion, decide how to respond, and explain the effect of their revision. The proposed feature would celebrate the judgment involved in improving work, alongside the finished result."
+        ]
+      }
+    },
+    {
+      "id": "marcus-reed",
+      "name": "Marcus Reed",
+      "portrait": "/img/teachers/marcus-reed.jpg",
+      "focus": "Projects & collaboration",
+      "highlight": {
+        "title": "Beyond the first answer",
+        "excerpt": "What a project can teach when students test an idea, share responsibility, and try again.",
+        "paragraphs": [
+          "An open-ended project gives students a reason to plan together and a chance to discover that a first solution is only a beginning. This sample feature would trace a project through its goals, constraints, and early attempts.",
+          "The proposed story would include an unexpected result, the evidence behind a revision, and a reflection from each collaborator. It would show learning as a sequence of choices that can be explained and improved."
+        ]
+      }
+    }
+  ]
+}

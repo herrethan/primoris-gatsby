@@ -10,7 +10,6 @@ const partition = (testimonials) => {
 }
 
 const Card = ({ testimonial }) => {
-  console.log(testimonial)
   return (
     <div className="student-testimonial-card">
       <div className="student-testimonial-card-header">
@@ -45,10 +44,10 @@ const StudentTestimonials = () => {
             <h1>What our students say</h1>
             <p>Get inspired by their stories.</p>
           </div>
-          {columns[0].map(testimonial => <Card testimonial={testimonial} />)}
+          {columns[0].map(testimonial => <Card key={`${testimonial.author}-${testimonial.date}`} testimonial={testimonial} />)}
         </div>
         <div className="column large-5">
-          {columns[1].map(testimonial => <Card testimonial={testimonial} />)}
+          {columns[1].map(testimonial => <Card key={`${testimonial.author}-${testimonial.date}`} testimonial={testimonial} />)}
         </div>
       </div>
     </div>

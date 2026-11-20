@@ -1,0 +1,28 @@
+.summer-camp-banner {
+  background: #daf3f4;
+  border-bottom: 2px solid #ff895a;
+  text-align: center;
+}
+
+.summer-camp-banner h2 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.summer-camp-banner a {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #00636a;
+}
+
+.summer-camp-banner a:hover {
+  color: #004c52;
+  text-decoration: underline;
+}
+
+.summer-camp-banner a:focus-visible {
+  outline: 3px solid #183d46;
+  outline-offset: -4px;
+}

@@ -1,0 +1,97 @@
+/* School pages share the compact scale and teal palette of Departments. */
+.school-header { --school-banner-height: 300px; background: #edf7f7; }
+.school-header .background-img { background-color: #edf7f7; background-position: right center; background-size: auto 100%; background-repeat: no-repeat; }
+.school-header .background-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #edf7f7 0%, #edf7f7 45%, rgba(237,247,247,.92) 60%, rgba(237,247,247,.25) 100%); }
+.school-header > .content { max-width: 1200px; }
+.school-header .school-hero { top: 66px; margin: 0; text-align: left; color: #183d46; max-width: 660px; font-size: 1rem; line-height: 1.65; }
+.school-hero .school-eyebrow { margin: 0 0 8px; }
+.school-hero .school-eyebrow a { color: #00636a; }
+.school-header .school-hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.1; }
+.school-hero > div { max-width: 520px; }
+.school-page .button, .school-hero .button { display: inline-block; padding: 12px 20px; border-radius: 3px; line-height: 1.5; font-weight: 600; }
+.school-hero .button { margin-top: 16px; padding: 10px 20px; font-size: .875rem; background: #164d57; color: #fff; }
+.school-strip { position: sticky; top: 60px; z-index: 8; background: #edf7f7; border-top: 1px solid #d5e7e8; border-bottom: 1px solid #cce0e2; }
+.school-strip .content { display: flex; align-items: center; gap: 20px; max-width: 1200px; padding-top: 10px; padding-bottom: 10px; }
+.school-strip a { display: block; white-space: nowrap; font-size: .875rem; font-weight: 400; color: #33565a; padding: 8px 12px; border-radius: 3px; }
+.school-strip .school-strip-overview { border-right: 1px solid #bddbdd; padding-left: 0; padding-right: 20px; border-radius: 0; }
+.school-strip ul { display: flex; align-items: center; gap: 4px; list-style: none; padding: 0; margin: 0; overflow-x: auto; min-width: 0; scrollbar-width: thin; }
+.school-strip li { flex-shrink: 0; }
+.school-strip a[aria-current="page"] { background: #006d74; color: #fff; font-weight: 600; }
+.school-strip .school-strip-overview[aria-current="page"] { background: transparent; color: #00636a; }
+.school-strip a:hover { background: #d3ebec; color: #004c52; }
+.school-page { max-width: 1200px; font-size: 1rem; line-height: 1.8; color: #40585d; }
+.school-page h2 { color: #183d46; font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; margin: 8px 0 24px; letter-spacing: -.02em; }
+.school-page h3 { color: #183d46; text-transform: none; letter-spacing: 0; font-size: 1.2rem; line-height: 1.4; margin: 0 0 14px; }
+.school-page p { margin-top: 0; }
+.school-page a { color: #00636a; }
+.school-page a:hover { text-decoration: underline; }
+.school-page section[id], .school-page article[id] { scroll-margin-top: 146px; }
+.school-eyebrow { color: #006d74; font-size: .875rem; text-transform: uppercase; font-weight: 700; letter-spacing: .1em; line-height: 1.6; margin-bottom: 12px; }
+.school-lead { font-size: 1.25rem; line-height: 1.65; color: #33565a; }
+.school-page-links { display: flex; flex-wrap: wrap; gap: 8px 28px; padding: 4px 0 22px; border-bottom: 1px solid #d5e3e5; font-size: .875rem; }
+.school-page-links a { padding: 6px 0; }
+.school-intro { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; padding: 48px 0 64px; }
+.school-intro figure { margin: 0; }
+.school-intro img { width: 100%; max-height: 380px; object-fit: cover; border-radius: 5px; }
+.school-intro figcaption { font-size: .875rem; color: #536469; padding-top: 12px; }
+.school-section { padding: 64px 0; border-top: 1px solid #d5e3e5; }
+.school-section > p, .school-band > p { max-width: 790px; }
+.school-band { background: #edf7f7; padding: 36px; border-radius: 5px; margin: 0 0 64px; }
+.school-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 28px; }
+.school-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.school-grid article { border-top: 3px solid #009aa3; padding-top: 24px; min-width: 0; }
+.school-grid article > :last-child { margin-bottom: 0; }
+.school-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 22px; }
+.school-link-list { list-style: none; padding: 0; margin: 20px 0 0; }
+.school-link-list a { display: block; padding: 10px 0; border-bottom: 1px solid #c8dfe2; font-size: .9375rem; }
+.school-note { font-size: .875rem; color: #536469; line-height: 1.7; }
+.school-page .school-note { margin-top: 20px; }
+.school-page .school-draft-label { display: inline-block; margin: 0 0 12px; padding: 4px 10px; background: #fff6da; color: #644500; border-radius: 3px; font-size: .875rem; }
+.school-table-wrap { overflow-x: auto; border: 1px solid #c8dfe2; border-radius: 5px; margin-top: 28px; }
+.school-track-table { width: 100%; min-width: 820px; text-align: left; font-size: .9375rem; line-height: 1.7; }
+.school-track-table caption { padding: 16px 20px; text-align: left; background: #edf7f7; color: #33565a; font-size: .875rem; }
+.school-track-table th, .school-track-table td { padding: 22px 20px; vertical-align: top; border-right: 1px solid #d5e3e5; border-bottom: 1px solid #d5e3e5; }
+.school-track-table thead th { background: #164d57; color: white; width: 27%; font-size: 1rem; }
+.school-track-table thead th:first-child { width: 19%; }
+.school-track-table th span { display: block; font-size: .875rem; font-weight: 400; margin-top: 6px; }
+.school-track-table tbody th { color: #164d57; background: #f1f8f8; }
+.school-track-table tr > :last-child { border-right: 0; }
+.school-track-table tbody tr:last-child > * { border-bottom: 0; }
+.school-track-table .school-link-list { margin: 0; }
+.school-track-table .school-link-list a { padding-top: 0; padding-bottom: 12px; margin-bottom: 12px; }
+.school-track-table .school-link-list li:last-child a { margin-bottom: 0; border: 0; }
+.school-week { margin: 28px 0 0; }
+.school-week > div { display: grid; grid-template-columns: minmax(140px, 1fr) 3fr; gap: 28px; padding: 22px 0; border-top: 1px solid #c8dfe2; }
+.school-week dt { color: #164d57; font-weight: 600; }
+.school-week dd { margin: 0; }
+.school-faq { margin-top: 28px; }
+.school-faq details { border-top: 1px solid #c8dfe2; padding: 20px 0; }
+.school-faq details:last-child { border-bottom: 1px solid #c8dfe2; }
+.school-faq summary { cursor: pointer; color: #183d46; font-weight: 600; padding-right: 12px; }
+.school-faq details p { margin: 16px 0 0; max-width: 790px; }
+.school-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 24px; }
+.school-page .button { background: #164d57; color: #fff; font-size: .875rem; }
+.school-page .button:hover, .school-hero .button:hover { background: #006d74; text-decoration: none; }
+.school-admissions { background: #edf7f7; padding: 36px; border-radius: 5px; margin-bottom: 40px; }
+.school-next { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; border-top: 1px solid #d5e3e5; padding: 24px 0; font-size: .9375rem; }
+.school-strip :focus-visible, .school-page :focus-visible, .school-hero :focus-visible { outline: 3px solid #00747a; outline-offset: 4px; }
+@media (min-width: 840px) {
+  .school-header { --school-banner-height: 244px; }
+  .school-header .school-hero { top: 6px; }
+  .school-strip { top: var(--primary-navigation-height, 64px); }
+  .school-strip .content { padding-top: 4px; padding-bottom: 4px; }
+}
+@media (max-width: 767px) {
+  .school-header .background-img::after { background: rgba(237,247,247,.94); }
+  .school-header .school-hero { top: 60px; }
+  .school-intro, .school-grid, .school-grid-two { grid-template-columns: 1fr; gap: 28px; }
+  .school-intro { padding: 36px 0 44px; }
+  .school-section { padding: 44px 0; }
+  .school-band { padding: 24px; margin-bottom: 44px; }
+  .school-admissions { padding: 24px; }
+  .school-strip .content { gap: 10px; padding-right: 12px; }
+  .school-strip .school-strip-overview { padding-right: 12px; }
+  .school-strip a { padding: 8px; }
+  .school-week > div { grid-template-columns: 1fr; gap: 8px; }
+  .school-page-links { gap: 4px 20px; }
+}

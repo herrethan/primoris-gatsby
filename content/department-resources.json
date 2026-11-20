@@ -1,0 +1,754 @@
+{
+  "biology": {
+    "title": "Biology",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A seed journal",
+          "prompt": "Observe a germinating seed over several days. Record changes with dated drawings and discuss what you can and cannot infer."
+        },
+        {
+          "title": "Build a habitat",
+          "prompt": "Design a model habitat and explain how its features support the needs of a chosen organism."
+        },
+        {
+          "title": "Leaf detectives",
+          "prompt": "Compare fallen leaves. Choose observable features for sorting and explain a classification to a partner."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A fair plant comparison",
+          "prompt": "Plan a comparison of plant growth under two conditions. Identify the measurements and controls you would need."
+        },
+        {
+          "title": "Model a cell",
+          "prompt": "Build a model that shows relationships among cell structures. Explain one useful feature and one limitation of the model."
+        },
+        {
+          "title": "Food-web changes",
+          "prompt": "Draw a simple food web and predict how changing one population might affect the others."
+        }
+      ],
+      "High School": [
+        {
+          "title": "Variation in a dataset",
+          "prompt": "Compare two sets of biological measurements. Describe spread as well as averages before proposing an explanation."
+        },
+        {
+          "title": "Evaluate an experiment",
+          "prompt": "Review a hypothetical investigation. Identify a confounding factor and propose a stronger design."
+        },
+        {
+          "title": "Models of inheritance",
+          "prompt": "Use a simplified inheritance model to make predictions, then discuss what the model does not represent."
+        }
+      ]
+    }
+  },
+  "physics": {
+    "title": "Physics",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "Roll and compare",
+          "prompt": "Compare how a toy rolls on two surfaces. Draw the setup and describe what makes the comparison fair."
+        },
+        {
+          "title": "Shadow stories",
+          "prompt": "Track the position of a shadow at different times. Describe the pattern without assuming a cause you have not tested."
+        },
+        {
+          "title": "Sound makers",
+          "prompt": "Make sounds using safe classroom objects. Compare how changing a vibration changes what you hear."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Motion on a graph",
+          "prompt": "Create a distance-time graph from a small dataset. Explain what its slope says about motion."
+        },
+        {
+          "title": "A paper helicopter",
+          "prompt": "Change one feature of a paper helicopter. Plan repeated trials and explain why one flight is not enough."
+        },
+        {
+          "title": "Energy in a ramp",
+          "prompt": "Draw an energy story for an object moving down a ramp. Identify which quantities you could measure."
+        }
+      ],
+      "High School": [
+        {
+          "title": "Testing a motion model",
+          "prompt": "Compare measured motion with a mathematical model. Use residuals to describe disagreement."
+        },
+        {
+          "title": "Measurement uncertainty",
+          "prompt": "Measure the same quantity repeatedly. Explain why precision and agreement with a reference are different questions."
+        },
+        {
+          "title": "Design a mechanics study",
+          "prompt": "Propose a mechanics question, choose measurements, and state the assumptions required to interpret them."
+        }
+      ]
+    }
+  },
+  "chemistry": {
+    "title": "Chemistry",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "Sort the materials",
+          "prompt": "Compare safe everyday materials using visible or tactile properties. Explain how your sorting rule works."
+        },
+        {
+          "title": "A mixture to separate",
+          "prompt": "Design a way to separate a mixture of large classroom objects. Explain which property makes your method possible."
+        },
+        {
+          "title": "Before and after",
+          "prompt": "Observe a teacher-selected change. Record only what you can observe before proposing an explanation."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Particles on paper",
+          "prompt": "Draw a particle model for a change of state. Explain which features of the drawing represent the real system."
+        },
+        {
+          "title": "A dissolving comparison",
+          "prompt": "Plan a teacher-supervised comparison using approved materials. Identify a variable to change and measurements to record."
+        },
+        {
+          "title": "Conservation in a model",
+          "prompt": "Use counters to model a rearrangement of particles. Explain how you checked that the count was conserved."
+        }
+      ],
+      "High School": [
+        {
+          "title": "Reasoning with quantities",
+          "prompt": "Use a hypothetical chemical relationship to connect a particle ratio with a quantitative prediction."
+        },
+        {
+          "title": "Compare two explanations",
+          "prompt": "Evaluate two models for the same observation. Identify evidence that would help distinguish them."
+        },
+        {
+          "title": "Design a chemical investigation",
+          "prompt": "Outline an investigation using teacher-approved procedures, including the variables, evidence, and limitations."
+        }
+      ]
+    }
+  },
+  "computer-science": {
+    "title": "Computer Science",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "An unplugged algorithm",
+          "prompt": "Write directions for a partner to arrange objects. Revise any instruction that can be interpreted in two ways."
+        },
+        {
+          "title": "An interactive story",
+          "prompt": "Plan a simple interactive story with a clear starting state and two possible outcomes."
+        },
+        {
+          "title": "Find the repeating step",
+          "prompt": "Describe a repeated task. Identify which part could be represented by a loop."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A pattern generator",
+          "prompt": "Write a rule that generates a growing number pattern. Test the rule against known cases."
+        },
+        {
+          "title": "Debug the explanation",
+          "prompt": "Trace a short program with an incorrect output. Explain the cause before changing the code."
+        },
+        {
+          "title": "A data question",
+          "prompt": "Organize a small dataset and write pseudocode to answer one clearly defined question."
+        }
+      ],
+      "High School": [
+        {
+          "title": "Compare algorithms",
+          "prompt": "Design two approaches to the same task. Compare their clarity, outputs, and resource needs."
+        },
+        {
+          "title": "A reproducible analysis",
+          "prompt": "Plan an analysis that another person could repeat from its inputs and documented steps."
+        },
+        {
+          "title": "Build and evaluate",
+          "prompt": "Develop a project proposal with user needs, meaningful tests, and a discussion of limitations."
+        }
+      ]
+    }
+  },
+  "robotics": {
+    "title": "Robotics",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A machine with a job",
+          "prompt": "Sketch a machine for a simple classroom task. Label its moving parts and explain how a person would use it."
+        },
+        {
+          "title": "A sequence to follow",
+          "prompt": "Create a sequence of movement instructions and ask a partner to act as the robot."
+        },
+        {
+          "title": "Build and revise",
+          "prompt": "Make a small structure, test it against one clear goal, and record a change that improves it."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Follow a route",
+          "prompt": "Plan a robot route with turns and stopping points. Explain how you would test positioning accuracy."
+        },
+        {
+          "title": "A sensor decision",
+          "prompt": "Draw a flowchart showing how a robot could respond to a sensor reading."
+        },
+        {
+          "title": "A stronger mechanism",
+          "prompt": "Compare two mechanisms against the same constraint. Record the evidence behind your choice."
+        }
+      ],
+      "High School": [
+        {
+          "title": "Feedback in action",
+          "prompt": "Propose a feedback rule for a moving system. Predict how it would respond to an error."
+        },
+        {
+          "title": "A reliable autonomous run",
+          "prompt": "Design repeated tests for an autonomous task. Define success before collecting results."
+        },
+        {
+          "title": "A design defense",
+          "prompt": "Prepare a proposal that weighs performance, reliability, complexity, and available materials."
+        }
+      ]
+    }
+  },
+  "literature": {
+    "title": "Literature",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A character in clues",
+          "prompt": "Choose a character and collect details that suggest what matters to them."
+        },
+        {
+          "title": "One story, two endings",
+          "prompt": "Write or tell two endings to a short story. Explain how each ending changes its meaning."
+        },
+        {
+          "title": "A poem of observations",
+          "prompt": "Use concrete observations to create a short poem. Read it aloud and revise one phrase."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A claim and its evidence",
+          "prompt": "Develop a claim about a short text and support it with carefully chosen details."
+        },
+        {
+          "title": "A change of perspective",
+          "prompt": "Rewrite a scene from another viewpoint. Explain what the new narrator can and cannot know."
+        },
+        {
+          "title": "The revision workshop",
+          "prompt": "Compare two drafts of a paragraph and explain how one revision improves its effect."
+        }
+      ],
+      "High School": [
+        {
+          "title": "Two interpretations",
+          "prompt": "Construct two plausible readings of a passage. Evaluate the evidence for each."
+        },
+        {
+          "title": "A research conversation",
+          "prompt": "Frame a research question that connects a literary work with its historical context."
+        },
+        {
+          "title": "A portfolio with purpose",
+          "prompt": "Plan a small writing portfolio and explain the craft choices that connect its pieces."
+        }
+      ]
+    }
+  },
+  "history": {
+    "title": "History",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A map of our community",
+          "prompt": "Draw a map that shows places important to a community. Explain what your map includes and leaves out."
+        },
+        {
+          "title": "An object tells a story",
+          "prompt": "Choose an everyday object and list questions a future historian might ask about it."
+        },
+        {
+          "title": "A timeline with choices",
+          "prompt": "Create a short timeline. Explain why you selected its events."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Two accounts of an event",
+          "prompt": "Compare two teacher-selected accounts. Identify agreements, differences, and missing perspectives."
+        },
+        {
+          "title": "Life in a past community",
+          "prompt": "Plan an exhibit about a historical community using objects, images, and short explanations."
+        },
+        {
+          "title": "A map as an argument",
+          "prompt": "Compare two maps and explain how their design choices influence a viewer."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A source investigation",
+          "prompt": "Trace the origin and context of a source before using it to support a claim."
+        },
+        {
+          "title": "Debating an explanation",
+          "prompt": "Develop two explanations for a historical change and compare the evidence for each."
+        },
+        {
+          "title": "A public history proposal",
+          "prompt": "Design a small exhibit or article for a public audience, with transparent sourcing and limitations."
+        }
+      ]
+    }
+  },
+  "mandarin": {
+    "title": "Mandarin",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "Greetings with a purpose",
+          "prompt": "Plan a short greeting exchange in Mandarin. Identify what each speaker needs to understand."
+        },
+        {
+          "title": "A picture and a word",
+          "prompt": "Create a small illustrated vocabulary collection. Use each word in a meaningful context."
+        },
+        {
+          "title": "Listen and notice",
+          "prompt": "Listen to a teacher-selected example. Record familiar sounds or words and one question."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A conversation with choices",
+          "prompt": "Plan a short Mandarin conversation with more than one possible response. Explain how a partner can keep it going."
+        },
+        {
+          "title": "Read for the main idea",
+          "prompt": "Use a short teacher-selected text to distinguish its main idea from unfamiliar details."
+        },
+        {
+          "title": "Culture in an object",
+          "prompt": "Explore an object or practice from a Chinese-speaking context. Ask how it is used and avoid assuming every community shares the same practice."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A perspective in context",
+          "prompt": "Compare two short sources on a cultural topic. Distinguish what each source says from your own interpretation."
+        },
+        {
+          "title": "An audience-aware message",
+          "prompt": "Draft a message in Mandarin for a defined audience. Explain how you would revise its tone and clarity."
+        },
+        {
+          "title": "A language portfolio",
+          "prompt": "Select examples of listening, speaking, reading, and writing that show a change in your ability over time."
+        }
+      ]
+    }
+  },
+  "korean": {
+    "title": "Korean",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "Greetings with a purpose",
+          "prompt": "Plan a short greeting exchange in Korean. Identify what each speaker needs to understand."
+        },
+        {
+          "title": "A picture and a word",
+          "prompt": "Create a small illustrated vocabulary collection. Use each word in a meaningful context."
+        },
+        {
+          "title": "Listen and notice",
+          "prompt": "Listen to a teacher-selected example. Record familiar sounds or words and one question."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A conversation with choices",
+          "prompt": "Plan a short Korean conversation with more than one possible response. Explain how a partner can keep it going."
+        },
+        {
+          "title": "Read for the main idea",
+          "prompt": "Use a short teacher-selected text to distinguish its main idea from unfamiliar details."
+        },
+        {
+          "title": "Culture in an object",
+          "prompt": "Explore an object or practice from a Korean-speaking context. Ask how it is used and avoid assuming every community shares the same practice."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A perspective in context",
+          "prompt": "Compare two short sources on a cultural topic. Distinguish what each source says from your own interpretation."
+        },
+        {
+          "title": "An audience-aware message",
+          "prompt": "Draft a message in Korean for a defined audience. Explain how you would revise its tone and clarity."
+        },
+        {
+          "title": "A language portfolio",
+          "prompt": "Select examples of listening, speaking, reading, and writing that show a change in your ability over time."
+        }
+      ]
+    }
+  },
+  "spanish": {
+    "title": "Spanish",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "Greetings with a purpose",
+          "prompt": "Plan a short greeting exchange in Spanish. Identify what each speaker needs to understand."
+        },
+        {
+          "title": "A picture and a word",
+          "prompt": "Create a small illustrated vocabulary collection. Use each word in a meaningful context."
+        },
+        {
+          "title": "Listen and notice",
+          "prompt": "Listen to a teacher-selected example. Record familiar sounds or words and one question."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A conversation with choices",
+          "prompt": "Plan a short Spanish conversation with more than one possible response. Explain how a partner can keep it going."
+        },
+        {
+          "title": "Read for the main idea",
+          "prompt": "Use a short teacher-selected text to distinguish its main idea from unfamiliar details."
+        },
+        {
+          "title": "Culture in an object",
+          "prompt": "Explore an object or practice from a Spanish-speaking context. Ask how it is used and avoid assuming every community shares the same practice."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A perspective in context",
+          "prompt": "Compare two short sources on a cultural topic. Distinguish what each source says from your own interpretation."
+        },
+        {
+          "title": "An audience-aware message",
+          "prompt": "Draft a message in Spanish for a defined audience. Explain how you would revise its tone and clarity."
+        },
+        {
+          "title": "A language portfolio",
+          "prompt": "Select examples of listening, speaking, reading, and writing that show a change in your ability over time."
+        }
+      ]
+    }
+  },
+  "music": {
+    "title": "Music",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A rhythm conversation",
+          "prompt": "Create a short rhythm and a contrasting response. Explain how a listener can hear the difference."
+        },
+        {
+          "title": "A sound map",
+          "prompt": "Listen to a familiar place and draw a map of the sounds you notice."
+        },
+        {
+          "title": "A musical mood",
+          "prompt": "Choose sounds that suggest a mood. Explain which musical features contribute to the effect."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Theme and variation",
+          "prompt": "Create a short theme and change one feature at a time. Describe what remains recognizable."
+        },
+        {
+          "title": "An ensemble rehearsal plan",
+          "prompt": "Choose a short passage and plan how a group could improve timing and balance."
+        },
+        {
+          "title": "Music in context",
+          "prompt": "Compare two teacher-selected performances and describe differences supported by what you hear."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A composition with constraints",
+          "prompt": "Plan a short composition with a clear structure and a defined set of musical materials."
+        },
+        {
+          "title": "Interpretation in rehearsal",
+          "prompt": "Document how feedback changes your interpretation of a passage."
+        },
+        {
+          "title": "A listening commentary",
+          "prompt": "Prepare a commentary that connects musical features, context, and the effect of a performance."
+        }
+      ]
+    }
+  },
+  "performance-arts": {
+    "title": "Performance Arts",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "Tell it without words",
+          "prompt": "Use movement to communicate a simple event. Ask a partner what they understood."
+        },
+        {
+          "title": "One line, three meanings",
+          "prompt": "Say a short line in three different ways. Explain how the meaning changes."
+        },
+        {
+          "title": "Build a shared scene",
+          "prompt": "Create a short scene with a partner, giving each performer a clear role."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A character in evidence",
+          "prompt": "Use details from a short text to justify a character choice."
+        },
+        {
+          "title": "A rehearsal experiment",
+          "prompt": "Perform a scene with two different pacing choices. Compare the effect on an audience."
+        },
+        {
+          "title": "Design for a story",
+          "prompt": "Sketch a simple visual or sound design and explain how it supports the scene."
+        }
+      ],
+      "High School": [
+        {
+          "title": "An interpretation to defend",
+          "prompt": "Develop a performance interpretation and support its choices with evidence from the source material."
+        },
+        {
+          "title": "A collaborative production plan",
+          "prompt": "Plan the roles, rehearsal milestones, and feedback process for a short performance."
+        },
+        {
+          "title": "A reflective performance portfolio",
+          "prompt": "Document how a piece changed from the first rehearsal to a later version."
+        }
+      ]
+    }
+  },
+  "visual-arts": {
+    "title": "Visual Arts",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "An object, three views",
+          "prompt": "Draw one object from three viewpoints. Describe how looking again changes what you notice."
+        },
+        {
+          "title": "A texture collection",
+          "prompt": "Create a collection of drawn or safely gathered textures and use them to plan an image."
+        },
+        {
+          "title": "Color and a story",
+          "prompt": "Choose a small color palette to suggest a scene or mood. Explain your choices."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Composition as a choice",
+          "prompt": "Make two compositions with the same elements. Explain how the arrangement changes the effect."
+        },
+        {
+          "title": "Art in its context",
+          "prompt": "Study a teacher-selected artwork and connect a visible feature with a question about its context."
+        },
+        {
+          "title": "A material experiment",
+          "prompt": "Test two ways to use a material. Record what each method makes possible."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A sustained visual question",
+          "prompt": "Plan a short series of works investigating one question through different choices."
+        },
+        {
+          "title": "A critique and revision",
+          "prompt": "Use specific feedback to revise a work and explain which suggestions you accepted or declined."
+        },
+        {
+          "title": "A portfolio narrative",
+          "prompt": "Select works that show a development in your thinking and write a short commentary for each."
+        }
+      ]
+    }
+  },
+  "finance": {
+    "title": "Finance",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A classroom shop",
+          "prompt": "Create a hypothetical shop with a fixed token budget. Explain which choices your budget allows."
+        },
+        {
+          "title": "Save for a goal",
+          "prompt": "Use counters to model saving a fixed amount each week. Draw the pattern over time."
+        },
+        {
+          "title": "Needs and trade-offs",
+          "prompt": "Discuss a fictional household choice. Explain how different priorities could lead to different decisions."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A budget with choices",
+          "prompt": "Build a hypothetical event budget. Revise it when one cost changes."
+        },
+        {
+          "title": "Compare unit prices",
+          "prompt": "Compare fictional packages with different quantities and prices. Keep the units visible in your reasoning."
+        },
+        {
+          "title": "An interest model",
+          "prompt": "Use a simplified interest model to compare growth over time. State the assumptions of the model."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A scenario-based budget",
+          "prompt": "Test a hypothetical budget under three different assumptions and identify the most sensitive inputs."
+        },
+        {
+          "title": "Read a financial claim",
+          "prompt": "Analyze a fictional financial advertisement. Identify the evidence needed to assess its claim."
+        },
+        {
+          "title": "A transparent decision model",
+          "prompt": "Create a comparison of two hypothetical options that clearly separates facts, assumptions, and unknowns."
+        }
+      ]
+    }
+  },
+  "friday-enrichment": {
+    "title": "Friday Enrichment",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A tiny museum",
+          "prompt": "Choose a small collection and design labels that help another person see it in a new way."
+        },
+        {
+          "title": "A paper structure",
+          "prompt": "Build a paper structure for a clearly defined task. Test it and explain one improvement."
+        },
+        {
+          "title": "Patterns around us",
+          "prompt": "Collect examples of a pattern in art, nature, or daily life. Explain what connects them."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "Design a board game",
+          "prompt": "Create a game that depends on a mathematical or historical idea. Test whether the rules are clear."
+        },
+        {
+          "title": "A question across subjects",
+          "prompt": "Explore one question using evidence or methods from two different subjects."
+        },
+        {
+          "title": "A prototype for a problem",
+          "prompt": "Design a small prototype for a fictional classroom need and document feedback."
+        }
+      ],
+      "High School": [
+        {
+          "title": "An interdisciplinary proposal",
+          "prompt": "Frame a project that uses at least two disciplines and explain what each contributes."
+        },
+        {
+          "title": "An exhibition of process",
+          "prompt": "Plan an exhibit that shows failed attempts as well as final results."
+        },
+        {
+          "title": "A student-led investigation",
+          "prompt": "Define a question, milestones, evidence, and a method for reflecting on the work."
+        }
+      ]
+    }
+  },
+  "afterschool-programs": {
+    "title": "Afterschool Programs",
+    "divisions": {
+      "Lower School": [
+        {
+          "title": "A makers club challenge",
+          "prompt": "Plan a small making task with a partner. Choose materials and explain how you will share the work."
+        },
+        {
+          "title": "A story circle",
+          "prompt": "Create a short shared story in which each participant contributes an idea."
+        },
+        {
+          "title": "A practice journal",
+          "prompt": "Choose a skill to practice in several short sessions and record what changes."
+        }
+      ],
+      "Middle School": [
+        {
+          "title": "A club project proposal",
+          "prompt": "Suggest a small group project with a goal, materials list, and plan for sharing responsibilities."
+        },
+        {
+          "title": "A collaborative performance",
+          "prompt": "Plan a short performance or presentation that gives each participant a meaningful role."
+        },
+        {
+          "title": "A design iteration log",
+          "prompt": "Document three versions of an idea and explain what prompted each revision."
+        }
+      ],
+      "High School": [
+        {
+          "title": "A student-led workshop",
+          "prompt": "Design a short workshop for a chosen audience, including a clear goal and a way to gather feedback."
+        },
+        {
+          "title": "A longer project plan",
+          "prompt": "Break an interest-based project into milestones and identify dependencies and likely obstacles."
+        },
+        {
+          "title": "A showcase with reflection",
+          "prompt": "Plan a showcase that explains both the finished work and the learning behind it."
+        }
+      ]
+    }
+  }
+}

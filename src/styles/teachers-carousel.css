@@ -1,0 +1,49 @@
+.teachers-section { margin: 56px 0 48px; border-top: 1px solid #c8dfe2; padding-top: 40px; line-height: 1.65; scroll-margin-top: 136px; }
+.teachers-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.teachers-section .subject-eyebrow { margin: 0 0 8px; }
+.teachers-section h2 { font-size: 2rem; line-height: 1.2; color: #183d46; margin: 0 0 12px; }
+.teachers-section .teachers-introduction { color: #4e6368; margin: 0; font-size: 1rem; }
+.teachers-controls { display: flex; gap: 8px; flex-shrink: 0; }
+.teachers-controls button, .teacher-dialog-topline button { border: 1px solid #a9cdd1; background: white; color: #006d74; border-radius: 4px; padding: 9px 14px; font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer; }
+.teachers-controls button:disabled { color: #718184; border-color: #dae5e7; cursor: default; }
+.teachers-controls button:hover:not(:disabled), .teacher-dialog-topline button:hover { background: #edf7f7; }
+.teachers-section .teachers-placeholder-note { margin: 20px 0 16px; font-size: .875rem; color: #596c71; }
+.teachers-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 2px; padding: 4px 2px 20px; scrollbar-width: thin; scrollbar-color: #88bbc1 #edf7f7; }
+.teachers-directory .teachers-track { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; }
+@media (max-width: 639px) { .teachers-directory .teachers-track { grid-template-columns: 1fr; } }
+.teacher-card { flex: 0 0 calc((100% - 40px) / 3); min-width: 0; scroll-snap-align: start; border: 1px solid #c8dfe2; border-radius: 6px; background: #fafcfc; padding: 24px; }
+.teacher-identity { display: flex; gap: 14px; align-items: center; }
+.teacher-identity img { display: block; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid #dceff0; }
+.teachers-section .teacher-identity h3, .teacher-dialog .teacher-identity h3 { margin: 0 0 4px; font-size: 1.0625rem; font-weight: 600; line-height: 1.35; letter-spacing: 0; text-transform: none; color: #183d46; }
+.teachers-section .teacher-identity p, .teacher-dialog .teacher-identity p { margin: 0; font-size: .875rem; color: #596c71; line-height: 1.45; }
+.teacher-highlight { display: block; margin-top: 22px; padding: 20px 0 0; width: 100%; text-align: left; border: 0; border-top: 1px solid #d5e5e7; border-radius: 0; background: transparent; font: inherit; cursor: pointer; }
+.teacher-highlight > span { display: block; }
+.teacher-highlight-label { text-transform: uppercase; letter-spacing: .06em; color: #006d74; font-size: .875rem; line-height: 1.5; }
+.teacher-highlight-title { color: #183d46; font-size: 1.1875rem; font-weight: 600; line-height: 1.35; margin: 10px 0; }
+.teacher-highlight-excerpt { color: #4e6368; font-size: 1rem; line-height: 1.6; }
+.teacher-highlight-read { color: #006d74; text-decoration: underline; font-size: .875rem; font-weight: 600; margin-top: 16px; }
+.teacher-highlight:hover .teacher-highlight-title { color: #006d74; text-decoration: underline; }
+.teachers-section :focus-visible { outline: 3px solid #00747a; outline-offset: 4px; }
+.teacher-dialog { color: #344c53; border: 1px solid #bed7db; border-radius: 8px; width: min(680px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 32px; line-height: 1.75; font-size: 1rem; overflow-y: auto; }
+.teacher-dialog::backdrop { background: rgba(14, 38, 44, .65); }
+.teacher-dialog-topline { display: flex; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.teacher-dialog-topline > span { font-size: .875rem; text-transform: uppercase; letter-spacing: .06em; color: #006d74; font-weight: 600; }
+.teacher-dialog-topline form { margin: 0; }
+.teacher-dialog .teacher-identity { margin-bottom: 24px; }
+.teacher-dialog .teacher-identity img { width: 64px; height: 64px; }
+.teacher-dialog .teacher-dialog-subject { font-size: .875rem; font-weight: 600; color: #006d74; margin-bottom: 6px; }
+.teacher-dialog h2 { font-size: 1.75rem; margin: 0 0 20px; line-height: 1.25; color: #183d46; }
+.teacher-dialog .teacher-dialog-note { background: #fff6da; border-left: 3px solid #aa7011; padding: 12px 16px; font-size: .875rem; color: #644500; }
+.teacher-dialog-example { margin-top: 24px; padding: 20px; border-radius: 4px; background: #edf7f7; }
+.teacher-dialog-example h3 { font-size: 1rem; text-transform: none; letter-spacing: 0; margin-top: 0; }
+.teacher-dialog-example h4 { font-size: 1rem; margin: 20px 0 8px; }
+.teacher-dialog-example p:last-child { margin-bottom: 0; }
+@media (min-width: 640px) and (max-width: 1023px) { .teacher-card { flex-basis: calc((100% - 20px) / 2); } }
+@media (max-width: 639px) {
+  .teachers-section-heading { align-items: flex-start; flex-direction: column; }
+  .teacher-card { flex-basis: 88%; padding: 20px; }
+  .teacher-identity { gap: 10px; }
+  .teacher-identity img { width: 64px; height: 64px; }
+  .teachers-section .teacher-identity h3 { font-size: 1rem; }
+  .teacher-dialog { padding: 22px; }
+}

@@ -1,0 +1,22 @@
+{
+  "mode": "built-in image_gen",
+  "purpose": "Fictional faculty placeholders for the department website prototype",
+  "portraits": [
+    {
+      "asset": "/img/teachers/maya-bennett.jpg",
+      "prompt": "Use case: photorealistic-natural. Asset type: small round faculty portrait for a clearly labeled fictional school website prototype. Create one photorealistic head-and-shoulders portrait of an invented woman educator in her early forties, warm brown skin, shoulder-length dark curly hair, dark green blouse, warm approachable smile. Soft daylight, muted pale teal studio background, natural skin texture, polished but candid school staff photography. Square composition, face centered with generous space around head and shoulders so it can be cropped into a circle. One adult only. No actual known person, no text, no logos, no watermarks."
+    },
+    {
+      "asset": "/img/teachers/daniel-park.jpg",
+      "prompt": "Use case: photorealistic-natural. Asset type: small round faculty portrait for a clearly labeled fictional school website prototype. Create one photorealistic head-and-shoulders portrait of an invented man educator in his late thirties, East Asian appearance, short black hair, thin round eyeglasses, navy button-down shirt, friendly relaxed smile. Soft daylight, muted pale teal studio background, natural skin texture, polished but candid school staff photography. Square composition, face centered with generous space around head and shoulders so it can be cropped into a circle. One adult only. No actual known person, no text, no logos, no watermarks."
+    },
+    {
+      "asset": "/img/teachers/clara-ellis.jpg",
+      "prompt": "Use case: photorealistic-natural. Asset type: small round faculty portrait for a clearly labeled fictional school website prototype. Create one photorealistic head-and-shoulders portrait of an invented woman educator in her mid thirties, light skin, auburn bob haircut, blue sweater, friendly confident expression. Soft daylight, muted pale teal studio background, natural skin texture, polished but candid school staff photography. Square composition, face centered with generous space around head and shoulders so it can be cropped into a circle. One adult only. No actual known person, no text, no logos, no watermarks."
+    },
+    {
+      "asset": "/img/teachers/marcus-reed.jpg",
+      "prompt": "Use case: photorealistic-natural. Asset type: small round faculty portrait for a clearly labeled fictional school website prototype. Create one photorealistic head-and-shoulders portrait of an invented man educator in his early fifties, deep brown skin, closely cropped salt-and-pepper hair, neatly trimmed beard, slate blue casual jacket over a white shirt, warm smile. Soft daylight, muted pale teal studio background, natural skin texture, polished but candid school staff photography. Square composition, face centered with generous space around head and shoulders so it can be cropped into a circle. One adult only. No actual known person, no text, no logos, no watermarks."
+    }
+  ]
+}

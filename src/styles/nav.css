@@ -292,3 +292,62 @@ nav .subnav a:focus, nav .subnav a:hover {
   transform: rotate(-45deg);
   top: 7px
 }
+
+/* Native disclosure menus support touch, keyboard, and desktop navigation. */
+.nav-dropdown > summary {
+  cursor: pointer;
+  list-style: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .05em;
+}
+.nav-dropdown > summary::-webkit-details-marker { display: none; }
+.nav-dropdown > summary svg { width: 12px; height: 8px; }
+.nav-dropdown[open] > summary svg { transform: rotate(180deg); }
+nav .nav-dropdown:not([open]) .subnav { display: none; }
+nav .nav-dropdown[open] .subnav { display: block; }
+nav .subnav ul { list-style: none; margin: 0; padding: 0; }
+nav .subnav li { margin: 0; }
+nav .subnav a { display: block; padding: 9px 12px; font-size: 14px; text-transform: none; letter-spacing: 0; font-weight: 400; }
+nav .subnav a:hover { background: var(--iceberg); }
+nav .department-menu-heading { font-weight: 700; color: var(--bondi-blue-dark); text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid var(--alto); margin-bottom: 6px; }
+nav .departments-overview-link { border-bottom: 1px solid var(--alto); margin-bottom: 12px; font-weight: 600; }
+.nav-links :focus-visible { outline: 2px solid var(--bondi-blue-dark); outline-offset: 4px; }
+@media (min-width: 840px) {
+  nav .grouped-subnav { width: min(720px, calc(100vw - 80px)); left: -140px; padding: 24px; }
+  .department-menu-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  nav .subnav { top: 100%; padding-top: 18px; }
+}
+@media (max-width: 839px) {
+  .nav-opened nav > ul { overflow-y: auto; }
+  nav .nav-dropdown[open] .subnav { margin-top: 14px; box-shadow: none; }
+  nav .department-menu-heading { color: #65e2e8; }
+  nav .subnav a:hover { background: #3c3a3a; }
+  nav .subnav li { margin-bottom: 0 !important; }
+  .department-menu-columns > div + div { margin-top: 20px; }
+  nav .grouped-subnav { text-align: left; max-width: 480px; margin-inline: auto; }
+  .nav-opened .nav-dropdown > summary { padding: 8px; }
+}
+@media (min-width: 840px) {
+  nav .subnav a { color: #28545a; }
+  nav .subnav .department-menu-heading { color: #006d74; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+  nav .subnav .departments-overview-link { font-weight: 600; }
+}
+
+/* Keep the primary navigation compact on desktop. */
+@media (min-width: 840px) {
+  :root { --primary-navigation-height: 64px; --department-navigation-height: 48px; }
+  nav[aria-label="Main navigation"] { height: var(--primary-navigation-height); }
+  nav[aria-label="Main navigation"] > .nav-links {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 28px;
+  }
+  nav[aria-label="Main navigation"] li.cta { margin-top: 0; margin-bottom: 0; }
+  body header { margin-top: var(--primary-navigation-height); }
+  body header.has-department-subnav { margin-top: calc(var(--primary-navigation-height) + var(--department-navigation-height)); }
+}

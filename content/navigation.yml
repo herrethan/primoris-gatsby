@@ -1,45 +1,91 @@
 main:
-  - title: Departments
-    url: /departments/math
+  - title: About Us
+    url: /about
     subnav:
-      - title: Math
-        url: /departments/math
-      - title: English
-        url: /departments/english
-      - title: Science
-        url: /departments/science/
-      - title: History
-        url: /departments/history
-      - title: Programming/Robotics
-        url: /departments/programming-and-robotics
-      - title: Mandarin
-        url: /departments/mandarin
-      - title: Music/Performing Arts
-        url: /departments/music-and-performing-arts
-      - title: Fine/Visual Arts
-        url: /departments/fine-and-visual-arts
-  - title: Programs
-    url: /programs
-    subnav:
-      - title: High school
-        url: /programs/high-school
-      - title: Middle school
-        url: /programs/middle-school
-      - title: Pre school
-        url: /programs/pre-school
-  - title: Admissions
-    url: /admissions/apply
-    subnav:
-      - title: Apply
-        url: /admissions/apply
+      - title: Overview
+        url: /about
       - title: FAQ
         url: /admissions/faq
+      - title: Teachers
+        url: /about/teachers/
+      - title: Awards
+        url: /awards
+  - title: Departments
+    url: /departments/
+    subnav:
+      - title: Mathematics
+        url: /departments/math/
+        group: Science
+      - title: Biology
+        url: /departments/biology/
+        group: Science
+      - title: Physics
+        url: /departments/physics/
+        group: Science
+      - title: Computer Science
+        url: /departments/computer-science/
+        group: Science
+      - title: Chemistry
+        url: /departments/chemistry/
+        group: Science
+      - title: Robotics
+        url: /departments/robotics/
+        group: Science
+      - title: Literature
+        url: /departments/literature/
+        group: Humanities
+      - title: History
+        url: /departments/history/
+        group: Humanities
+      - title: Mandarin
+        url: /departments/mandarin/
+        group: Humanities
+      - title: Korean
+        url: /departments/korean/
+        group: Humanities
+      - title: Spanish
+        url: /departments/spanish/
+        group: Humanities
+      - title: Music
+        url: /departments/music/
+        group: Enrichment
+      - title: Performance Arts
+        url: /departments/performance-arts/
+        group: Enrichment
+      - title: Visual Arts
+        url: /departments/visual-arts/
+        group: Enrichment
+      - title: Finance
+        url: /departments/finance/
+        group: Enrichment
+      - title: Friday Enrichment
+        url: /departments/friday-enrichment/
+        group: Enrichment
+      - title: Afterschool Programs
+        url: /departments/afterschool-programs/
+        group: Enrichment
+      - title: Summer Camp
+        url: /departments/summer-camp/
+        group: Enrichment
+  - title: Our Schools
+    url: /schools/
+    subnav:
+      - title: Explore our schools
+        url: /schools/
+      - title: Lower School
+        url: /schools/lower-school/
+      - title: Middle School
+        url: /schools/middle-school/
+      - title: High School
+        url: /schools/high-school/
+      - title: Preschool
+        url: /schools/preschool/
+  - title: Admissions
+    url: /admissions/apply
   - title: Calendar
     url: /calendar
-  - title: Awards
-    url: /awards
 footer:
-  - title: About us
+  - title: About Us
     url: /about
   - title: Partner with us
     url: /partner-with-us

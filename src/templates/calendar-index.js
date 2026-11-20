@@ -13,12 +13,17 @@ const CalendarIndexTemplate = ({ data }) => {
   return (
     <>
       <SEO title={`${settings.schoolYear} ${page.frontmatter.title}`} description={page.excerpt} />
-      <Header />
+      <Header backgroundImg="/img/calendar-banner.jpg" height={300}>
+        <div className="calendar-hero">
+          <div className="content">
+            <p className="calendar-eyebrow">Primoris Academy · {settings.schoolYear}</p>
+            <h1>{page.frontmatter.title}</h1>
+          </div>
+        </div>
+      </Header>
       <main className="content calendar-page">
         <div className="calendar-intro">
           <div>
-            <p className="calendar-eyebrow">Primoris Academy · {settings.schoolYear}</p>
-            <h1>{page.frontmatter.title}</h1>
             <div className="calendar-description" dangerouslySetInnerHTML={{ __html: page.html }} />
           </div>
           {settings.preliminary && <div className="calendar-preliminary"><span>Preliminary calendar</span><p>Dates are subject to change.<br />Updated {settings.updated}</p></div>}

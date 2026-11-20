@@ -1,3 +1,10 @@
+.calendar-hero { position: relative; height: 100%; display: flex; align-items: center; background: linear-gradient(90deg, rgba(12, 48, 53, .5), rgba(12, 48, 53, 0) 75%); }
+.calendar-hero > .content { width: 100%; max-width: 1360px; }
+.calendar-hero .calendar-eyebrow { color: #e0f3f3; }
+.calendar-hero h1 { max-width: 600px; margin: 0; color: white; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -.04em; text-shadow: 0 2px 12px rgba(12, 48, 53, .3); }
+@media (max-width: 767px) {
+  .calendar-hero { padding-top: 60px; background: linear-gradient(90deg, rgba(12, 48, 53, .8), rgba(12, 48, 53, .25)); }
+}
 .calendar-page { max-width: 1360px; padding-top: 54px; padding-bottom: 64px; color: #24464d; }
 .calendar-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; margin-bottom: 30px; }
 .calendar-eyebrow { margin: 0 0 12px; color: #527077; font-size: .875rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }

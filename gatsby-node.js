@@ -1,5 +1,6 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath, loadNodeContent } = require(`gatsby-source-filesystem`)
+const { readCalendarCsv } = require('./scripts/lib/calendar-csv.cjs')
 
 const templates = {
   'page': path.resolve(`./src/templates/page.js`),
@@ -8,12 +9,31 @@ const templates = {
   'calendar-index': path.resolve(`./src/templates/calendar-index.js`)
 }
 
+// Keep optional fields stable in both development and production schemas.
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type CalendarEvent implements Node @dontInfer {
+      slug: String!
+      title: String!
+      date: Date! @dateformat
+      endDate: Date @dateformat
+      category: String!
+      noSchool: Boolean!
+      time: String
+      detail: String!
+    }
+  `);
+};
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const result = await graphql(
     `
       {
+        allCalendarEvent {
+          nodes { id slug }
+        }
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
@@ -63,10 +83,40 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
   })
+
+  result.data.allCalendarEvent.nodes.forEach(event => {
+    createPage({
+      path: event.slug,
+      component: templates['calendar'],
+      context: { id: event.id },
+    });
+  });
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = async ({ node, actions, getNode, getNodesByType, createNodeId, createContentDigest }) => {
   const { createNodeField } = actions;
+
+  if (node.internal.type === 'File' && node.sourceInstanceName === 'calendar' && node.extension === 'csv') {
+    let events;
+    try {
+      events = readCalendarCsv(await loadNodeContent(node));
+    } catch (error) {
+      throw new Error(`${node.absolutePath}: ${error.message}`);
+    }
+    const eventIds = new Set();
+    events.forEach(event => {
+      const id = createNodeId(`calendar-event:${event.slug}`);
+      eventIds.add(id);
+      actions.createNode({
+        ...event, id, parent: node.id, children: [],
+        internal: { type: 'CalendarEvent', contentDigest: createContentDigest(event) },
+      });
+      actions.createParentChildLink({ parent: node, child: { id } });
+    });
+    // Remove deleted rows during live preview as well as production rebuilds.
+    getNodesByType('CalendarEvent').filter(event => event.parent === node.id && !eventIds.has(event.id))
+      .forEach(event => actions.deleteNode(event));
+  }
 
   if (node.internal.type === `MarkdownRemark`) {
     const parent = getNode(node.parent);

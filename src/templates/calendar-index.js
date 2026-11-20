@@ -1,88 +1,55 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import moment from 'moment';
-import { partition } from 'lodash';
+import SchoolCalendar from "../components/school-calendar";
+import settings from "../../content/calendar-settings.json";
 
 const CalendarIndexTemplate = ({ data }) => {
   const page = data.markdownRemark;
-  const image = page.frontmatter.image && page.frontmatter.image.publicURL;
-  const entries = data.allMarkdownRemark.edges || [];
-  const events = partition(entries, entry => moment(entry.node.frontmatter.date) > moment());
+  const events = data.allCalendarEvent.nodes;
 
   return (
     <>
-      <SEO
-        title={page.frontmatter.title}
-        description={page.excerpt}
-      />
-      <Header backgroundImg={image} height={image ? 300 : 100} darken>
-        <div className="content">
-          <div className="header-blurb">
-            <h1 className="capitalize">{page.frontmatter.title}</h1>
+      <SEO title={`${settings.schoolYear} ${page.frontmatter.title}`} description={page.excerpt} />
+      <Header />
+      <main className="content calendar-page">
+        <div className="calendar-intro">
+          <div>
+            <p className="calendar-eyebrow">Primoris Academy · {settings.schoolYear}</p>
+            <h1>{page.frontmatter.title}</h1>
+            <div className="calendar-description" dangerouslySetInnerHTML={{ __html: page.html }} />
           </div>
+          {settings.preliminary && <div className="calendar-preliminary"><span>Preliminary calendar</span><p>Dates are subject to change.<br />Updated {settings.updated}</p></div>}
         </div>
-      </Header>
-      <main className="content">
-        {page && <div dangerouslySetInnerHTML={{ __html: page.html }}></div>}
-        {entries.length && (
-          <ul className="events">
-            {[...events[0], ...events[1]].map((entry, i) => (
-              <li className={i >= events[0].length ? 'is-past' : ''} key={entry.node.fields.slug}>
-                <Link className="date-block" to={entry.node.fields.slug}>
-                  <div>
-                    <span className="month">{moment(entry.node.frontmatter.date).format('MMM')}</span>
-                    <span className="day">{moment(entry.node.frontmatter.date).format('D')}</span>
-                  </div>
-                </Link>
-                <div className="event-text">
-                  <h2><Link to={entry.node.fields.slug}>{entry.node.frontmatter.title}</Link></h2>
-                  <p>
-                    {moment(entry.node.frontmatter.date).format('dddd, MMMM Do, YYYY')}
-                    <br />
-                    {entry.node.frontmatter.detail}
-                  </p>
-                  <p></p>                
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
+        <SchoolCalendar events={events} />
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default CalendarIndexTemplate
+export default CalendarIndexTemplate;
 
 export const pageQuery = graphql`
   query CalendarBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      excerpt(pruneLength: 120)
+      excerpt(pruneLength: 160)
       html
-      frontmatter {
-        title
-        image {
-          publicURL
-        }
-      }
+      frontmatter { title }
     }
-    allMarkdownRemark(filter: {fields: {source: {eq: "calendar"}}}, sort: {fields: frontmatter___date, order: ASC}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            detail
-            title
-            date
-          }
-        }
+    allCalendarEvent(sort: {fields: [date, slug], order: ASC}) {
+      nodes {
+        slug
+        detail
+        title
+        date(formatString: "YYYY-MM-DD")
+        endDate(formatString: "YYYY-MM-DD")
+        category
+        noSchool
+        time
       }
     }
   }
-`
+`;
